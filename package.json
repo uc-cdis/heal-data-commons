@@ -18,9 +18,10 @@
     "getDRSToHostname": "node ./node_modules/@gen3/toolsff/dist/getDRSToHostname.esm.js --out=config/"
   },
   "dependencies": {
+    "@axe-core/react": "^4.10.0",
     "@fontsource/montserrat": "^5.0.19",
-    "@fontsource/source-sans-pro": "^5.0.8",
     "@fontsource/poppins": "^5.0.15",
+    "@fontsource/source-sans-pro": "^5.0.8",
     "@gen3/frontend": "^0.10.44",
     "@mantine/core": "^7.12.1",
     "@mantine/form": "^7.12.1",
@@ -32,8 +33,7 @@
     "@next/mdx": "^14.2.8",
     "@types/mdx": "^2.0.11",
     "cookies-next": "^4.1.1",
-    "swr": "^2.2.5",
-    "@axe-core/react": "^4.10.0"
+    "swr": "^2.2.5"
   },
   "devDependencies": {
     "@gen3/toolsff": "^0.10.44",
@@ -44,13 +44,14 @@
     "@types/lodash": "^4.14.202",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^7.12.0",
     "eslint": "8.57.0",
+    "eslint-config-next": "14.2.3",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-config-next": "14.2.3",
     "next": "^14.2.8",
     "postcss": "^8.4.29",
     "postcss-loader": "^7.3.2",
@@ -61,7 +62,6 @@
     "tailwindcss": "^3.4.10",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.1",
-    "typescript": "5.5.4",
-    "@typescript-eslint/eslint-plugin": "^7.12.0"
+    "typescript": "5.5.4"
   }
 }
