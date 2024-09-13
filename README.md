@@ -1,12 +1,12 @@
 
 
-This is the base REPOSITORY for Gen3.2 data commons.
+This is the NextJS application for the HEAL Data Commons.
 
 
 ## Getting Started
-Gen3 Data Commons using the Gen3 Frontend Framework is a matter of the following:
+The HEAL Data Commons develop quick startup:
 
-* create a clone of [Gen3 Data Commons Application](https://github.com/uc-cdis/commons-frontend-app/)  
+* create a clone of [HEAL Data Commons](https://github.com/uc-cdis/heal-data-commons)
 
 * Configure the commons by editing the configuration files in the ```config```
 
@@ -16,11 +16,11 @@ Gen3 Data Commons using the Gen3 Frontend Framework is a matter of the following
 
 Changes to the Gen3 Data Commons Application can be pulled from the Common Frontend Repository. You need configure git to pull from the Common Frontend Repository.
 ```bash
-git remote add upstream https://github.com/uc-cdis/commons-frontend-app.git
+git remote add upstream https://github.com/uc-cdis/heal-data-commons.git
 ```
 or
 ```bash
-git remote add upstream git@github.com:uc-cdis/commons-frontend-app.git
+git remote add upstream git@github.com:uc-cdis/heal-data-commons.git
 ```
 
 changes to ```main``` can be pulled from the Common Frontend Repository by running:
@@ -34,12 +34,12 @@ This documentation is currently less complete than we would like, but we will be
 
 ## Installation
 
-The minimum node version is set to v20.11.0 only from an LTS perspective.
+The minimum node version is set to v20.71.0.
 Node can be downloaded from the official Node.js site. You may also consider using a [Node version manager](https://docs.npmjs.com/cli/v7/configuring-npm/install#using-a-node-version-manager-to-install-nodejs-and-npm).
 Your version of Node may not ship with npm v10. To install it, run:
 
 ```bash
-npm install npm@10.2.4 -g
+npm install npm@10.8.2 -g
 ```
 
 Note: if you see this error:
@@ -51,7 +51,7 @@ you can run ```npx next telemetry disable```
 
 Alternatively, you can use `nvm` to install the correct version of npm:
 ```bash
-nvm install 20.11.0
+nvm install 20.17.0
 ```
 
 ### Install Dependencies
@@ -78,3 +78,16 @@ You build a Docker image by:
 ```bash
 docker build .
 ```
+
+## Configuration
+
+All the configuration files are located in ```config/heal```. As HEAL is currently only used for the landing page the
+relevant configuration files are:
+
+* navigation.json
+* footer.json
+* banner
+
+## Custom Pages
+
+See ```src/pages/SamplePage``` for an example of adding a new page to the HEAL commons.
