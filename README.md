@@ -81,8 +81,13 @@ docker build .
 
 ## Configuration
 
-All of the configuration files are located in ```config```. As HEAL is current only used for the landing page the
-configuration that are used are:
+All the configuration files are located in ```config/heal```. As HEAL is currently only used for the landing page the
+relevant configuration files are:
 
 * navigation.json
 * footer.json
+* banner
+
+## Custom Pages
+
+See ```src/pages/SamplePage``` for an example of adding a new page to the HEAL commons.
