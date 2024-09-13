@@ -36,6 +36,7 @@
   "devDependencies": {
     "@axe-core/react": "^4.10.0",
     "@gen3/toolsff": "https://github.com/uc-cdis/gen3-frontend-framework/releases/download/v0.10.0-alpha/gen3-toolsff-0.10.45.tgz",
+    "@gen3/core": "https://github.com/uc-cdis/gen3-frontend-framework/releases/download/v0.10.0-alpha/gen3-core-0.10.45.tgz",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/line-clamp": "^0.4.2",
