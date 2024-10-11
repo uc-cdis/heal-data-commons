@@ -6,7 +6,6 @@ import {
   getNavPageLayoutPropsFromConfig,
 } from '@gen3/frontend';
 import { GetServerSideProps } from 'next';
-import { ExampleComponent } from '@/lib/Home/ExampleComponent';
 import Hero from '@/lib/Home/Components/Hero/Hero';
 import CarouselBanner from '@/lib/Home/Components/CarouselBanner/CarouselBanner';
 import QuickLinks from '@/lib/Home/Components/QuickLinks/QuickLinks';
