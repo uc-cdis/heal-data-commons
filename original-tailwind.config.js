@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 /* eslint-disable @typescript-eslint/no-var-requires */
+
 const plugin = require('tailwindcss/plugin');
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { GEN3_COMMONS_NAME } = require('@gen3/core');
 const themeColors = require(`./config/heal/themeColors.json`);
 const themeFonts = require(`./config/heal/themeFonts.json`);
 

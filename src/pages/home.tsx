@@ -6,7 +6,7 @@ import {
   getNavPageLayoutPropsFromConfig,
 } from '@gen3/frontend';
 import { GetServerSideProps } from 'next';
-import { ExampleComponent } from '@/lib/HealLandingPage/ExampleComponent';
+import { ExampleComponent } from '@/lib/home/ExampleComponent';
 
 const HealLandingPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
   return (
@@ -18,10 +18,15 @@ const HealLandingPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
         key: 'heal-landing-page',
       }}
     >
-      <div className="w-full m-10 bg">
-        <Center>
-          <ExampleComponent />
-        </Center>
+      <div className="w-full bg-purple-500 w-full">
+        This is a colored background!
+        <div className="w-full bg-blue-500 text-white p-4 bg-blue-600">
+          This is a blue background!
+        </div>
+        <h1 className="text-4xl font-bold text-center text-green-200 bg-cyan-100">
+          lol
+        </h1>
+        <ExampleComponent />
       </div>
     </NavPageLayout>
   );
