@@ -34,7 +34,6 @@ const HealLandingPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
   );
 };
 
-// TODO: replace this with a custom getServerSideProps function
 export const getServerSideProps: GetServerSideProps<
   NavPageLayoutProps
 > = async () => {
