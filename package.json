@@ -45,6 +45,7 @@
     "@tailwindcss/typography": "^0.5.7",
     "@testing-library/jest-dom": "^6.6.1",
     "@testing-library/react": "^16.0.1",
+    "@types/jest": "^29.5.13",
     "@types/lodash": "^4.14.202",
     "@types/mdx": "^2.0.11",
     "@types/react": "^18.2.21",

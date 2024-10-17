@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import CarouselBanner from './CarouselBanner';
+import ContentSpotlight from './ContentSpotlight';
 
-describe('CarouselBanner Component', () => {
+describe('ContentSpotlight Component', () => {
   test('renders the CarouselBanner component', () => {
-    render(<CarouselBanner />);
-    const element = screen.getByTestId('carousel-banner');
+    render(<ContentSpotlight />);
+    const element = screen.getByTestId('content-spotlight');
     expect(element).toBeInTheDocument();
   });
 });
