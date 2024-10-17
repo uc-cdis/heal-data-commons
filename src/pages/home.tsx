@@ -1,5 +1,4 @@
 import React from 'react';
-import { Center, Text, Paper } from '@mantine/core';
 import {
   NavPageLayout,
   NavPageLayoutProps,

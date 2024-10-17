@@ -7,6 +7,6 @@ test('renders Example Component text', () => {
   render(<CarouselBanner />);
 
   // Check if the component renders the expected text
-  const headingElement = screen.getByText(/Example Component/i);
+  const headingElement = screen.getByText(/Carousel Banner/i);
   expect(headingElement).toBeInTheDocument();
 });
