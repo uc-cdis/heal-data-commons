@@ -4,9 +4,9 @@ const ResourcesCallout: React.FC = () => {
   return (
     <div
       data-testid="resources-callout"
-      className="resources-callout text-center p-4"
+      className="bg-heal-purple text-white rounded-lg p-6"
     >
-      <h1 className="text-2xl font-bold">Resources Callout</h1>
+      <h2 className="text-xl font-bold mb-2">Resource Callout</h2>
     </div>
   );
 };
