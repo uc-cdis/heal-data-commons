@@ -23,6 +23,7 @@ import {
 
 // a definition of the query response
 interface QueryResponse {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data?: Record<string, Array<any>>;
 }
 
@@ -32,6 +33,7 @@ interface QueryResponse {
  * @param {any} obj - The object to be checked.
  * @returns {boolean} Returns true if the object is a QueryResponse, false otherwise.
  */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const isQueryResponse = (obj: any): obj is QueryResponse => {
   // Considering that the data property can be optional
   return (

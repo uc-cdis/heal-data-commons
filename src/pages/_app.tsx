@@ -100,6 +100,7 @@ Gen3App.getInitialProps = async (
       colors: colors,
       icons: icons as RegisteredIcons,
     };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     console.error('Provider Wrapper error loading config', error.toString());
   }

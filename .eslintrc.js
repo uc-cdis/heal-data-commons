@@ -23,7 +23,7 @@ module.exports = {
   },
   plugins: ['jsx-a11y', 'react', 'react-hooks', '@typescript-eslint'],
   rules: {
-    '@typescript-eslint/no-explicit-any':['warn'],
+    '@typescript-eslint/no-explicit-any': ['warn'],
     'no-underscore-dangle': 'off',
     'import/prefer-default-export': 'off',
     'linebreak-style': ['error', 'unix'],
@@ -32,7 +32,7 @@ module.exports = {
     'jsx-quotes': ['warn', 'prefer-double'],
     semi: ['error', 'always'],
     'prefer-destructuring': ['error', { object: true, array: false }],
-    'react/jsx-fragments': ['warn', 'element'],
+    'react/jsx-fragments': ['off'],
     // disable these because we're using React 17+ with the jsx transform
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
