@@ -19,10 +19,17 @@ const SamplePage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
     >
       <div className="w-full m-10 bg-heal-light_purple">
         <Center>
-          <Paper classNames={{
-            root: "bg-heal-purple"
-          }} shadow="md" p="xl" withBorder >
-            <Text  className="text-gen3-white">This is a example custom page in Gen3</Text>
+          <Paper
+            classNames={{
+              root: 'bg-heal-purple',
+            }}
+            shadow="md"
+            p="xl"
+            withBorder
+          >
+            <Text className="text-gen3-white">
+              This is a example custom page in Gen3
+            </Text>
             <Text className="text-gen3-smoke">
               You can add your own content here, and add a link to this page in
               the navigation bar by editing the config file in navigation.json
