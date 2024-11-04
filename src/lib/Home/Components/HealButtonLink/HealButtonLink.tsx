@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import ArrowIcon from '../../Assets/Icons/IconArrow';
+import React from 'react';
+// import {ArrowIcon} from '../../Assets/Icons/IconArrow';
+import ArrowIconSVG from '../../Assets/Icons/IconArrow.svg';
 
 interface ButtonLinkProps {
   href: string;
@@ -10,12 +11,9 @@ const HealButtonLink: React.FC<ButtonLinkProps> = ({
   href = 'https://www.altavista.com',
   label,
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
   return (
     <a
       href={href}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       className={`
         heal-button-link
         focus:border-4
@@ -28,7 +26,8 @@ const HealButtonLink: React.FC<ButtonLinkProps> = ({
         p-[0.0625rem]
         py-[0.2rem]
         rounded
-        inline-block`}
+        inline-block
+      `}
       role="button"
     >
       <span
@@ -41,8 +40,15 @@ const HealButtonLink: React.FC<ButtonLinkProps> = ({
       >
         {label}
       </span>
-      <span className="bg-white group-hover:bg-heal-magenta group-hover:text-white  text-heal-magenta ml-1">
-        <ArrowIcon />
+      <span
+        className={`
+          bg-white
+          group-hover:bg-heal-magenta
+          group-hover:text-white
+          text-heal-magenta ml-1
+        `}
+      >
+        <ArrowIconSVG className="inline-block fill-current" />
       </span>
     </a>
   );
