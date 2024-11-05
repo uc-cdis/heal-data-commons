@@ -1,6 +1,5 @@
 import React from 'react';
-// import {ArrowIcon} from '../../Assets/Icons/IconArrow';
-import ArrowIconSVG from '../../Assets/Icons/IconArrow.svg';
+import ArrowIconSVG from '../../Assets/Icons/Icon-Arrow.svg';
 
 interface ButtonLinkProps {
   href: string;
