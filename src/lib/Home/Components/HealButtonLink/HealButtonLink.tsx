@@ -7,10 +7,7 @@ interface ButtonLinkProps {
   label: string;
 }
 
-const HealButtonLink: React.FC<ButtonLinkProps> = ({
-  href = 'https://www.altavista.com',
-  label,
-}) => {
+const HealButtonLink: React.FC<ButtonLinkProps> = ({ href, label }) => {
   return (
     <a
       href={href}
@@ -32,6 +29,7 @@ const HealButtonLink: React.FC<ButtonLinkProps> = ({
     >
       <span
         className={`
+          px-2
           group-hover:bg-white
           group-hover:text-heal-magenta
           bg-heal-magenta
