@@ -28,6 +28,7 @@ module.exports = {
           medium_gray: '#818A91',
           light_gray: '#DDDDDD',
           blue: '#0044B3',
+          background: '#262663',
         },
         midrc: {
           secondary: '#421C52',
