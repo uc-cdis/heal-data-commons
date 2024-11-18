@@ -1,10 +1,10 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
 
 @import '@mantine/core/styles.css';
 @import 'mantine-react-table/styles.css';
 
-@import "tailwindcss/utilities";
+@import 'tailwindcss/utilities';
 @import '@gen3/frontend/dist/styles.css';
 
 @layer base {
@@ -14,3 +14,57 @@
 }
 
 @tailwind variants;
+
+/* Montserrat Font */
+/* Regular (400 weight) */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Italic (400 weight) */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Semibold (600 weight) */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Semibold Italic (600 weight) */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Bold (700 weight) */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Bold Italic (700 weight) */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Set global default font to Monserrat */
+body {
+  font-family: 'Montserrat', sans-serif;
+}

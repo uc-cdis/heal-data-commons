@@ -60,6 +60,7 @@ module.exports = {
       fontFamily: {
         heading: themeFonts.heading,
         content: themeFonts.content,
+        sans: ['Montserrat', 'sans-serif'],
       },
       fontSize: {
         tiny: '0.625rem',
