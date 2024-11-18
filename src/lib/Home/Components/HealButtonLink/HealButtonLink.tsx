@@ -39,10 +39,11 @@ const HealButtonLink: React.FC<ButtonLinkProps> = ({ href, label }) => {
       </span>
       <span
         className={`
+          mx-1
           bg-white
           group-hover:bg-heal-magenta
           group-hover:text-white
-          text-heal-magenta ml-1
+          text-heal-magenta
         `}
       >
         <ArrowIconSVG className="inline-block fill-current" />
