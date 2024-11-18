@@ -19,8 +19,8 @@ const HealButtonLink: React.FC<ButtonLinkProps> = ({ href, label }) => {
         border-heal-magenta
         bg-white
         text-white
-        p-[0.0625rem]
-        py-[0.2rem]
+        px-[0.0625rem]
+        py-[0.25rem]
         rounded
         inline-block
       `}
