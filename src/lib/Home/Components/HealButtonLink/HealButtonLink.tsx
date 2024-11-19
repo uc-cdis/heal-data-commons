@@ -24,7 +24,6 @@ const HealButtonLink: React.FC<ButtonLinkProps> = ({ href, label }) => {
         rounded
         inline-block
       `}
-      role="button"
     >
       <span
         className={`
