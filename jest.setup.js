@@ -6,8 +6,8 @@ import '@testing-library/jest-dom';
 
 // Mock the complex Next imports that JEST does not handle well
 jest.mock('*.svg', () => {
-  return (props) => <img {...props} alt={''} />;
+  return (props) => <img {...props} src="" alt={''} />;
 });
 jest.mock('next/image', () => {
-  return (props) => <img {...props} alt={''} />;
+  return (props) => <img {...props} src="" alt={''} />;
 });
