@@ -28,7 +28,6 @@ module.exports = {
           medium_gray: '#818A91',
           light_gray: '#DDDDDD',
           blue: '#0044B3',
-          background: '#262663',
         },
         midrc: {
           secondary: '#421C52',
@@ -60,7 +59,6 @@ module.exports = {
       fontFamily: {
         heading: themeFonts.heading,
         content: themeFonts.content,
-        sans: ['Montserrat', 'sans-serif'],
       },
       fontSize: {
         tiny: '0.625rem',
