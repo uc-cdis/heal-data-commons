@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import ContentSpotlight from './ContentSpotlight';
 
 describe('ContentSpotlight Component', () => {
-  test('renders the CarouselBanner component', () => {
+  test('renders the ContentSpotlight component', () => {
     render(<ContentSpotlight />);
     const element = screen.getByTestId('content-spotlight');
     expect(element).toBeInTheDocument();
