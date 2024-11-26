@@ -3,6 +3,7 @@
 const plugin = require('tailwindcss/plugin');
 const themeColors = require(`./config/heal/themeColors.json`);
 const themeFonts = require(`./config/heal/themeFonts.json`);
+const { BackgroundImage } = require('@mantine/core');
 
 module.exports = {
   content: [
@@ -14,6 +15,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'carousel-gradient': 'linear-gradient(90.11deg, #532565 10.07%, #982568 30.02%, #981F32 49.97%, #BF362E 94.85%, #E07C3E 99.84%)',
+      },
       colors: {
         heal: {
           primary: '#99286B',
@@ -29,6 +33,7 @@ module.exports = {
           light_gray: '#DDDDDD',
           blue: '#0044B3',
           background: '#262663',
+          carousel: 'linear-gradient(90.11deg, #532565 10.07%, #982568 30.02%, #981F32 49.97%, #BF362E 94.85%, #E07C3E 99.84%)',
         },
         midrc: {
           secondary: '#421C52',
