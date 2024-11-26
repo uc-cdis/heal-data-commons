@@ -14,11 +14,26 @@ const CarouselBanner: React.FC = () => {
   return (
     <div
       data-testid="carousel-banner"
-      className="carousel-banner text-center p-4 bg-carousel-gradient h-28 overflow-visible px-[33%]"
+      className="carousel-banner text-center p-4 bg-carousel-gradient h-28 overflow-visible px-[33%] relative"
     >
       <Slide href='#' Icon={()=><IconHdd className='fill-current' />} text='View the latest studies who have shared their data!'/>
       <Slide href='#' Icon={()=><IconAnalyses className='fill-current' />} text='Explore example analyses!'/>
 
+
+{/* Controls Section */}
+<div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center space-x-4">
+        {/* Play/Pause Button */}
+        <button class="border-1 h-[16px] w-[16px] border-white rounded-full text-white hover:bg-gray-200 flex items-center justify-center">
+  ⏸
+</button>
+        {/* Slide Indicators */}
+        <div className="flex space-x-2">
+            <button
+              className='w-3 h-3 rounded-full bg-gray-400'
+            ></button>
+        </div>
+
+    </div>
     </div>
   );
 };
