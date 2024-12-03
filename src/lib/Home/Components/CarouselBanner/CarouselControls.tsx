@@ -26,6 +26,7 @@ const CarouselControls = ({
   return (
     <div
       className="
+            carousel-controls
             absolute bottom-4 left-1/2
             transform -translate-x-1/2
             flex items-center space-x-4
@@ -66,9 +67,8 @@ const CarouselControls = ({
                 h-3
                 rounded-full
                 hover:opacity-90
-                border border-white ${
-                  i === currentSlide ? 'bg-white' : 'bg-transparent'
-                }
+                border border-white
+                ${i === currentSlide ? 'bg-white' : 'bg-transparent'}
             `}
             onClick={() => {
               setCurrentSlide(i);

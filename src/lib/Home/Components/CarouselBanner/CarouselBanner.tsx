@@ -53,7 +53,6 @@ const CarouselBanner: React.FC = () => {
         ))}
       </div>
 
-      {/* Controls Section */}
       {!bannerOnly && (
         <CarouselControls
           isPlaying={isPlaying}
