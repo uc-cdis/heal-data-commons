@@ -82,6 +82,7 @@ const CarouselBanner: React.FC = () => {
           >
             {isPlaying ? '⏸' : '▶'}
           </button>
+
           {/* Slide Indicators */}
           <div className="flex space-x-2">
             {slideData.map((_, i) => (
@@ -95,7 +96,8 @@ const CarouselBanner: React.FC = () => {
                   hover:opacity-90
                   border border-white ${
                     i === currentSlide ? 'bg-white' : 'bg-transparent'
-                  }`}
+                  }
+                `}
                 onClick={() => {
                   setCurrentSlide(i);
                   setIsPlaying(false);

@@ -20,11 +20,11 @@
 
 /* CSS Classes for Animations */
 .current-slide {
-  animation: slideFromRight 1s ease-in-out forwards;
+  animation: slideFromRight .75s ease-in-out forwards;
 }
 
 .previous-slide {
-  animation: slideFromCenter 1s ease-in-out forwards;
+  animation: slideFromCenter .75s ease-in-out forwards;
 }
 
 .hidden-slide {

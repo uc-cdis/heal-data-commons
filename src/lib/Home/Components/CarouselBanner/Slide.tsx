@@ -18,8 +18,8 @@ const Slide: React.FC<SlideProps> = ({
   Icon,
   text,
 }: SlideProps) => {
-  // Function to determine the class name based on the current slide index
-  // used for sliding animations
+
+  // Determines the class name based on the current slide index for sliding animation
   const getSlideClassName = (i: number) => {
     if (currentSlide === i) {
       return styles['current-slide'];
@@ -31,7 +31,7 @@ const Slide: React.FC<SlideProps> = ({
   };
 
   return (
-    <div className={`absolute  ${getSlideClassName(iterator)}`}>
+    <div className={`absolute ${getSlideClassName(iterator)}`}>
       <a
         href={href}
         className="text-white flex group text-center mx-1 px-1 hover:underline"
@@ -40,15 +40,15 @@ const Slide: React.FC<SlideProps> = ({
           min-w-[32px] w-[32px]
           min-h-[32px] h-[32px]
           border-1
-         border-white rounded-full
-         flex items-center
-         justify-center
-         text-white">
+        border-white rounded-full
+          flex items-center
+          justify-center
+        text-white">
           <Icon className="fill-current" />
         </span>
         <span className="pl-3 pr-1  mt-1">{text}</span>
         <span className="mr-2">
-          <ArrowIconSVG className="inline-block fill-current mt-2 " />
+          <ArrowIconSVG className="inline-block fill-current mt-2" />
         </span>
       </a>
     </div>
