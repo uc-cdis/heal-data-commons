@@ -11,8 +11,11 @@
 
 @keyframes slideFromRight {
   0% {
-    display: block;
+    display: none;
     transform: translateX(9999px); /* Start from the right off-screen */
+  }
+  1% {
+    display: block;
   }
   100% {
     transform: translateX(0); /* Move to the center */
@@ -26,11 +29,9 @@
 
 .previous-slide {
   animation: slideFromCenter 2s forwards;
-  /* Hide the previous slide when animation ends */
 }
 
 .next-slide {
-  /* animation: slideRight 2s forwards; */
   display: none;
 }
 

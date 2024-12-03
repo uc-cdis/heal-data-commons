@@ -33,6 +33,7 @@ module.exports = {
           light_gray: '#DDDDDD',
           blue: '#0044B3',
           background: '#262663',
+          carousel_button: '#98203f',
           carousel: 'linear-gradient(90.11deg, #532565 10.07%, #982568 30.02%, #981F32 49.97%, #BF362E 94.85%, #E07C3E 99.84%)',
         },
         midrc: {
