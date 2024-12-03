@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { slideData } from './SlideData';
-
 import Slide from './Slide';
 
 const CarouselBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const slideDisplayTime = 5000;
-  const bannerOnly = slideData.length === 1; // render carousel like a banner if only one slide
+  const bannerOnly = slideData.length === 1; // used to render carousel as a banner if only one slide
 
   const togglePlayPause = () => {
     setIsPlaying((prevState) => !prevState);
@@ -43,7 +42,7 @@ const CarouselBanner: React.FC = () => {
       aria-live="polite"
       aria-label="Carousel banner displaying slide images"
     >
-      <div className="w-[100%] relative flex justify-center">
+      <div className="slide-container w-[100%] relative flex justify-center">
         {slideData.map((obj, i) => (
           <Slide
             key={i}
