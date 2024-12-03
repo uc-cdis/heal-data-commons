@@ -37,7 +37,7 @@ const CarouselBanner: React.FC = () => {
         px-[10%] md:px-[33%]
         relative"
       aria-live="polite"
-      aria-label="Carousel banner displaying slide images"
+      aria-label="Carousel banner displaying slides"
     >
       <div className="slide-container w-[100%] relative flex justify-center">
         {slideData.map((obj, i) => (
