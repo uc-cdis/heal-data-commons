@@ -7,7 +7,7 @@ const CarouselBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const slideDisplayTime = 5000;
-  const bannerOnly = slideData.length < 2;
+  const bannerOnly = slideData.length === 1; // render carousel like a banner if only one slide
 
   const togglePlayPause = () => {
     setIsPlaying((prevState) => !prevState);

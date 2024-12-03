@@ -4,18 +4,14 @@
     transform: translateX(0); /* Start at the center */
   }
   100% {
-    transform: translateX(-9999px); /* Move to the left off-screen */
+    transform: translateX(-100vw); /* Move to the left off-screen */
     display: none;
   }
 }
 
 @keyframes slideFromRight {
   0% {
-    display: none;
-    transform: translateX(9999px); /* Start from the right off-screen */
-  }
-  1% {
-    display: block;
+    transform: translateX(100vw); /* Start from the right off-screen */
   }
   100% {
     transform: translateX(0); /* Move to the center */
@@ -24,15 +20,11 @@
 
 /* CSS Classes for Animations */
 .current-slide {
-  animation: slideFromRight 1s forwards;
+  animation: slideFromRight 1s ease-in-out forwards;
 }
 
 .previous-slide {
-  animation: slideFromCenter 2s forwards;
-}
-
-.next-slide {
-  display: none;
+  animation: slideFromCenter 1s ease-in-out forwards;
 }
 
 .hidden-slide {

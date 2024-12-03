@@ -31,13 +31,14 @@ const Slide: React.FC<SlideProps> = ({
   };
 
   return (
-    <div className={`flex justify-center absolute  ${getSlideClassName(iterator)}`}>
+    <div className={`absolute  ${getSlideClassName(iterator)}`}>
       <a
         href={href}
         className="text-white flex group text-center mx-1 px-1 hover:underline"
       >
-        <span className="w-[32px]
-          h-[32px]
+        <span className="
+          min-w-[32px] w-[32px]
+          min-h-[32px] h-[32px]
           border-1
          border-white rounded-full
          flex items-center
