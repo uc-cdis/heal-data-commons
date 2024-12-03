@@ -3,7 +3,6 @@
 const plugin = require('tailwindcss/plugin');
 const themeColors = require(`./config/heal/themeColors.json`);
 const themeFonts = require(`./config/heal/themeFonts.json`);
-const { BackgroundImage } = require('@mantine/core');
 
 module.exports = {
   content: [

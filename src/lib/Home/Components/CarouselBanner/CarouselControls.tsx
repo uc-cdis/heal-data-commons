@@ -37,16 +37,10 @@ const CarouselControls = ({
       <button
         className={`
             ${!isPlaying && 'pb-[1px]'}
-            hover:opacity-90
-            h-[12px] w-[12px]
-          border-white
-            rounded-full
-            flex
-            items-center
-            justify-center
-          bg-white
-            text-xs
-          text-heal-carousel_button
+            hover:opacity-90 h-[12px] w-[12px]
+          border-white rounded-full flex
+            items-center justify-center bg-white
+            text-xs text-heal-carousel_button
         `}
         aria-label={isPlaying ? 'Pause carousel' : 'Play carousel'}
         onClick={() => {
@@ -64,11 +58,8 @@ const CarouselControls = ({
             key={i}
             aria-label={`Go to slide ${i + 1}`}
             className={`
-                w-3
-                h-3
-                rounded-full
-                hover:opacity-90
-                border border-white
+                w-3 h-3 rounded-full
+                hover:opacity-90 border border-white
                 ${i === currentSlide ? 'bg-white' : 'bg-transparent'}
             `}
             onClick={() => {

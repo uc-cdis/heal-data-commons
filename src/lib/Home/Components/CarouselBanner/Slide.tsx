@@ -39,11 +39,8 @@ const Slide: React.FC<SlideProps> = ({
           className="
           min-w-[32px] w-[32px]
           min-h-[32px] h-[32px]
-          border-1
-        border-white rounded-full
-          flex items-center
-          justify-center
-        text-white"
+          border-1 border-white rounded-full
+          flex items-center justify-center text-white"
         >
           <Icon className="fill-current" />
         </span>
