@@ -1,6 +1,5 @@
 import IconHdd from './../../Assets/Icons/Icon-Hdd.svg';
 import IconAnalyses from '../../Assets/Icons/Icon-Analyses.svg';
-import IconHelp from './../../Assets/Icons/Icon-Help.svg';
 
 export const slideData = [
   {
