@@ -36,7 +36,7 @@ const CarouselBanner: React.FC = () => {
         flex
         p-4
         bg-carousel-gradient
-        h-32 lg:h-28
+        h-36 lg:h-28
         overflow-hidden
         px-[10%] md:px-[33%]
         relative"

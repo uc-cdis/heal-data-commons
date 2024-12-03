@@ -23,7 +23,7 @@ const Slide: React.FC<SlideProps> = ({
   const getSlideClassName = (i: number) => {
     if (currentSlide === i) {
       return styles['current-slide'];
-    } else if (currentSlide === (i - 1 + numberOfSlides) % numberOfSlides) {
+    } else if ((currentSlide === (i + 1) % numberOfSlides)){
       return styles['previous-slide'];
     } else {
       return styles['hidden-slide'];

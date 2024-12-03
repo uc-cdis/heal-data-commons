@@ -8,7 +8,7 @@ export const slideData = [
     icon: IconHdd,
     text: 'View the latest studies who have shared their data!',
   },
-  {
+{
     href: 'https://www.aol.com/',
     icon: IconAnalyses,
     text: 'Explore example analyses!',
