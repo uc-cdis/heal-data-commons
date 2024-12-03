@@ -25,6 +25,7 @@ const CarouselControls = ({
 
   return (
     <div
+      data-testid="carousel-controls"
       className="
             carousel-controls
             absolute bottom-4 left-1/2

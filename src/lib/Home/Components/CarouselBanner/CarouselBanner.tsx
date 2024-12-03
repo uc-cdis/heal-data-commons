@@ -21,6 +21,14 @@ const CarouselBanner: React.FC = () => {
     return () => clearInterval(interval);
   }, [isPlaying, bannerOnly]);
 
+  if (slideData.length === 0 || 1 === 1) {
+    return (
+      <div className="text-center" data-testid="no-slides">
+        No slides available
+      </div>
+    );
+  }
+
   return (
     <div
       data-testid="carousel-banner"
