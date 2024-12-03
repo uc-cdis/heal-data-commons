@@ -1,0 +1,32 @@
+/* Keyframes for Slide Movement */
+@keyframes slideFromCenter {
+  0% {
+    transform: translateX(0); /* Start at the center */
+  }
+  100% {
+    transform: translateX(-100vw); /* Move to the left off-screen */
+    display: none;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100vw); /* Start from the right off-screen */
+  }
+  100% {
+    transform: translateX(0); /* Move to the center */
+  }
+}
+
+/* CSS Classes for Animations */
+.current-slide {
+  animation: slideFromRight .75s ease-in-out forwards;
+}
+
+.previous-slide {
+  animation: slideFromCenter .75s ease-in-out forwards;
+}
+
+.hidden-slide {
+  display: none;
+}
