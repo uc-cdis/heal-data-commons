@@ -9,18 +9,8 @@ export const slideData = [
     text: 'View the latest studies who have shared their data!',
   },
   {
-    href: 'https://www.aol.com/',
+    href: 'https://www.spacejam.com/1996/',
     icon: IconAnalyses,
     text: 'Explore example analyses!',
-  },
-  {
-    href: 'https://www.lycos.com/',
-    icon: IconHelp,
-    text: 'Look it is another slide!',
-  },
-  {
-    href: 'https://www.spacejam.com/1996/',
-    icon: IconHdd,
-    text: 'Look it is slide 4! And its copy is substantially longer. How very, very, interesting.',
   },
 ];
