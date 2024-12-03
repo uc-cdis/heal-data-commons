@@ -14,7 +14,7 @@ export const slideData = [
     text: 'Explore example analyses!',
   },
   {
-    href: 'https://www.angelfire.com/',
+    href: 'https://www.lycos.com/',
     icon: IconHelp,
     text: 'Look it is another slide!',
   },
