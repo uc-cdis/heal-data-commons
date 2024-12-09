@@ -1,7 +1,21 @@
 import React from 'react';
 import IconLinkArrow from './../../Assets/Icons/Icon-Link-Arrow.svg';
 
-const ResourceCallout: React.FC = ({ ResourceCalloutData }) => {
+interface ResourceCalloutLink {
+  title: string;
+  href: string;
+}
+
+interface ResourceCalloutProps {
+  ResourceCalloutData: {
+    title: string;
+    links: ResourceCalloutLink[];
+  };
+}
+
+const ResourceCallout: React.FC<ResourceCalloutProps> = ({
+  ResourceCalloutData,
+}) => {
   return (
     <div data-testid="resource-callout" className="rounded shadow text-left">
       <div
@@ -12,20 +26,25 @@ const ResourceCallout: React.FC = ({ ResourceCalloutData }) => {
       </div>
       <div className="p-4">
         <ul className="list-none">
-          {ResourceCalloutData.links.map((resourceLink, i) => (
-            <li className="flex items-center space-x-2 align-top pb-2" key={i}>
-              <span className="mr-1">
-                <IconLinkArrow />
-              </span>
-              <a
-                href={resourceLink.href}
-                className="text-heal-blue underline
-                decoration-solid hover:text-heal-magenta"
+          {ResourceCalloutData.links.map(
+            (resourceLink: ResourceCalloutLink, i: number) => (
+              <li
+                className="flex items-center space-x-2 align-top pb-2"
+                key={i}
               >
-                {resourceLink.title}
-              </a>
-            </li>
-          ))}
+                <span className="mr-1">
+                  <IconLinkArrow />
+                </span>
+                <a
+                  href={resourceLink.href}
+                  className="text-heal-blue underline
+                decoration-solid hover:text-heal-magenta"
+                >
+                  {resourceLink.title}
+                </a>
+              </li>
+            ),
+          )}
         </ul>
       </div>
     </div>
