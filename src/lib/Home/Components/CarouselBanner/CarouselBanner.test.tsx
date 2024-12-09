@@ -37,7 +37,7 @@ describe('CarouselBanner', () => {
 
   test('does not render CarouselControls when there is only one slide', () => {
     // Mock the slideData to simulate a single slide
-    jest.mock('./SlideData', () => ({
+    jest.mock('../../../../../config/heal/home/SlideData', () => ({
       slideData: [{ href: '#slide1', icon: () => <div />, text: 'Slide 1' }],
     }));
     render(<CarouselBanner />);
