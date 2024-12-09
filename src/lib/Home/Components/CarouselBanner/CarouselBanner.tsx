@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { slideData } from './SlideData';
+import { slideData } from '../../../../../config/heal/home/SlideData';
 import Slide from './Slide';
 import CarouselControls from './CarouselControls';
 

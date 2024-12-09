@@ -12,7 +12,7 @@ jest.mock('./CarouselControls', () => {
 });
 
 // Mock the slideData import
-jest.mock('./SlideData', () => ({
+jest.mock('../../../../../config/heal/home/SlideData', () => ({
   slideData: [
     { href: '#slide1', icon: () => <div />, text: 'Slide 1' },
     { href: '#slide2', icon: () => <div />, text: 'Slide 2' },
