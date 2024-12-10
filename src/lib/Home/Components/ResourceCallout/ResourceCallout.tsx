@@ -1,20 +1,20 @@
 import React from 'react';
 import IconLinkArrow from './../../Assets/Icons/Icon-Link-Arrow.svg';
 
-interface ResourceCalloutLink {
+interface resourceCalloutLink {
   title: string;
   href: string;
 }
 
-interface ResourceCalloutProps {
-  ResourceCalloutData: {
+interface resourceCalloutProps {
+  resourceCalloutData: {
     title: string;
-    links: ResourceCalloutLink[];
+    links: resourceCalloutLink[];
   };
 }
 
-const ResourceCallout: React.FC<ResourceCalloutProps> = ({
-  ResourceCalloutData,
+const ResourceCallout: React.FC<resourceCalloutProps> = ({
+  resourceCalloutData,
 }) => {
   return (
     <div
@@ -25,20 +25,19 @@ const ResourceCallout: React.FC<ResourceCalloutProps> = ({
         data-testid="resource-callout-header"
         className="bg-heal-magenta text-white h-15 rounded-t text-xl font-bold p-4"
       >
-        {ResourceCalloutData.title}
+        {resourceCalloutData.title}
       </div>
       <div className="p-4">
         <ul className="list-none">
-          {ResourceCalloutData.links.map(
-            (resourceLink: ResourceCalloutLink, i: number) => (
+          {resourceCalloutData.links.map(
+            (resourceLink: resourceCalloutLink, i: number) => (
               <li className="flex space-x-2 align-top pb-2" key={i}>
                 <span className="mr-1 pt-2">
                   <IconLinkArrow />
                 </span>
                 <a
                   href={resourceLink.href}
-                  className="text-heal-blue underline
-                    decoration-solid hover:text-heal-magenta"
+                  className="text-heal-blue underline hover:text-heal-magenta"
                 >
                   {resourceLink.title}
                 </a>
