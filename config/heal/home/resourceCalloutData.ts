@@ -43,7 +43,7 @@ export const resourceCalloutsData = [
       {
         title:
           'Watch tutorial videos to learn how to interact with the HEAL Platform',
-        href: 'https://www.spacejam.com/1996cmp/behind/behindframes.html',
+        href: 'https://www.spacejam.com/1996/cmp/behind/behindframes.html',
       },
     ],
   },
