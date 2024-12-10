@@ -12,10 +12,10 @@ const QuickLinks: React.FC = () => {
         Quick Links
       </div>
       <div className="flex flex-wrap">
-        <div className="pt-4 px-5 md:px-0 md:w-1/2 md:pr-2">
+        <div className="w-full pt-4 px-5 md:px-0 md:w-1/2 md:pr-2">
           <ResourcesCallout resourceCalloutData={resourceCalloutsData[0]} />
         </div>
-        <div className="pt-4 px-5 md:px-0 md:w-1/2 md:pl-2">
+        <div className="w-full pt-4 px-5 md:px-0 md:w-1/2 md:pl-2">
           <ResourcesCallout resourceCalloutData={resourceCalloutsData[1]} />
         </div>
       </div>
