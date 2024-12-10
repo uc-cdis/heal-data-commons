@@ -31,8 +31,8 @@ const ResourceCallout: React.FC<resourceCalloutProps> = ({
         <ul className="list-none">
           {resourceCalloutData.links.map(
             (resourceLink: resourceCalloutLink, i: number) => (
-              <li className="flex space-x-2 align-top pb-2" key={i}>
-                <span className="mr-1 pt-2" data-testid="icon-link-arrow">
+              <li key={i} className="flex space-x-2 align-top pb-2">
+                <span data-testid="icon-link-arrow" className="mr-1 pt-2">
                   <IconLinkArrow />
                 </span>
                 <a

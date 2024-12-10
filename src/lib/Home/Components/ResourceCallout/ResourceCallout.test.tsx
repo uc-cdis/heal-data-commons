@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import ResourceCallout from './ResourceCallout'; // Adjust the import path as needed
+import ResourceCallout from './ResourceCallout';
 
 const mockData = {
   title: 'Test Resources',
