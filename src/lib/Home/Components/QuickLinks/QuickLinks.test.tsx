@@ -8,5 +8,7 @@ describe('Quicklinks Component', () => {
     render(<QuickLinks />);
     const element = screen.getByTestId('quick-links');
     expect(element).toBeInTheDocument();
+    const resourceCallouts = screen.getAllByTestId('resource-callout');
+    expect(resourceCallouts.length).toBe(2);
   });
 });
