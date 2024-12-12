@@ -17,7 +17,7 @@ const SelectCohort = ({
   };
   return (
     <React.Fragment>
-      <div data-tour="cohort-search" className="GWASUI-row cohort-table-search">
+      <div data-tour="cohort-search" className="flex justify-between w-full">
         <div className="GWASUI-column">
           <SearchBar
             searchTerm={cohortSearchTerm}

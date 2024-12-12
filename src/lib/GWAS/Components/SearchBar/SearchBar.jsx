@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { SearchOutlined } from '@ant-design/icons';
+import { TextInput } from '@mantine/core';
+import { IconSearch } from '@tabler/icons-react';
 
 const SearchBar = ({ searchTerm, handleSearch, field = 'variable name' }) => (
-  <div data-tour="search-bar" className="GWASUI-searchContainer">
+  <div data-tour="search-bar" className="GWASUI-searchContainer pr-4">
     <div>
-      <input
-        className="GWASUI-searchInput"
+      <TextInput
+        className="GWASUI-searchInput text-sm"
         type="text"
+        rightSection={<IconSearch />}
         placeholder={`Search by ${field}...`}
         value={searchTerm}
         onChange={(e) => handleSearch(e.target.value)}
       />
-      🔎
     </div>
   </div>
 );

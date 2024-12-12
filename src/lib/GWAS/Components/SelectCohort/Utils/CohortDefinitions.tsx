@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 // import { useQuery } from 'react-query';
 // import { Table, Spin, Radio } from 'antd';
-import { Loader } from '@mantine/core';
+import { IconDatabaseOff } from '@tabler/icons-react';
+import { Loader, Table, Pagination, Radio } from '@mantine/core';
 
 // import { fetchCohortDefinitions } from '../../../Utils/cohortMiddlewareApi';
 // import queryConfig from '../../../../SharedUtils/QueryConfig';
@@ -18,13 +19,17 @@ const CohortDefinitions = ({
 }) => {
   // State to manage selected row (only one row at a time)
   const [selectedRow, setSelectedRow] = useState(null);
+  const [page, setPage] = useState(1); // Track current page
+  const rowsPerPage = 10; // Number of rows to show per page
 
   // Handle row click
+  /*
   const handleRowSelection = (rowKey: string) => {
     setSelectedRow((prevSelectedRow) =>
       prevSelectedRow === rowKey ? null : rowKey,
     );
   };
+  */
   // const { source } = useSourceContext();
 
   /*
@@ -57,9 +62,18 @@ const CohortDefinitions = ({
       size: 80,
     },
   ];
-  const fetchedCohorts = useFetch(cohorts, 'cohort_definitions_and_stats');
-  const displayedCohorts = useFilter(fetchedCohorts, searchTerm, 'cohort_name');
+  // const fetchedCohorts = useFetch(cohorts, 'cohort_definitions_and_stats');
+  let displayedCohorts = useFilter(cohorts, searchTerm, 'cohort_name');
+  displayedCohorts = displayedCohorts.slice(
+    (page - 1) * rowsPerPage,
+    page * rowsPerPage,
+  );
 
+  const handleSelectCohort = (cohortId) => {
+    setSelectedCohort(cohortId);
+  };
+
+  /*
   const cohortSelection = (inputSelectedCohort) => ({
     type: 'radio',
     columnTitle: 'Select',
@@ -70,12 +84,15 @@ const CohortDefinitions = ({
       handleCohortSelect(selectedRows[0]);
     },
     renderCell: (checked, record) => null,
-    /*      <Radio
+
+    */
+  /*      <Radio
         checked={checked}
         value={record.cohort_definition_id}
         aria-label={'Row action: study population selection'}
-      /> */
-  });
+      />
+  });*/
+  /*
   const cohortTableConfig = [
     {
       title: 'Cohort Name',
@@ -88,6 +105,7 @@ const CohortDefinitions = ({
       key: 'size',
     },
   ];
+  */
   if (cohorts?.status === 'error')
     return <React.Fragment>Error getting data for table</React.Fragment>;
 
@@ -95,6 +113,7 @@ const CohortDefinitions = ({
 
   return cohorts?.status === 'success' ? (
     <>
+      {/*}
       <DataTable
         striped
         highlightOnHover
@@ -113,6 +132,56 @@ const CohortDefinitions = ({
           onChange: (keys) => setSelectedRow(keys[0] || null),
         }}
       />
+      */}
+      {/* VANILLA TABLE */}
+      <div className="w-full min-h-[200px] py-5">
+        {displayedCohorts?.length > 0 ? (
+          <Table>
+            <Table.Thead>
+              <Table.Tr>
+                <Table.Th>Select</Table.Th>
+                <Table.Th>Cohort Name</Table.Th>
+                <Table.Th>Size</Table.Th>
+              </Table.Tr>
+            </Table.Thead>
+            <Table.Tbody>
+              {displayedCohorts.map((cohort, i) => (
+                <Table.Tr key={i}>
+                  <Table.Td>
+                    <Radio
+                      value={cohort.cohort_definition_id}
+                      checked={selectedCohort === cohort.cohort_definition_id}
+                      onChange={() =>
+                        handleCohortSelect(cohort.cohort_definition_id)
+                      }
+                      name="cohort-selection"
+                    />
+                  </Table.Td>
+                  <Table.Td>{cohort.cohort_name}</Table.Td>
+                  <Table.Td>{cohort.size}</Table.Td>
+                </Table.Tr>
+              ))}
+            </Table.Tbody>
+          </Table>
+        ) : (
+          <div className="flex flex-col items-center justify-center py-10">
+            <div>
+              <IconDatabaseOff />
+            </div>
+            <div>No Data</div>
+          </div>
+        )}
+
+        <Pagination
+          className="pt-5 flex justify-end"
+          value={page}
+          onChange={setPage}
+          total={Math.ceil(cohorts.length / rowsPerPage)} // Calculate total pages
+          color="blue"
+          size="md"
+          withEdges
+        />
+      </div>
     </>
   ) : (
     /*    <Table

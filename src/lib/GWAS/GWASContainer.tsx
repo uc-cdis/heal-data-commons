@@ -124,16 +124,19 @@ const GWASContainer = () => {
           });
         }}
       /> */}
-      <div className="GWASApp">
-        <Group className="steps-wrapper">
+      <div data-testid="GWASApp" className="p-4">
+        <div className="steps-wrapper">
           <div className="steps-content">
-            <Group align={'center'}>{generateStep()}</Group>
+            <Group justify={'center'}>{generateStep()}</Group>
           </div>
-          <div className="steps-action">
+          <div
+            className="flex justify-between w-full"
+            data-testid="steps-action"
+          >
             <Button
               className="GWASUI-navBtn GWASUI-navBtn__next"
               onClick={() => {
-                alert('clicked');
+                alert('Next!');
                 // dispatch({ type: ACTIONS.DECREMENT_CURRENT_STEP });
               }}
               disabled={state.currentStep < 1}
@@ -156,7 +159,7 @@ const GWASContainer = () => {
             )}
           </div>
           {/* <MakeFullscreenButton /> */}
-        </Group>
+        </div>
       </div>
     </>
   );

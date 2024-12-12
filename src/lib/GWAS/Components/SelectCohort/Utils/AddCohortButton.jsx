@@ -5,7 +5,6 @@ import { atlasDomain } from '../../../Utils/cohortMiddlewareApi';
 const AddCohortButton = () => (
   <Button
     data-tour="cohort-add"
-    type="button"
     onClick={() => window.open(atlasDomain(), '_blank')}
   >
     Add New Cohort

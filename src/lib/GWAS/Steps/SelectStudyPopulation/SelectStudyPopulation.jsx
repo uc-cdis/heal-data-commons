@@ -17,7 +17,6 @@ const SelectStudyPopulation = ({
 
   return (
     <div data-tour="cohort-select">
-      <h1>Select Study Population</h1>
       <SelectCohort
         selectedCohort={selectedCohort}
         handleCohortSelect={handleStudyPopulationSelect}
