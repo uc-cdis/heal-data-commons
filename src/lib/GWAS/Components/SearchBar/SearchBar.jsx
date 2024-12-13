@@ -4,17 +4,19 @@ import { TextInput } from '@mantine/core';
 import { IconSearch } from '@tabler/icons-react';
 
 const SearchBar = ({ searchTerm, handleSearch, field = 'variable name' }) => (
-  <div data-tour="search-bar" className="GWASUI-searchContainer pr-4">
-    <div>
-      <TextInput
-        className="GWASUI-searchInput text-sm"
-        type="text"
-        rightSection={<IconSearch />}
-        placeholder={`Search by ${field}...`}
-        value={searchTerm}
-        onChange={(e) => handleSearch(e.target.value)}
-      />
-    </div>
+  <div data-tour="search-bar" className="text-sm w-64">
+    <TextInput
+      type="text"
+      rightSection={<IconSearch size={16} />}
+      placeholder={`Search by ${field}...`}
+      value={searchTerm}
+      onChange={(e) => handleSearch(e.target.value)}
+      styles={{
+        placeholder: {
+          fontSize: '10px',
+        },
+      }}
+    />
   </div>
 );
 

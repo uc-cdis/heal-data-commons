@@ -1,21 +1,22 @@
-/*
 import React, { useState, useEffect } from 'react';
-import Button from '@gen3/ui-component/dist/components/Button';
-import FullscreenClassNames from './FullscreenClassNames';
-import './MakeFullscreenButton.css';
+import FullscreenSelectors from './FullscreenSelectors';
+import { Button } from '@mantine/core';
+import { IconBrowserMaximize, IconArrowLeft } from '@tabler/icons-react';
+
+type DisplayValue = 'none' | 'block';
 
 const MakeFullscreenButton = () => {
   const [analysisIsFullscreen, setAnalysisIsFullscreen] = useState(false);
 
-  const setElementsDisplay = (selector, displayValue) => {
+  const setElementsDisplay = (selector: string, displayValue: DisplayValue) => {
     document.querySelectorAll(selector).forEach((element) => {
-      const temporaryElement = element;
+      const temporaryElement = element as HTMLElement;
       temporaryElement.style.display = displayValue;
     });
   };
 
-  const HideShowElementsForFullscreen = (displayValue) => {
-    FullscreenClassNames.forEach((selector) => {
+  const HideShowElementsForFullscreen = (displayValue: DisplayValue) => {
+    FullscreenSelectors.forEach((selector) => {
       setElementsDisplay(selector, displayValue);
     });
   };
@@ -33,18 +34,24 @@ const MakeFullscreenButton = () => {
   // Reset any hidden elements when leaving the app
   useEffect(() => () => HideShowElementsForFullscreen('block'), []);
   return (
-    <div className='make-full-screen-button'>
+    <div
+      data-testid="make-full-screen-button"
+      className="flex justify-center pt-8"
+    >
       <Button
-        className='analysis-app__button'
         onClick={handleFullscreenButtonClick}
-        label={analysisIsFullscreen ? 'Exit Fullscreen' : 'Make Fullscreen'}
-        buttonType='secondary'
-        rightIcon={analysisIsFullscreen ? 'back' : 'external-link'}
-      />
+        rightSection={
+          analysisIsFullscreen ? (
+            <IconArrowLeft size={16} />
+          ) : (
+            <IconBrowserMaximize size={16} />
+          )
+        }
+      >
+        {analysisIsFullscreen ? 'Exit Fullscreen' : 'Make Fullscreen'}
+      </Button>
     </div>
   );
 };
 
 export default MakeFullscreenButton;
-
-*/

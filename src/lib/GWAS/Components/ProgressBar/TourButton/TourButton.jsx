@@ -1,14 +1,13 @@
-/*
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'antd';
-import { useTour } from '@reactour/tour';
-import TourSteps from './TourSteps';
+// import { useTour } from '@reactour/tour';
+// import TourSteps from './TourSteps';
+import { Button } from '@mantine/core';
 
 const TourButton = ({ currentStep, selectionMode }) => {
-  const { setIsOpen, setSteps } = useTour();
+  // const { setIsOpen, setSteps } = useTour();
 
-  useEffect(() => {
+  /*   useEffect(() => {
     if (selectionMode === 'continuous' && currentStep === 1) {
       setSteps(TourSteps[1.1]);
     } else if (selectionMode === 'dichotomous' && currentStep === 1) {
@@ -20,10 +19,15 @@ const TourButton = ({ currentStep, selectionMode }) => {
     } else {
       setSteps(TourSteps[currentStep]);
     }
-  }, [currentStep, selectionMode]);
+  }, [currentStep, selectionMode]); */
 
   return (
-    <Button onClick={() => setIsOpen(true)}>New to GWAS? Get started here!</Button>
+    /*     <Button onClick={() => setIsOpen(true)}>
+      New to GWAS? Get started here!
+    </Button> */
+    <Button variant="default" onClick={() => alert('Coming soon.')}>
+      New to GWAS? Get started here!
+    </Button>
   );
 };
 
@@ -33,5 +37,3 @@ TourButton.propTypes = {
 };
 
 export default TourButton;
-
-*/

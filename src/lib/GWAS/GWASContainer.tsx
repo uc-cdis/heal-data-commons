@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
 import { Group, Button } from '@mantine/core';
-// import ProgressBar from './Components/ProgressBar/ProgressBar';
+import ProgressBar from './Components/ProgressBar/ProgressBar';
 import { GWASAppSteps, checkFinalPopulationSizeZero } from './Utils/constants';
 // import { SourceContextProvider } from './Utils/Source';
 import reducer from './Utils/StateManagement/reducer';
@@ -11,7 +11,7 @@ import SelectStudyPopulation from './Steps/SelectStudyPopulation/SelectStudyPopu
 // import SelectOutcome from './Steps/SelectOutcome/SelectOutcome';
 // import SelectCovariates from './Steps/SelectCovariates/SelectCovariates';
 // import DismissibleMessagesList from './Components/DismissibleMessagesList/DismissibleMessagesList';
-// import MakeFullscreenButton from './Components/MakeFullscreenButton/MakeFullscreenButton';
+import MakeFullscreenButton from './Components/MakeFullscreenButton/MakeFullscreenButton';
 import InitializeCurrentState from './Utils/StateManagement/InitializeCurrentState';
 // import WorkflowLimitsDashboard from '../SharedUtils/WorkflowLimitsDashboard/WorkflowLimitsDashboard';
 // import './GWASApp.css';
@@ -24,7 +24,7 @@ const GWASContainer = () => {
     switch (state.currentStep) {
       case 0:
         return (
-          <div data-tour="cohort-intro">
+          <div data-tour="cohort-intro" className="min-w-[500px]">
             <SelectStudyPopulation
               selectedCohort={state.selectedStudyPopulationCohort}
               dispatch={dispatch}
@@ -105,11 +105,12 @@ const GWASContainer = () => {
 
   return (
     <>
-      {/* <SourceContextProvider>  <WorkflowLimitsDashboard />
       <ProgressBar
         currentStep={state.currentStep}
         selectionMode={state.selectionMode}
       />
+      {/* <SourceContextProvider>  <WorkflowLimitsDashboard />
+
       <AttritionTableWrapper
         covariates={state.covariates}
         selectedCohort={state.selectedStudyPopulationCohort}
@@ -158,7 +159,7 @@ const GWASContainer = () => {
               </Button>
             )}
           </div>
-          {/* <MakeFullscreenButton /> */}
+          <MakeFullscreenButton />
         </div>
       </div>
     </>

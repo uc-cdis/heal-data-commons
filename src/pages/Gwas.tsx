@@ -9,6 +9,8 @@ import GWASContainer from '@/lib/GWAS/GWASContainer';
 import { MantineProvider, createTheme, Button } from '@mantine/core';
 
 const theme = createTheme({
+  /*
+  // EXAMPLE  OF HOW TO SET DEFAULT PROPS FOR A COMPONENT
   components: {
     Button: Button.extend({
       defaultProps: {
@@ -17,6 +19,7 @@ const theme = createTheme({
       },
     }),
   },
+  */
   colors: {
     // See here: https://mantine.dev/colors-generator/?color=2e77b8
     primary: [
@@ -46,7 +49,7 @@ const Gwas = ({ headerProps, footerProps }: NavPageLayoutProps) => {
           key: 'Gwas',
         }}
       >
-        <div className="w-full">
+        <div className="w-full p-5">
           <GWASContainer />
         </div>
       </NavPageLayout>

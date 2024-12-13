@@ -9,6 +9,7 @@ const SelectStudyPopulation = ({
   selectedTeamProject,
 }) => {
   const handleStudyPopulationSelect = (selectedRow) => {
+    console.log('called handleStudyPopulationSelect', selectedRow);
     dispatch({
       type: ACTIONS.SET_SELECTED_STUDY_POPULATION_COHORT,
       payload: selectedRow,

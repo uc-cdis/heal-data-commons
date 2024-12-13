@@ -15,6 +15,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        vadc: {
+          primary: '#2e77b8',
+          secondary: '#2466ac',
+          slate_blue: '#e9eef2',
+          border: '#dedede',
+          alternate_row: '#fafafb',
+          gold: '#ef8523',
+        },
         heal: {
           primary: '#99286B',
           secondary: '#402264',
@@ -60,7 +68,7 @@ module.exports = {
       fontFamily: {
         heading: themeFonts.heading,
         content: themeFonts.content,
-        sans: ['Montserrat', 'sans-serif'],
+        sans: ['Source Sans Pro', 'sans-serif'],
       },
       fontSize: {
         tiny: '0.625rem',
