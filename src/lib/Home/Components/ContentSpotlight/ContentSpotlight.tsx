@@ -2,6 +2,7 @@ import React from 'react';
 import HealButtonLink from '../HealButtonLink/HealButtonLink';
 import Image from 'next/image';
 import search from './../../Assets/Images/Search.webp';
+
 const ContentSpotlight: React.FC = () => {
   return (
     <div
@@ -20,7 +21,6 @@ const ContentSpotlight: React.FC = () => {
           <div className="font-bold text-heal-magenta text-2xl pb-6">
             HEAL Semantic Search
           </div>
-
           <p className="text-md mb-8 leading-relaxed">
             The NIH HEAL Initiative also provides HEAL Semantic Search, a
             complementary tool to use with the HEAL Data Platform. HEAL Semantic
