@@ -8,8 +8,6 @@ jobs:
       - uses: actions/setup-node@v3.4.1
         with:
           node-version: 20.11.0
-      - name: install npm version
-        run: npm install -g npm
       - name: Get Version
         run: npm -v
       - name: Install modules
