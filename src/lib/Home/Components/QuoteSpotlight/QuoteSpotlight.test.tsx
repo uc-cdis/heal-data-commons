@@ -2,10 +2,15 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import QuoteSpotlight from './QuoteSpotlight';
+import { MantineProvider } from '@mantine/core';
 
-describe('PhotoDivider Component', () => {
-  test('renders the PhotoDivider component', () => {
-    render(<QuoteSpotlight />);
+describe('QuoteSpotlight Component', () => {
+  test('renders the QuoteSpotlight component', () => {
+    render(
+      <MantineProvider>
+        <QuoteSpotlight />
+      </MantineProvider>,
+    );
     const element = screen.getByTestId('quote-spotlight');
     expect(element).toBeInTheDocument();
   });
