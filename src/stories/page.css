@@ -22,8 +22,8 @@
 }
 
 .storybook-page a {
-  color: #1ea7fd;
-  text-decoration: none;
+  color: darkblue;
+  text-decoration: underline;
 }
 
 .storybook-page ul {
@@ -42,7 +42,7 @@
   border-radius: 1em;
   background: #e7fdd8;
   padding: 4px 12px;
-  color: #66bf3c;
+  color: darkgreen;
   font-weight: 700;
   font-size: 11px;
   line-height: 12px;
