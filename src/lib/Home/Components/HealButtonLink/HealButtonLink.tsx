@@ -10,6 +10,7 @@ interface ButtonLinkProps {
 const HealButtonLink: React.FC<ButtonLinkProps> = ({ href, label }) => {
   return (
     <a
+      role="button"
       href={href}
       className={`
         heal-button-link
