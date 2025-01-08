@@ -2,7 +2,9 @@ import React from 'react';
 import ArrowIconSVG from '../../Assets/Icons/Icon-Arrow.svg';
 
 interface ButtonLinkProps {
+  /** HREF for Button Link */
   href: string;
+  /** Button Text */
   label: string;
 }
 
