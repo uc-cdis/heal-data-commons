@@ -3,6 +3,7 @@ import HealButtonLink from '../HealButtonLink/HealButtonLink';
 import Image from 'next/image';
 import search from './../../Assets/Images/Search.webp';
 
+/** UI component for highlighting content */
 const ContentSpotlight: React.FC = () => {
   return (
     <div

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, userEvent, within, spyOn, fireEvent } from '@storybook/test';
+import { expect, within, fireEvent } from '@storybook/test';
 
 import ContentSpotlight from './ContentSpotlight';
 
@@ -10,9 +10,6 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-// export const Default: Story = {};
-
 // More on interaction testing: https://storybook.js.org/docs/writing-tests/interaction-testing
 export const Default: Story = {
   play: async ({ canvasElement }) => {

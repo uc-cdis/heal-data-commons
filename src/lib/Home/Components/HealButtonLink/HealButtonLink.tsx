@@ -3,7 +3,9 @@ import React from 'react';
 import ArrowIconSVG from '../../../../../public/icons/HealIcons/Icon-Arrow.svg';
 
 interface ButtonLinkProps {
+  /** HREF for Button Link */
   href: string;
+  /** Button Text */
   label: string;
 }
 
