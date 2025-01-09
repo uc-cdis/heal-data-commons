@@ -3,6 +3,7 @@ import { slideData } from '../../../../../config/heal/home/SlideData';
 import Slide from './Slide';
 import CarouselControls from './CarouselControls';
 
+/** Carousel Component that uses imported slide data */
 const CarouselBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -24,6 +25,7 @@ const CarouselBanner: React.FC = () => {
   return (
     <div
       data-testid="carousel-banner"
+      role="region"
       className="
         carousel-banner
         left-1/2
