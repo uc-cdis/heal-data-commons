@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { expect, within } from '@storybook/test';
+import { MantineProvider } from '@mantine/core';
 import QuoteSpotlight from './QuoteSpotlight';
 
 const meta = {
@@ -13,12 +14,13 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
+    const quote = canvas.getByRole('blockquote');
+    expect(quote).toBeInTheDocument();
+
     const testIds = ['quote-spotlight', 'citation'];
     testIds.forEach((id) => {
       const currEle = canvas.getByTestId(id);
       expect(currEle).toBeInTheDocument();
     });
-    const citation = canvas.getByTestId('citation');
-    expect(citation).toBeInTheDocument();
   },
 };
