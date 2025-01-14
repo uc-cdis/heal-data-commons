@@ -8,8 +8,8 @@ describe('HealButtonLink', () => {
 
     render(<HealButtonLink href={href} label={label} />);
 
-    const linkElement = screen.getByRole('link', { name: label });
-    expect(linkElement).toHaveAttribute('href', href);
+    const buttonElement = screen.getByRole('button', { name: label });
+    expect(buttonElement).toHaveAttribute('href', href);
 
     const labelElement = screen.getByText(label);
     expect(labelElement).toBeInTheDocument();
