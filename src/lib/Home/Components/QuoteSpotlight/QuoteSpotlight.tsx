@@ -2,6 +2,7 @@ import React from 'react';
 import { BackgroundImage } from '@mantine/core';
 import Background from '../../Assets/Images/background.webp';
 
+/** UI component for displaying a quote and attribution */
 const QuoteSpotlight: React.FC = () => {
   return (
     <div data-testid="quote-spotlight" className="text-center mt-4 text-white">
@@ -14,7 +15,7 @@ const QuoteSpotlight: React.FC = () => {
             “Data are both a product of research, and also an engine for new
             discovery.”
           </blockquote>
-          <cite className="sm:text-sm text-base px-6 ">
+          <cite data-testid="citation" className="sm:text-sm text-base px-6 ">
             Rebecca G. Baker, Ph.D., former Director of the NIH HEAL
             Initiative®
           </cite>
