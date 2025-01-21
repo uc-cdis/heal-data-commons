@@ -11,26 +11,28 @@ import QuickLinks from '../lib/Home/Components/QuickLinks/QuickLinks';
 import PhotoDivider from '../lib/Home/Components/PhotoDivider/PhotoDivider';
 import ContentSpotlight from '../lib/Home/Components/ContentSpotlight/ContentSpotlight';
 import QuoteSpotlight from '../lib/Home/Components/QuoteSpotlight/QuoteSpotlight';
+import HealHeader from '@/lib/HealNav/HealHeader';
 
 const HealLandingPage = ({ headerProps, footerProps }: NavPageLayoutProps) => {
   return (
-    <NavPageLayout
+    /*     <NavPageLayout
       {...{ headerProps, footerProps }}
       headerData={{
         title: 'Heal Landing Page',
         content: 'Heal Landing Page',
         key: 'heal-landing-page',
       }}
-    >
-      <div className="w-full">
-        <Hero />
-        <CarouselBanner />
-        <QuickLinks />
-        <PhotoDivider />
-        <ContentSpotlight />
-        <QuoteSpotlight />
-      </div>
-    </NavPageLayout>
+    > */
+    <div className="w-full">
+      <HealHeader />
+      <Hero />
+      <CarouselBanner />
+      <QuickLinks />
+      <PhotoDivider />
+      <ContentSpotlight />
+      <QuoteSpotlight />
+    </div>
+    /*     </NavPageLayout> */
   );
 };
 

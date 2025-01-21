@@ -1,4 +1,4 @@
-import ArrowIconSVG from '../../Assets/Icons/Icon-Arrow.svg';
+import ArrowIconSVG from '../../../../../public/icons/HealIcons/Icon-Arrow.svg';
 import styles from './CarouselAnimations.module.css';
 
 type SlideProps = {
