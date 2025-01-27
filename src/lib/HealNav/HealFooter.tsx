@@ -2,6 +2,7 @@ import Image from 'next/image';
 import gen3Logo from '../../../public/images/gen3.png';
 import ctdsLogo from '../../../public/images/ctds-logo.png';
 import footerNihLogo from '../../../public/images/footer-nih-logo.png';
+
 const HealFooter: React.FC = () => {
   return (
     <div
