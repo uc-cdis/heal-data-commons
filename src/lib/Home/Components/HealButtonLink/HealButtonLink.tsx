@@ -2,13 +2,16 @@ import React from 'react';
 import ArrowIconSVG from '../../Assets/Icons/Icon-Arrow.svg';
 
 interface ButtonLinkProps {
+  /** HREF for Button Link */
   href: string;
+  /** Button Text */
   label: string;
 }
 
 const HealButtonLink: React.FC<ButtonLinkProps> = ({ href, label }) => {
   return (
     <a
+      role="button"
       href={href}
       className={`
         heal-button-link

@@ -2,6 +2,7 @@ import React from 'react';
 import ResourcesCallout from '../ResourceCallout/ResourceCallout';
 import { resourceCalloutsData } from '../../../../../config/heal/home/resourceCalloutData';
 
+/** Component for sharing groups of links in resource callouts */
 const QuickLinks: React.FC = () => {
   return (
     <div

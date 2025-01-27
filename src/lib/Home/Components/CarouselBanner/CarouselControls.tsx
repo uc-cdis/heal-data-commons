@@ -42,6 +42,7 @@ const CarouselControls = ({
             items-center justify-center bg-white
             text-xs text-heal-carousel_button
         `}
+        data-testid="play-pause-button"
         aria-label={isPlaying ? 'Pause carousel' : 'Play carousel'}
         onClick={() => {
           togglePlayPause();

@@ -2,17 +2,21 @@ import React from 'react';
 import IconLinkArrow from './../../Assets/Icons/Icon-Link-Arrow.svg';
 
 interface resourceCalloutLink {
+  /** Each Link contains a title */
   title: string;
+  /** Each Link contains a href */
   href: string;
 }
 
 interface resourceCalloutProps {
+  /** Resource Callout Data is an object with a title and array of links with titles and hrefs */
   resourceCalloutData: {
     title: string;
     links: resourceCalloutLink[];
   };
 }
 
+/** Used to display groups of links in the Quick Links Component */
 const ResourceCallout: React.FC<resourceCalloutProps> = ({
   resourceCalloutData,
 }) => {
