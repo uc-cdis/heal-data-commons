@@ -15,7 +15,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'carousel-gradient': 'linear-gradient(90.11deg, #532565 10.07%, #982568 30.02%, #981F32 49.97%, #BF362E 94.85%, #E07C3E 99.84%)',
+        'carousel-gradient':
+          'linear-gradient(90.11deg, #532565 10.07%, #982568 30.02%, #981F32 49.97%, #BF362E 94.85%, #E07C3E 99.84%)',
       },
       colors: {
         heal: {
@@ -31,7 +32,9 @@ module.exports = {
           medium_gray: '#818A91',
           light_gray: '#DDDDDD',
           blue: '#0044B3',
+          blue_accent: '#81C5FF',
           background: '#262663',
+          dark_background: '#111111',
           carousel_button: '#98203f',
         },
         midrc: {

@@ -3,12 +3,12 @@ import IconAnalyses from '../../../public/icons/HealIcons/Icon-Analyses.svg';
 
 export const slideData = [
   {
-    href: 'https://www.askjeeves.com',
+    href: 'https://healdata.org',
     icon: IconHdd,
     text: 'View the latest studies who have shared their data!',
   },
   {
-    href: 'https://www.spacejam.com/1996/',
+    href: 'https://healdata.org',
     icon: IconAnalyses,
     text: 'Explore example analyses!',
   },

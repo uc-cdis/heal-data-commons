@@ -2,22 +2,22 @@ export const resourceCalloutsData = [
   {
     title: 'Resources for HEAL Investigators',
     links: [
-      { title: 'Select a Repository', href: 'https://www.spacejam.com/1996/' },
+      { title: 'Select a Repository', href: 'https://healdata.org' },
       {
         title: 'Register Your Study',
-        href: 'https://www.spacejam.com/1996/cmp/pressbox/pressboxframes.html',
+        href: 'https://healdata.org',
       },
       {
         title: 'Submit Study-Level Metadata',
-        href: 'https://www.spacejam.com/1996/cmp/lineup/lineupframes.html',
+        href: 'https://healdata.org',
       },
       {
         title: 'Submit Variable-Level Metadata',
-        href: 'https://www.spacejam.com/1996/cmp/junior/juniorframes.html',
+        href: 'https://healdata.org',
       },
       {
         title: 'Link Data to the HEAL Platform',
-        href: 'https://www.spacejam.com/1996/cmp/souvenirs/souvenirsframes.html',
+        href: 'https://healdata.org',
       },
     ],
   },
@@ -26,24 +26,24 @@ export const resourceCalloutsData = [
     links: [
       {
         title: 'Browse Studies and Data',
-        href: 'https://www.spacejam.com/1996/cmp/jamcentral/jamcentralframes.html',
+        href: 'https://healdata.org',
       },
       {
         title: 'Request Access to Workspaces',
-        href: 'https://www.spacejam.com/1996/cmp/bball/bballframes.html',
+        href: 'https://healdata.org',
       },
       {
         title: 'Explore Example Analyses',
-        href: 'https://www.spacejam.com/1996/cmp/tunes/tunesframes.html',
+        href: 'https://healdata.org',
       },
       {
         title: 'View answers to FAQs',
-        href: 'https://www.spacejam.com/1996/cmp/jump/jumpframes.html',
+        href: 'https://healdata.org',
       },
       {
         title:
           'Watch tutorial videos to learn how to interact with the HEAL Platform',
-        href: 'https://www.spacejam.com/1996/cmp/behind/behindframes.html',
+        href: 'https://healdata.org',
       },
     ],
   },
