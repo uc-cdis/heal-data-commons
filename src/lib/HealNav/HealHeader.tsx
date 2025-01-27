@@ -1,5 +1,4 @@
 import Image from 'next/image';
-<<<<<<< HEAD
 import nihLogo from '../../../public/images/nih-logo.png';
 import discoveryIcon from '../../../public/icons/HealIcons/Icon-Discovery.svg';
 import workspacesIcon from '../../../public/icons/HealIcons/Icon-Workspaces.svg';
@@ -46,15 +45,11 @@ const generateLinkClassNames = (i: number) => {
     i === navLinks.length - 1 ? 'border-l-1 ml-5 pl-2 mr-2' : 'mr-3';
   return classNames;
 };
-=======
-import logo from '../../../public/images/logo.png';
->>>>>>> 58ce38d (feat(homepageHeader): initial commit)
 
 const HealHeader: React.FC = () => {
   return (
     <>
       <div className="bg-carousel-gradient h-2"></div>
-<<<<<<< HEAD
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between">
           <a
@@ -80,13 +75,6 @@ const HealHeader: React.FC = () => {
                 {link.text}
               </a>
             ))}
-=======
-      <div className="container mx-auto px-6 py-2">
-        <div className="flex flex-wrap">
-          <Image src={logo} alt="" className="w-10 border-r-1 pr-3" />
-          <div className="text-heal-medium_gray font-semibold text-lg pl-3">
-            HEAL Data Platform
->>>>>>> 58ce38d (feat(homepageHeader): initial commit)
           </div>
         </div>
       </div>
