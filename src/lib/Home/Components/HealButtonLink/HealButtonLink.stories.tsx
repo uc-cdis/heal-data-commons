@@ -6,7 +6,6 @@ import HealButtonLink from './HealButtonLink';
 const meta = {
   title: 'HomePage/HealButtonLink',
   component: HealButtonLink,
-  tags: ['autodocs'],
   args: { href: 'www.healdata.org', label: 'button label' },
 } satisfies Meta<typeof HealButtonLink>;
 
