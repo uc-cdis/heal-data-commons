@@ -40,11 +40,11 @@ const navLinks = [
 ];
 
 const generateLinkClassNames = (i: number) => {
-  let classNames = 'hover:underline ';
+  let classNames = 'hover:underline mt-3 ';
   classNames +=
     i === navLinks.length - 1
-      ? 'border-l-1 ml-4 lg:ml-3 pl-2 mr-1 lg:mr-6  mt-3 sm:mt-0'
-      : 'mr-2 mt-3 sm:mt-0';
+      ? 'border-l-1 ml-4 lg:ml-3 pl-2 mr-1 lg:mr-6 sm:mt-0'
+      : 'mr-2 sm:mt-0';
   return classNames;
 };
 
@@ -53,10 +53,10 @@ const HealHeader: React.FC = () => {
     <header data-testid="heal-header">
       <div className="bg-carousel-gradient h-2"></div>
       <div className="container mx-auto px-1 md:px-1 lg:px-6 py-4 text-xs">
-        <div className="sm:flex justify-between">
+        <div className="lg:flex justify-between">
           <a
             href="https://healdata.org"
-            className="flex  hover:underline justify-center mb-5 md:mb-0 sm:justify-normal"
+            className="flex  hover:underline justify-center mb-5 md:mb-0 lg:justify-normal"
           >
             <Image
               src={nihLogo}
@@ -68,7 +68,7 @@ const HealHeader: React.FC = () => {
             </div>
           </a>
 
-          <div className="flex flex-wrap justify-center sm:justify-normal mt-1 md:mt-1.5 lg:mt-1">
+          <div className="flex flex-wrap justify-center lg:justify-normal mt-4 lg:mt-1">
             {navLinks.map((link, i) => (
               <a key={i} href={link.href} className={generateLinkClassNames(i)}>
                 <link.icon

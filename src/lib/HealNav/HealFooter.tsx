@@ -11,7 +11,7 @@ const HealFooter: React.FC = () => {
     >
       <div className="container mx-auto px-6 py-12 flex justify-between">
         <div className="flex flex-wrap max-w-[400px] text-sm">
-          <div className="mb-3 hidden md:block">
+          <div className="mb-3">
             <a
               href="https://ctds.uchicago.edu/gen3"
               className="hover:opacity-85"
@@ -19,21 +19,21 @@ const HealFooter: React.FC = () => {
               <Image
                 src={gen3Logo}
                 alt="GEN3"
-                className="w-[58px] border-r-1 border-heal-blue_accent pr-3 inline"
+                className="w-[20%] sm:w-[58px] border-r-1 border-heal-blue_accent pr-2 sm:pr-3 inline"
               />
             </a>
             <a href="https://ctds.uchicago.edu/" className="hover:opacity-85">
               <Image
                 src={ctdsLogo}
                 alt="Center for Translational Data Science at the University of Chicago"
-                className="w-[105px] border-r-1 border-heal-blue_accent px-3 inline"
+                className="w-[40%] sm:w-[105px] border-r-1 border-heal-blue_accent px-2 sm:px-3 inline"
               />
             </a>
             <a href="https://heal.nih.gov/" className="hover:opacity-85">
               <Image
                 src={footerNihLogo}
                 alt="NIH HEAL INITIATIVE"
-                className="w-[45px] pl-3 inline"
+                className="w-[20%] sm:w-[45px] pl-2 sm:pl-3 inline"
               />
             </a>
           </div>
@@ -52,7 +52,7 @@ const HealFooter: React.FC = () => {
             <span className="hidden md:inline">&nbsp;|&nbsp;</span>
             <a
               href="https://healdata.org"
-              className="underline hover:opacity-85  inline"
+              className="underline hover:opacity-85 block sm:inline mt-3 sm:mt-0"
             >
               HHS Responsible Disclosure Form
             </a>
