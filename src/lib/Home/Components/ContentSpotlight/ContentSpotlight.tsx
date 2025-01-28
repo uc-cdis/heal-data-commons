@@ -8,7 +8,7 @@ const ContentSpotlight: React.FC = () => {
   return (
     <div
       data-testid="content-spotlight"
-      className="flex flex-col md:flex-row justify-between px-8 lg:px-36 py-8  "
+      className="flex flex-col md:flex-row justify-between px-8 lg:px-36 py-8 mt-5"
     >
       <div className="flex-1 h-full min-h-full mb-6 md:mb-0 relative">
         <Image

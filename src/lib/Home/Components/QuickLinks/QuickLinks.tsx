@@ -7,7 +7,7 @@ const QuickLinks: React.FC = () => {
   return (
     <div
       data-testid="quick-links"
-      className="text-center md:p-4 container md:mx-auto md:px-6"
+      className="text-center md:p-4 container md:mx-auto md:px-6 mt-12"
     >
       <div className="font-bold text-heal-magenta text-2xl pb-3">
         Quick Links
