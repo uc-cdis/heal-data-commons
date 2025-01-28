@@ -48,7 +48,7 @@ const generateLinkClassNames = (i: number) => {
 
 const HealHeader: React.FC = () => {
   return (
-    <>
+    <header data-testid="heal-header">
       <div className="bg-carousel-gradient h-2"></div>
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between">
@@ -78,7 +78,7 @@ const HealHeader: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </header>
   );
 };
 

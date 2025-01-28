@@ -30,7 +30,10 @@ const Slide: React.FC<SlideProps> = ({
   };
 
   return (
-    <div className={`absolute ${getSlideClassName(iterator)}`}>
+    <div
+      className={`absolute ${getSlideClassName(iterator)}`}
+      aria-live="assertive"
+    >
       <a
         href={href}
         className="text-white flex group text-center mx-1 px-1 hover:underline"

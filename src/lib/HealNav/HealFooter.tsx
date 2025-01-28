@@ -5,13 +5,13 @@ import footerNihLogo from '../../../public/images/footer-nih-logo.png';
 
 const HealFooter: React.FC = () => {
   return (
-    <div
-      data-testid="footer"
+    <footer
+      data-testid="heal-footer"
       className="bg-heal-dark_background min-h-[212px] text-white "
     >
       <div className="container mx-auto px-6 py-12 flex justify-between">
         <div className="flex flex-wrap max-w-[400px] text-sm">
-          <div className="mb-3">
+          <div className="mb-3 hidden md:block">
             <a
               href="https://ctds.uchicago.edu/gen3"
               className="hover:opacity-85"
@@ -42,25 +42,25 @@ const HealFooter: React.FC = () => {
             HEAL Initiative and Helping to End Addiction Long-term are service
             marks of the U.S. Department of Health and Human Services.
           </div>
-          <div className="mt-3 ">
-            <a
-              href="https://healdata.org"
-              className="underline  hover:opacity-85"
-            >
-              NIH HEAL Initiative
-            </a>
-            &nbsp;|&nbsp;
+          <div className="mt-3">
             <a
               href="https://healdata.org"
               className="underline hover:opacity-85"
+            >
+              NIH HEAL Initiative
+            </a>
+            <span className="hidden md:inline">&nbsp;|&nbsp;</span>
+            <a
+              href="https://healdata.org"
+              className="underline hover:opacity-85  inline"
             >
               HHS Responsible Disclosure Form
             </a>
           </div>
         </div>
 
-        <div className="flex justify-between max-w-[225px]">
-          <div className="flex-wrap mr-14">
+        <div className="block md:flex justify-between max-w-[225px] ml-8 md:ml-0 md:mr-8">
+          <div className="flex-wrap mr-14 mb-8 md:mb-0">
             <div className="mb-3 font-bold">PLATFORM</div>
             <ul className="text-sm">
               <li>
@@ -92,7 +92,7 @@ const HealFooter: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
