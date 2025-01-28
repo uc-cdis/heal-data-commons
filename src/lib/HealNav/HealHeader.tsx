@@ -40,7 +40,7 @@ const navLinks = [
 ];
 
 const generateLinkClassNames = (i: number) => {
-  let classNames = 'hover:underline mt-3 ';
+  let classNames = 'flex hover:underline items-center ';
   classNames +=
     i === navLinks.length - 1
       ? 'border-l-1 ml-4 lg:ml-3 pl-2 mr-1 lg:mr-6 sm:mt-0'
