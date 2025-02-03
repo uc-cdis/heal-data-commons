@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowIconSVG from '../../Assets/Icons/Icon-Arrow.svg';
+import ArrowIconSVG from '../../../../../public/icons/HealIcons/Icon-Arrow.svg';
 
 interface ButtonLinkProps {
   /** HREF for Button Link */

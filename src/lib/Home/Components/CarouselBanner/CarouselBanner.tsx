@@ -38,7 +38,7 @@ const CarouselBanner: React.FC = () => {
         overflow-hidden
         px-[10%] md:px-[33%]
         relative"
-      aria-live="polite"
+      aria-live={isPlaying ? 'polite' : 'off'}
       aria-label="Carousel banner displaying slides"
     >
       <div className="slide-container w-[100%] relative flex justify-center">
