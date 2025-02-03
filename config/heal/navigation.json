@@ -3,36 +3,36 @@
     "title": "HEAL Data Platform",
     "logo": {
       "src": "/images/nih-logo.png",
-      "alt": "NIH HEAL INITIATIVE",
-      "href": "https://healdata.org",
       "width": 60,
-      "height": 60
+      "height": 60,
+      "href": "https://healdata.org",
+      "alt": "NIH HEAL INITIATIVE"
     },
     "items": [
       {
-        "name": "Discovery",
         "icon": "/icons/HealIcons/Icon-Discovery.svg",
-        "href": "https://healdata.org"
+        "href": "https://healdata.org",
+        "name": "Discovery"
       },
       {
-        "name": "Workspaces",
         "icon": "/icons/HealIcons/Icon-Workspaces.svg",
-        "href": "https://healdata.org"
+        "href": "https://healdata.org",
+        "name": "Workspaces"
       },
       {
-        "name": "Example Analyses",
         "icon": "/icons/HealIcons/Icon-Analyses-Nav.svg",
-        "href": "https://healdata.org"
+        "href": "https://healdata.org",
+        "name": "Example Analyses"
       },
       {
-        "name": "Profile",
         "icon": "/icons/HealIcons/Icon-Profile.svg",
-        "href": "https://healdata.org"
+        "href": "https://healdata.org",
+        "name": "Profile"
       },
       {
-        "name": "Help",
         "icon": "/icons/HealIcons/Icon-Help.svg",
-        "href": "https://healdata.org"
+        "href": "https://healdata.org",
+        "name": "Help"
       }
     ]
   },
