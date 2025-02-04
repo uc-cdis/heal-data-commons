@@ -1,8 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import gen3Logo from '../../../public/images/gen3.png';
-import ctdsLogo from '../../../public/images/ctds-logo.png';
-import footerNihLogo from '../../../public/images/footer-nih-logo.png';
 import footerJSON from '../../../config/heal/footer.json';
 
 const { healFooter } = footerJSON;
@@ -14,6 +11,7 @@ const HealFooter: React.FC = () => {
       className="bg-heal-dark_background min-h-[212px] text-white "
     >
       <div className="container mx-auto px-6 py-12 flex justify-between">
+        {/* Left Section */}
         <div className="flex flex-wrap max-w-[400px] text-sm">
           <div className="mb-3">
             {healFooter.leftSection.icons.map((item, i) => (
@@ -27,30 +25,6 @@ const HealFooter: React.FC = () => {
                 />
               </a>
             ))}
-            {/* <a
-              href="https://ctds.uchicago.edu/gen3"
-              className="hover:opacity-85"
-            >
-              <Image
-                src={gen3Logo}
-                alt="GEN3"
-                className="w-[20%] sm:w-[58px] border-r-1 border-heal-blue_accent pr-2 sm:pr-3 inline"
-              />
-            </a>
-            <a href="https://ctds.uchicago.edu/" className="hover:opacity-85">
-              <Image
-                src={ctdsLogo}
-                alt="Center for Translational Data Science at the University of Chicago"
-                className="w-[40%] sm:w-[105px] border-r-1 border-heal-blue_accent px-2 sm:px-3 inline"
-              />
-            </a>
-            <a href="https://heal.nih.gov/" className="hover:opacity-85">
-              <Image
-                src={footerNihLogo}
-                alt="NIH HEAL INITIATIVE"
-                className="w-[20%] sm:w-[45px] pl-2 sm:pl-3 inline"
-              />
-            </a> */}
           </div>
           <div>{healFooter.leftSection.description}</div>
           <div className="mt-3">
@@ -66,38 +40,22 @@ const HealFooter: React.FC = () => {
             ))}
           </div>
         </div>
-
+        {/* Right Section */}
         <div className="block md:flex justify-between max-w-[225px] ml-8 md:ml-0 md:mr-8">
-          <div className="flex-wrap mr-14 mb-8 md:mb-0">
-            <div className="mb-3 font-bold">PLATFORM</div>
-            <ul className="text-sm">
-              <li>
-                <a className="hover:underline" href="https://healdata.org/">
-                  About HEAL
-                </a>
-              </li>
-              <li>
-                <a className="hover:underline" href="https://healdata.org/">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="flex-wrap">
-            <div className="mb-3 font-bold">HELP</div>
-            <ul className="text-sm">
-              <li>
-                <a className="hover:underline" href="https://healdata.org/">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a className="hover:underline" href="https://healdata.org/">
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </div>
+          {healFooter.rightSection.columns.map((col, i) => (
+            <div className={col.className} key={i}>
+              <div className="mb-3 font-bold uppercase">{col.title}</div>
+              <ul className="text-sm">
+                {col.linkSet.map((link, iterator) => (
+                  <li key={iterator}>
+                    <a className="hover:underline" href={link.href}>
+                      {link.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </footer>

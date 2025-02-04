@@ -39,7 +39,38 @@
         }
       ]
     },
-    "rightSection": {}
+    "rightSection": {
+      "columns": [
+        {
+          "title": "Platform",
+          "className": "flex-wrap mr-14 mb-8 md:mb-0",
+          "linkSet": [
+            {
+              "text": "About HEAL",
+              "href": "https://healdata.org/"
+            },
+            {
+              "text": "Contact Us",
+              "href": "https://healdata.org/"
+            }
+          ]
+        },
+        {
+          "title": "Help",
+          "className": "flex-wrap",
+          "linkSet": [
+            {
+              "text": "Documentation",
+              "href": "https://healdata.org/"
+            },
+            {
+              "text": "FAQ",
+              "href": "https://healdata.org/"
+            }
+          ]
+        }
+      ]
+    }
   },
 
   "classNames": {
