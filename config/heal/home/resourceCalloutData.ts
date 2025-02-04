@@ -9,11 +9,11 @@ export const resourceCalloutsData = [
       },
       {
         title: 'Submit Study-Level Metadata',
-        href: 'https://healdata.org',
+        href: '/documentation/slmd_submission',
       },
       {
         title: 'Submit Variable-Level Metadata',
-        href: 'https://healdata.org',
+        href: '/documentation/vlmd',
       },
       {
         title: 'Link Data to the HEAL Platform',
@@ -30,20 +30,20 @@ export const resourceCalloutsData = [
       },
       {
         title: 'Request Access to Workspaces',
-        href: 'https://healdata.org',
+        href: '/documentation/workspaces/heal_workspace_registration',
       },
       {
         title: 'Explore Example Analyses',
-        href: 'https://healdata.org',
+        href: '/documentation/platform_example_analyses',
       },
       {
         title: 'View answers to FAQs',
-        href: 'https://healdata.org',
+        href: '/documentation/faqs',
       },
       {
         title:
           'Watch tutorial videos to learn how to interact with the HEAL Platform',
-        href: 'https://healdata.org',
+        href: '/documentation/platform_tutorial_videos',
       },
     ],
   },
