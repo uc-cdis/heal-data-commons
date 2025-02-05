@@ -52,4 +52,4 @@ ENV PORT=3000
 ENV NODE_ENV=production
 
 EXPOSE 3000
-CMD bash ./start.sh
+CMD ["/bin/bash", "./start.sh"]
