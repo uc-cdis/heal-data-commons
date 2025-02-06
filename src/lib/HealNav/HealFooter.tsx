@@ -44,14 +44,14 @@ const HealFooter: React.FC = () => {
           </div>
           <div className="mt-3">
             <a
-              href="https://healdata.org"
+              href="https://heal.nih.gov/"
               className="underline hover:opacity-85"
             >
               NIH HEAL Initiative
             </a>
             <span className="hidden md:inline">&nbsp;|&nbsp;</span>
             <a
-              href="https://healdata.org"
+              href="https://hhs.responsibledisclosure.com/hc/en-us"
               className="underline hover:opacity-85 block sm:inline mt-3 sm:mt-0"
             >
               HHS Responsible Disclosure Form
@@ -69,7 +69,7 @@ const HealFooter: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a className="hover:underline" href="https://healdata.org/">
+                <a className="hover:underline" href="/documentation/contact">
                   Contact Us
                 </a>
               </li>
@@ -79,12 +79,12 @@ const HealFooter: React.FC = () => {
             <div className="mb-3 font-bold">HELP</div>
             <ul className="text-sm">
               <li>
-                <a className="hover:underline" href="https://healdata.org/">
+                <a className="hover:underline" href="/documentation">
                   Documentation
                 </a>
               </li>
               <li>
-                <a className="hover:underline" href="https://healdata.org/">
+                <a className="hover:underline" href="/documentation/faqs">
                   FAQ
                 </a>
               </li>

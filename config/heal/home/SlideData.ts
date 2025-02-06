@@ -8,7 +8,7 @@ export const slideData = [
     text: 'View the latest studies who have shared their data!',
   },
   {
-    href: 'https://healdata.org',
+    href: '/portal/resource-browser',
     icon: IconAnalyses,
     text: 'Explore example analyses!',
   },

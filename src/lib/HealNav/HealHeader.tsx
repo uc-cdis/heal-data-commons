@@ -5,37 +5,38 @@ import workspacesIcon from '../../../public/icons/HealIcons/Icon-Workspaces.svg'
 import analysesIconNav from '../../../public/icons/HealIcons/Icon-Analyses-Nav.svg';
 import profileIcon from '../../../public/icons/HealIcons/Icon-Profile.svg';
 import helpIcon from '../../../public/icons/HealIcons/Icon-Help.svg';
+import Link from 'next/link';
 
 const navLinks = [
   {
     text: 'Discovery',
     icon: discoveryIcon,
     iconClassNames: 'fill-current',
-    href: 'https://healdata.org',
+    href: '/portal',
   },
   {
     text: 'Workspaces',
     icon: workspacesIcon,
     iconClassNames: 'fill-current',
-    href: 'https://healdata.org',
+    href: '/portal/workspace',
   },
   {
     text: 'Example Analyses',
     icon: analysesIconNav,
     iconClassNames: 'fill-current',
-    href: 'https://healdata.org',
+    href: '/portal/resource-browser',
   },
   {
     text: 'Profile',
     icon: profileIcon,
     iconClassNames: 'fill-current',
-    href: 'https://healdata.org',
+    href: '/portal/identity',
   },
   {
     text: 'Help',
     icon: helpIcon,
     iconClassNames: '',
-    href: 'https://healdata.org',
+    href: '/documentation',
   },
 ];
 
@@ -54,8 +55,8 @@ const HealHeader: React.FC = () => {
       <div className="bg-carousel-gradient h-2"></div>
       <div className="container mx-auto px-1 md:px-1 lg:px-6 py-4 text-xs">
         <div className="lg:flex justify-between">
-          <a
-            href="https://healdata.org"
+          <Link
+            href="/"
             className="flex  hover:underline justify-center mb-5 md:mb-0 lg:justify-normal"
           >
             <Image
@@ -66,7 +67,7 @@ const HealHeader: React.FC = () => {
             <div className="text-heal-dark_gray font-semibold text-base pl-3 mt-1">
               HEAL Data Platform
             </div>
-          </a>
+          </Link>
 
           <div className="flex flex-wrap justify-center lg:justify-normal mt-4 lg:mt-1">
             {navLinks.map((link, i) => (
