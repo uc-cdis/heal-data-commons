@@ -32,7 +32,7 @@ const HealHeader: React.FC = () => {
             <div className="text-heal-dark_gray font-semibold text-base pl-3 mt-1">
               {navigation.title}
             </div>
-          </a>
+          </Link>
 
           <div className="flex flex-wrap justify-center lg:justify-normal mt-4 lg:mt-1">
             {navigation.items.map((item, i) => (
