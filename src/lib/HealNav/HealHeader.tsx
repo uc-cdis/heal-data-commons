@@ -4,11 +4,11 @@ import navigationJSON from '../../../config/heal/navigation.json';
 const { navigation } = navigationJSON;
 
 const generateLinkClassNames = (i: number) => {
-  let classNames = 'flex hover:underline items-center ';
+  let classNames = 'flex hover:underline items-center mt-2 ';
   classNames +=
     i === navigation.items.length - 1
-      ? 'border-l-1 ml-4 lg:ml-3 pl-2 mr-1 lg:mr-6  mt-2 sm:mt-0'
-      : 'mr-2 mt-2 sm:mt-0';
+      ? 'border-l-1 ml-4 lg:ml-3 pl-2 mr-1 lg:mr-6 sm:mt-0'
+      : 'mr-2 sm:mt-0';
   return classNames;
 };
 
