@@ -43,7 +43,6 @@
       "columns": [
         {
           "title": "Platform",
-          "className": "flex-wrap mr-14 mb-8 md:mb-0",
           "linkSet": [
             {
               "text": "About HEAL",
@@ -57,7 +56,6 @@
         },
         {
           "title": "Help",
-          "className": "flex-wrap",
           "linkSet": [
             {
               "text": "Documentation",

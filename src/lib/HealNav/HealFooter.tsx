@@ -30,7 +30,7 @@ const HealFooter: React.FC = () => {
           <div className="mt-3">
             {healFooter.leftSection.linkSet.map((item, i) => (
               <React.Fragment key={i}>
-                <a href={item.href} className="underline hover:opacity-85">
+                <a href={item.href} className="block mt-1 md:inline md:mt-0 underline hover:opacity-85">
                   {item.text}
                 </a>
                 {i < healFooter.leftSection.linkSet.length - 1 && (
@@ -43,7 +43,7 @@ const HealFooter: React.FC = () => {
         {/* Right Section */}
         <div className="block md:flex justify-between max-w-[225px] ml-8 md:ml-0 md:mr-8">
           {healFooter.rightSection.columns.map((col, i) => (
-            <div className={col.className} key={i}>
+            <div className="flex-wrap mr-14 mb-8 md:mb-0" key={i}>
               <div className="mb-3 font-bold uppercase">{col.title}</div>
               <ul className="text-sm">
                 {col.linkSet.map((link, iterator) => (
