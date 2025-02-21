@@ -21,7 +21,8 @@ const HealFooter: React.FC = () => {
                   height={item.height}
                   width={item.width}
                   alt={item.alt}
-                  className={item.className}
+                  className={`border-heal-blue_accent
+                    ${item.className}`}
                 />
               </a>
             ))}
@@ -30,7 +31,10 @@ const HealFooter: React.FC = () => {
           <div className="mt-3">
             {healFooter.leftSection.linkSet.map((item, i) => (
               <React.Fragment key={i}>
-                <a href={item.href} className="block mt-1 md:inline md:mt-0 underline hover:opacity-85">
+                <a
+                  href={item.href}
+                  className="block mt-1 md:inline md:mt-0 underline hover:opacity-85"
+                >
                   {item.text}
                 </a>
                 {i < healFooter.leftSection.linkSet.length - 1 && (
