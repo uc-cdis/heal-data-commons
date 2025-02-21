@@ -3,7 +3,16 @@
 const plugin = require('tailwindcss/plugin');
 const themeColors = require(`./config/heal/themeColors.json`);
 const themeFonts = require(`./config/heal/themeFonts.json`);
+// import safeList from './tailwind.safelist';
 
+const safeList = [
+  'w-[40%]',
+  'sm:w-[105px]',
+  'w-[20%]',
+  'sm:w-[45px]',
+  'w-[20%]',
+  'sm:w-[58px]',
+];
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
@@ -11,6 +20,14 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
     './src/features/**/*.{js,ts,jsx,tsx}',
     './node_modules/@gen3/frontend/dist/esm/index.js',
+  ],
+  safelist: [
+    {
+      pattern: /^w-\[.+\]$/,
+    },
+    {
+      pattern: /^sm-\[.+\]$/,
+    },
   ],
   theme: {
     extend: {
