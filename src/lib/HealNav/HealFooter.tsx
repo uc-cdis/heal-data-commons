@@ -15,7 +15,7 @@ const HealFooter: React.FC = () => {
         <div className="flex flex-wrap max-w-[400px] text-sm">
           <div className="mb-3">
             {healFooter.leftSection.icons.map((item, i) => (
-              <a key={i} href={item.href} className="hover:opacity-85">
+              <a key={i} href={item.href} target="_blank" rel="noopener noreferrer" className="hover:opacity-85">
                 <Image
                   src={item.icon}
                   height={item.height}
@@ -33,6 +33,8 @@ const HealFooter: React.FC = () => {
               <React.Fragment key={i}>
                 <a
                   href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block mt-1 md:inline md:mt-0 underline hover:opacity-85"
                 >
                   {item.text}
@@ -52,7 +54,7 @@ const HealFooter: React.FC = () => {
               <ul className="text-sm">
                 {col.linkSet.map((link, iterator) => (
                   <li key={iterator}>
-                    <a className="hover:underline" href={link.href}>
+                    <a className="hover:underline" href={link.href} target="_blank" rel="noopener noreferrer">
                       {link.text}
                     </a>
                   </li>
