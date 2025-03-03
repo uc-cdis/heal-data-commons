@@ -9,10 +9,10 @@ export interface CardedPageConfig {
   readonly introduction: ReadonlyArray<MultiPartTextPart>;
   readonly sections: ReadonlyArray<{
     title: string;
-    introduction: string;
     cards: ReadonlyArray<CardGridItem>;
   }>;
 }
+[];
 
 const CardedPageContent = ({
   title,
@@ -20,7 +20,7 @@ const CardedPageContent = ({
   sections,
 }: CardedPageConfig) => {
   return (
-    <React.Fragment>
+    <div>
       <div className="py-10 text-sm px-10 ">
         <Link legacyBehavior href={'/'}>
           Home&nbsp;
@@ -33,21 +33,20 @@ const CardedPageContent = ({
           {title}
         </Text>
         <div className="pl-5">
-          <MultiPartText parts={introduction} />
-          {(sections || []).map(({ title, introduction, cards }, i) => {
+          {introduction && <MultiPartText parts={introduction} />}
+          {(sections || []).map(({ title, cards }, i) => {
             return (
               <div key={i} className="mt-10">
-                <Text className="font-bold text-3xl text-gen3-coal font-montserrat pb-8">
+                <Text className="not-prose font-bold text-3xl text-gen3-coal font-montserrat pb-8">
                   {title}
                 </Text>
-                <Text className="font-montserrat text-xl">{introduction}</Text>
                 <CardGrid content={cards} />
               </div>
             );
           })}
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 

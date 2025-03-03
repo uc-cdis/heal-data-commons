@@ -7,10 +7,9 @@ export interface MultiPartTextProps {
 }
 
 export interface MultiPartTextPart {
-  type: 'text' | 'link' | 'bold' | 'break';
+  type: string;
   content?: string;
   link?: string;
-  linkType: string;
 }
 
 const MultiPartText = ({ parts }: MultiPartTextProps) => {
@@ -34,7 +33,6 @@ const MultiPartText = ({ parts }: MultiPartTextProps) => {
               href={link}
               key={i}
             >
-              {' '}
               {content}
             </a>
           ),
