@@ -6,17 +6,12 @@ import MultiPartText, { MultiPartTextPart } from './MultiPartText';
 
 export interface CardedPageConfig {
   readonly title: string;
-  // readonly introduction?: ReadonlyArray<MultiPartTextPart>;
-  readonly introduction?: { type: string; content: string }[];
-  readonly sections: {
-    title: string;
-    cards: { title: string; content: string; linkText: string; link: string }[];
-  }[];
-  /*   readonly sections: ReadonlyArray<{
+  readonly introduction: ReadonlyArray<MultiPartTextPart>;
+  readonly sections: ReadonlyArray<{
     title: string;
     introduction: string;
-    cards: [];
- */ // cards: ReadonlyArray<CardGridItem>;  }>;
+    cards: ReadonlyArray<CardGridItem>;
+  }>;
 }
 
 const CardedPageContent = ({
@@ -26,14 +21,14 @@ const CardedPageContent = ({
 }: CardedPageConfig) => {
   return (
     <React.Fragment>
-      <div className="py-10 text-sm px-10">
+      <div className="py-10 text-sm px-10 ">
         <Link legacyBehavior href={'/'}>
           Home&nbsp;
         </Link>
         {' > '}
         <span className="text-heal-primary">&nbsp;{title}</span>
       </div>
-      <div className="text-md pl-10">
+      <div className="text-md pl-10 pb-4">
         <Text className="font-bold text-4xl text-gen3-coal font-montserrat pb-8">
           {title}
         </Text>
