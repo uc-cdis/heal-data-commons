@@ -29,7 +29,10 @@ const CardedPageContent = ({
         <span className="text-heal-primary">&nbsp;{title}</span>
       </div>
       <div className="text-md pl-10 pb-4">
-        <Text className="font-bold text-4xl text-gen3-coal font-montserrat pb-8">
+        <Text
+          data-testid="carded-page-content-title"
+          className="font-bold text-4xl text-gen3-coal font-montserrat pb-8"
+        >
           {title}
         </Text>
         <div className="pl-5">

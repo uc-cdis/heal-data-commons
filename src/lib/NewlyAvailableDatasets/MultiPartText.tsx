@@ -14,7 +14,7 @@ export interface MultiPartTextPart {
 
 const MultiPartText = ({ parts }: MultiPartTextProps) => {
   return (
-    <React.Fragment>
+    <div data-testid="multi-part-text">
       {parts.map(({ type, content, link }, i) => {
         return {
           text: (
@@ -58,7 +58,7 @@ const MultiPartText = ({ parts }: MultiPartTextProps) => {
           break: <br key={i} />,
         }[type];
       })}
-    </React.Fragment>
+    </div>
   );
 };
 
