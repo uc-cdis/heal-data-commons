@@ -18,7 +18,9 @@ export const Default: Story = {
       'carded-page-content-title',
     );
     const multiPartText = canvas.getByTestId('multi-part-text');
+    const cardGrid = canvas.getAllByTestId('card-grid');
     expect(cardedPageContentTitle).toBeInTheDocument();
     expect(multiPartText).toBeInTheDocument();
+    expect(cardGrid.length).toBeGreaterThan(0);
   },
 };
