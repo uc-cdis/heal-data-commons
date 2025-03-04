@@ -39,7 +39,7 @@ const CardedPageContent = ({
           {title}
         </Text>
         <div className="pl-5">
-          {introduction && <MultiPartText parts={introduction} />}
+          <MultiPartText parts={introduction} />
           {(sections || []).map(({ title, cards }, i) => {
             return (
               <div key={i} className="mt-10">
