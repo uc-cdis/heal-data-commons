@@ -14,13 +14,27 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const cardedPageContentTitle = canvas.getByTestId(
+
+    const testIds = [
+      'carded-page-content-backlink',
       'carded-page-content-title',
-    );
-    const multiPartText = canvas.getByTestId('multi-part-text');
-    const cardGrid = canvas.getAllByTestId('card-grid');
-    expect(cardedPageContentTitle).toBeInTheDocument();
-    expect(multiPartText).toBeInTheDocument();
-    expect(cardGrid.length).toBeGreaterThan(0);
+      'multi-part-text',
+    ];
+    testIds.forEach((id) => {
+      const currEle = canvas.getByTestId(id);
+      expect(currEle).toBeInTheDocument();
+    });
+
+    const testIdsWithMultipleInstances = [
+      'carded-page-content-header',
+      'card-grid',
+      'card-grid-title',
+      'card-grid-content',
+      'card-grid-link',
+    ];
+    testIdsWithMultipleInstances.forEach((id) => {
+      const currEle = canvas.getAllByTestId(id);
+      expect(currEle.length).toBeGreaterThan(0);
+    });
   },
 };

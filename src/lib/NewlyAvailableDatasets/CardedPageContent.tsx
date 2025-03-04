@@ -21,7 +21,10 @@ const CardedPageContent = ({
 }: CardedPageConfig) => {
   return (
     <div>
-      <div className="py-10 text-sm px-10 ">
+      <div
+        data-testid="carded-page-content-backlink"
+        className="py-10 text-sm px-10 "
+      >
         <Link legacyBehavior href={'/'}>
           Home&nbsp;
         </Link>
@@ -40,7 +43,10 @@ const CardedPageContent = ({
           {(sections || []).map(({ title, cards }, i) => {
             return (
               <div key={i} className="mt-10">
-                <Text className="not-prose font-bold text-3xl text-gen3-coal font-montserrat pb-8">
+                <Text
+                  data-testid="carded-page-content-header"
+                  className="not-prose font-bold text-3xl text-gen3-coal font-montserrat pb-8"
+                >
                   {title}
                 </Text>
                 <CardGrid content={cards} />
