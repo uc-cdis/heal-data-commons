@@ -2,10 +2,11 @@ export const resourceCalloutsData = [
   {
     title: 'Resources for HEAL Investigators',
     links: [
-      { title: 'Select a Repository', href: 'https://healdata.org' },
+      { title: 'View the Checklist for HEAL-compliant Data', href: 'https://www.healdatafair.org/resources/road-map' },
+      { title: 'Select a Repository', href: 'https://www.healdatafair.org/resources/guidance/selection' },
       {
         title: 'Register Your Study',
-        href: 'https://healdata.org',
+        href: '/documentation/study-registration',
       },
       {
         title: 'Submit Study-Level Metadata',
@@ -16,8 +17,8 @@ export const resourceCalloutsData = [
         href: '/documentation/vlmd',
       },
       {
-        title: 'Link Data to the HEAL Platform',
-        href: 'https://healdata.org',
+        title: 'Link Data to the HEAL Data Platform',
+        href: '/documentation/reporting-repo',
       },
     ],
   },
@@ -26,7 +27,7 @@ export const resourceCalloutsData = [
     links: [
       {
         title: 'Browse Studies and Data',
-        href: 'https://healdata.org',
+        href: '/portal',
       },
       {
         title: 'Request Access to Workspaces',
@@ -34,15 +35,15 @@ export const resourceCalloutsData = [
       },
       {
         title: 'Explore Example Analyses',
-        href: '/documentation/platform_example_analyses',
+        href: '/portal/resource-browser',
       },
       {
-        title: 'View answers to FAQs',
+        title: 'View Answers to FAQs',
         href: '/documentation/faqs',
       },
       {
         title:
-          'Watch tutorial videos to learn how to interact with the HEAL Platform',
+          'Watch Tutorial Videos to Learn How to Interact with the HEAL Data Platform',
         href: '/documentation/platform_tutorial_videos',
       },
     ],
