@@ -34,7 +34,7 @@ const CardedPageContent = ({
       <div className="text-md pl-10 pb-4">
         <Text
           data-testid="carded-page-content-title"
-          className="font-bold text-4xl text-gen3-coal font-montserrat pb-8"
+          className="not-prose font-bold text-4xl text-gen3-coal font-montserrat pb-8"
         >
           {title}
         </Text>
