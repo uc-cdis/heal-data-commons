@@ -47,11 +47,11 @@
           "linkSet": [
             {
               "text": "About HEAL",
-              "href": "https://healdata.org/"
+              "href": "/documentation"
             },
             {
               "text": "Contact Us",
-              "href": "https://healdata.org/"
+              "href": "/documentation/contact"
             }
           ]
         },
