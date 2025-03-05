@@ -1,4 +1,11 @@
-import Document, { DocumentContext, DocumentInitialProps } from 'next/document';
+import Document, {
+  DocumentContext,
+  DocumentInitialProps,
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from 'next/document';
 import { ColorSchemeScript } from '@mantine/core';
 
 class Gen3Document extends Document {
@@ -15,6 +22,18 @@ class Gen3Document extends Document {
         </>
       ),
     };
+  }
+
+  render() {
+    return (
+      <Html lang="en">
+        <Head></Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }
 
