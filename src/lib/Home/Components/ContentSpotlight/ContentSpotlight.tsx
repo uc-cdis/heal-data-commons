@@ -34,7 +34,7 @@ const ContentSpotlight: React.FC = () => {
         </div>
         <div className="mb-4">
           <HealButtonLink
-            href="https://healdata.org"
+            href="https://www.healdatafair.org/resources/semanticsearch"
             label="Go to Semantic Search"
           />
         </div>

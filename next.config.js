@@ -17,7 +17,7 @@ const withMDX = require('@next/mdx')({
   },
 });
 
-// Next configuration with support for rewrting API to existing common services
+// Next configuration with support for rewriting API to existing common services
 const nextConfig = {
   output: 'standalone',
   reactStrictMode: true,
@@ -45,6 +45,20 @@ const nextConfig = {
             value: 'SAMEORIGIN',
           },
         ],
+      },
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: '/landing',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/landing/:path*',
+        destination: '/:path*',
+        permanent: true,
       },
     ];
   },

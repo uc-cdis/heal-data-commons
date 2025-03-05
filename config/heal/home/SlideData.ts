@@ -3,7 +3,7 @@ import IconAnalyses from '../../../public/icons/HealIcons/Icon-Analyses.svg';
 
 export const slideData = [
   {
-    href: 'https://healdata.org',
+    href: '/newly-available-datasets',
     icon: IconHdd,
     text: 'View the latest studies who have shared their data!',
   },
