@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import Hero from '../lib/Home/Components/Hero/Hero';
 import CarouselBanner from '../lib/Home/Components/CarouselBanner/CarouselBanner';
 import QuickLinks from '../lib/Home/Components/QuickLinks/QuickLinks';
