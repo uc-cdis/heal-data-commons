@@ -13,5 +13,6 @@ export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     await expect(canvas.getByTestId('heal-header')).toBeInTheDocument();
+    await expect(canvas.getByTestId('skip-to-main')).toBeInTheDocument();
   },
 };

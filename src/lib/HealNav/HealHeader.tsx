@@ -17,6 +17,7 @@ const HealHeader: React.FC = () => {
     <>
       <a
         href="#main-content"
+        data-testid="skip-to-main"
         className="absolute -left-full focus:static text-heal-blue"
       >
         Skip to main content

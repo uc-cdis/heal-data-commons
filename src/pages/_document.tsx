@@ -31,14 +31,12 @@ class Gen3Document extends Document {
       <Html lang="en">
         <Head></Head>
         <body>
-          <div className="w-full">
-            <HealHeader />
-            <main id="main-content">
-              <Main />
-              <NextScript />
-            </main>
-            <HealFooter />
-          </div>
+          <HealHeader />
+          <main id="main-content">
+            <Main />
+            <NextScript />
+          </main>
+          <HealFooter />
         </body>
       </Html>
     );
