@@ -1,6 +1,4 @@
 import React from 'react';
-
-import HealFooter from '@/lib/HealNav/HealFooter';
 import CardedPageContent from '@/lib/NewlyAvailableDatasets/CardedPageContent';
 import newDatasetsPageConfig from '../../config/heal/newDatasets.json';
 import PageTitle from '@/lib/HealNav/PageTitle';

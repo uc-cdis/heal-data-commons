@@ -30,9 +30,9 @@ class Gen3Document extends Document {
     return (
       <Html lang="en">
         <Head></Head>
-        <body>
+        <body className="flex flex-col min-h-screen">
           <HealHeader />
-          <main id="main-content">
+          <main id="main-content" className="flex-grow">
             <Main />
             <NextScript />
           </main>
