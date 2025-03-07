@@ -29,7 +29,7 @@ class Gen3Document extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head></Head>
+        <Head />
         <body className="flex flex-col min-h-screen">
           <HealHeader />
           <main id="main-content" className="flex-grow">
