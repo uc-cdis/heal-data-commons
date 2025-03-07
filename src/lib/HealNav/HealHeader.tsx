@@ -14,7 +14,7 @@ const generateLinkClassNames = (i: number) => {
 
 const HealHeader: React.FC = () => {
   return (
-    <>
+    <div>
       <a
         href="#main-content"
         data-testid="skip-to-main"
@@ -62,7 +62,7 @@ const HealHeader: React.FC = () => {
           </div>
         </div>
       </header>
-    </>
+    </div>
   );
 };
 
