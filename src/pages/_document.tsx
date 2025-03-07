@@ -7,6 +7,8 @@ import Document, {
   NextScript,
 } from 'next/document';
 import { ColorSchemeScript } from '@mantine/core';
+import HealHeader from '@/lib/HealNav/HealHeader';
+import HealFooter from '@/lib/HealNav/HealFooter';
 
 class Gen3Document extends Document {
   static async getInitialProps(
@@ -29,8 +31,14 @@ class Gen3Document extends Document {
       <Html lang="en">
         <Head></Head>
         <body>
-          <Main />
-          <NextScript />
+          <div className="w-full">
+            <HealHeader />
+            <main id="main-content">
+              <Main />
+              <NextScript />
+            </main>
+            <HealFooter />
+          </div>
         </body>
       </Html>
     );

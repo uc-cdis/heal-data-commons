@@ -13,16 +13,12 @@ const HealLandingPage = () => {
   return (
     <>
       <PageTitle pageName="Home" />
-      <div className="w-full">
-        <HealHeader />
-        <Hero />
-        <CarouselBanner />
-        <QuickLinks />
-        <PhotoDivider />
-        <ContentSpotlight />
-        <QuoteSpotlight />
-        <HealFooter />
-      </div>
+      <Hero />
+      <CarouselBanner />
+      <QuickLinks />
+      <PhotoDivider />
+      <ContentSpotlight />
+      <QuoteSpotlight />
     </>
   );
 };
