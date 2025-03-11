@@ -5,7 +5,10 @@ import Background from '../../Assets/Images/background.webp';
 /** UI component for displaying a quote and attribution */
 const QuoteSpotlight: React.FC = () => {
   return (
-    <div data-testid="quote-spotlight" className="text-center mt-6 text-white">
+    <div
+      data-testid="quote-spotlight"
+      className="text-center mt-6 text-white bg-heal-background"
+    >
       <BackgroundImage
         className="m:h-[269px] md:h-[321px] lg:h-[272px] flex items-center justify-center"
         src={Background.src}
