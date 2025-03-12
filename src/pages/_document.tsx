@@ -23,6 +23,7 @@ class Gen3Document extends Document {
       ),
     };
   }
+
   render() {
     return (
       <Html lang="en">
