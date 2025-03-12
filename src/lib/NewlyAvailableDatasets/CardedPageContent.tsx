@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { Text } from '@mantine/core';
 import CardGrid, { CardGridItem } from './CardGrid';
 import MultiPartText, { MultiPartTextPart } from './MultiPartText';
@@ -25,9 +24,9 @@ const CardedPageContent = ({
         data-testid="carded-page-content-backlink"
         className="py-10 text-sm px-10 "
       >
-        <Link legacyBehavior href={'/'}>
+        <a href={'/'}>
           Home&nbsp;
-        </Link>
+        </a>
         {' > '}
         <span className="text-heal-primary">&nbsp;{title}</span>
       </div>
