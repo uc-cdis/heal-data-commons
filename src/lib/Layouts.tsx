@@ -10,9 +10,7 @@ export default function Layout({
     return (
         <>
           <HealHeader />
-          <main id="main-content" className="flex-grow">
-            {children}
-          </main>
+          {children}
           <HealFooter />
         </>
     );

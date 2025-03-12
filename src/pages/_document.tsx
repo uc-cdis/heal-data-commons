@@ -1,6 +1,10 @@
 import Document, {
   DocumentContext,
   DocumentInitialProps,
+  Head,
+  Html,
+  Main,
+  NextScript,
 } from 'next/document';
 import { ColorSchemeScript } from '@mantine/core';
 
@@ -18,6 +22,19 @@ class Gen3Document extends Document {
         </>
       ),
     };
+  }
+  render() {
+    return (
+      <Html lang="en">
+        <Head />
+        <body className="flex flex-col min-h-screen">
+          <main id="main-content" className="flex-grow">
+            <Main />
+            <NextScript />
+          </main>
+        </body>
+      </Html>
+    );
   }
 }
 
