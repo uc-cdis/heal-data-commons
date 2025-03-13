@@ -27,7 +27,9 @@ class Gen3Document extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <link rel="icon" href="/icons/favicon.ico" />
+        </Head>
         <body className="flex flex-col min-h-screen">
           <main id="main-content" className="flex-grow">
             <Main />
