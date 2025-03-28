@@ -1,18 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 /* eslint-disable @typescript-eslint/no-var-requires */
-const plugin = require('tailwindcss/plugin');
-const themeColors = require(`./config/heal/themeColors.json`);
-const themeFonts = require(`./config/heal/themeFonts.json`);
-// import safeList from './tailwind.safelist';
 
-const safeList = [
-  'w-[40%]',
-  'sm:w-[105px]',
-  'w-[20%]',
-  'sm:w-[45px]',
-  'w-[20%]',
-  'sm:w-[58px]',
-];
+const plugin = require('tailwindcss/plugin');
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { GEN3_COMMONS_NAME } = require('@gen3/core');
+const themeColors = require(`./config/${GEN3_COMMONS_NAME}/themeColors.json`);
+const themeFonts = require(`./config/${GEN3_COMMONS_NAME}/themeFonts.json`);
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
@@ -183,6 +177,5 @@ module.exports = {
   safelist: [
     { pattern: /^bg-navigation-footer$/ },
     { pattern: /^border-navigation-topbar_hover$/ },
-    { pattern: /^bg-navigation-top$/ },
   ],
 };

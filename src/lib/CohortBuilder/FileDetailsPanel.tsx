@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Anchor,
   Group,
@@ -23,7 +24,6 @@ import {
 
 // a definition of the query response
 interface QueryResponse {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data?: Record<string, Array<any>>;
 }
 
@@ -33,7 +33,6 @@ interface QueryResponse {
  * @param {any} obj - The object to be checked.
  * @returns {boolean} Returns true if the object is a QueryResponse, false otherwise.
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const isQueryResponse = (obj: any): obj is QueryResponse => {
   // Considering that the data property can be optional
   return (
@@ -52,7 +51,7 @@ const isQueryResponse = (obj: any): obj is QueryResponse => {
 const extractData = (
   data: QueryResponse,
   index: string,
-): Record<string, never> => {
+): Record<string, any> => {
   if (data === undefined || data === null) return {};
   if (data.data === undefined || data.data === null) return {};
 
@@ -116,7 +115,7 @@ export const FileDetailsPanel = ({
          */}
         {field === 'object_id' ? (
           <Anchor
-            href={`${GEN3_FENCE_API}/user/data/download/${
+            href={`${GEN3_FENCE_API}/data/download/${
               value ? (value as string) : ''
             }?redirect=true`}
             target="_blank"

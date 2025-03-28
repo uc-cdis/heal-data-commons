@@ -1,3 +1,4 @@
+import React from 'react';
 type CarouselControlsProps = {
   isPlaying: boolean;
   setIsPlaying: (isPlaying: boolean) => void;

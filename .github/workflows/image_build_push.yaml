@@ -8,12 +8,12 @@ jobs:
     uses: uc-cdis/.github/.github/workflows/securitypipeline.yaml@master
     with:
       python-poetry: 'false'
-    secrets: inherit
+    secrets: inherit # pragma: allowlist-secret
   ci:
     name: Build Image and Push to Quay
     uses: uc-cdis/.github/.github/workflows/image_build_push.yaml@master
     with:
-      BUILD_PLATFORMS: "linux/amd64"
+      USE_QUAY_ONLY: true
     secrets:
       ECR_AWS_ACCESS_KEY_ID: ${{ secrets.ECR_AWS_ACCESS_KEY_ID }}
       ECR_AWS_SECRET_ACCESS_KEY: ${{ secrets.ECR_AWS_SECRET_ACCESS_KEY }}
