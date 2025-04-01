@@ -10,8 +10,7 @@ export interface CardedPageConfig {
     title: string;
     cards: ReadonlyArray<CardGridItem>;
   }>;
-}
-[];
+};
 
 const CardedPageContent = ({
   title,

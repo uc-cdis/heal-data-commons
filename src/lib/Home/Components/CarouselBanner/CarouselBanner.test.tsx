@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import CarouselBanner from './CarouselBanner';
 import Slide from './Slide';

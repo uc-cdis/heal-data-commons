@@ -1,3 +1,4 @@
+import React from 'react';
 import Layout from '@/lib/Layouts';
 import HealLandingPage from './Home';
 

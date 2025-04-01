@@ -1,3 +1,4 @@
+import React from 'react';
 import ArrowIconSVG from '../../../../../public/icons/HealIcons/Icon-Arrow.svg';
 import styles from './CarouselAnimations.module.css';
 
