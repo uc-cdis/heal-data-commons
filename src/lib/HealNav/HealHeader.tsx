@@ -1,8 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import {
+  Banner, BannerProps
+} from './Banner';
 import navigationJSON from '../../../config/heal/navigation.json';
+import bannerJSON from '../../../config/heal/banner.json';
 
 const { navigation } = navigationJSON;
+const banners:Array<BannerProps> = bannerJSON;
 
 const generateLinkClassNames = (i: number) => {
   let classNames = 'flex hover:underline items-center mt-2 ';
@@ -62,6 +67,7 @@ const HealHeader: React.FC = () => {
             </div>
           </div>
         </div>
+        {banners?.map((banner) => <Banner {...banner} key={banner.id} />)}
       </header>
     </div>
   );
