@@ -1,13 +1,21 @@
 import React from 'react';
 import Image from 'next/image';
 import {
-  Banner, BannerProps
+  Banner, BannerProps, BannerLevelCategories
 } from './Banner';
 import navigationJSON from '../../../config/heal/navigation.json';
 import bannerJSON from '../../../config/heal/banner.json';
 
 const { navigation } = navigationJSON;
-const banners:Array<BannerProps> = bannerJSON;
+const banners:Array<BannerProps> = []
+bannerJSON.forEach((banner) => (banners.push({
+  message: banner.message,
+  level: banner.level as BannerLevelCategories,
+  isExternalLink: banner.isExternalLink,
+  dismissible: banner.dismissible,
+  id: banner.id
+})))
+
 
 const generateLinkClassNames = (i: number) => {
   let classNames = 'flex hover:underline items-center mt-2 ';

@@ -10,9 +10,11 @@ import {
 } from 'react-icons/fa';
 import Markdown from 'react-markdown';
 
+export type BannerLevelCategories = 'INFO' | 'WARNING' | 'ERROR'
+
 export interface BannerProps {
   readonly message: string;
-  readonly level: 'INFO' | 'WARNING' | 'ERROR';
+  readonly level: BannerLevelCategories;
   readonly dismissible: boolean;
   readonly isExternalLink: boolean;
   readonly id: number;
