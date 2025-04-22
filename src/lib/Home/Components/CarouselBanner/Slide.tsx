@@ -48,8 +48,12 @@ const Slide: React.FC<SlideProps> = ({
         >
           <Icon className="fill-current" />
         </span>
-        <span className="px-3 text-2xl
-        font-normal leading-[36px]">{text}</span>
+        <span
+          className="pl-3 pr-1  mt-1 font-normal
+          lg:mt-0 lg:px-3 lg:text-2xl lg:leading-[36px] "
+        >
+          {text}
+        </span>
         <span className="mr-2">
           <ArrowIconSVG className="inline-block fill-current mt-2" />
         </span>
