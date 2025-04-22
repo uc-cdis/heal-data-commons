@@ -5,7 +5,7 @@ export const slideData = [
   {
     href: '/newly-available-datasets',
     icon: IconHdd,
-    text: 'View the latest studies who have shared their data!',
+    text: 'View newly available datasets',
   },
   {
     href: '/portal/resource-browser',
