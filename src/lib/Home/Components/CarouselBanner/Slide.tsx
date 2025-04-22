@@ -49,8 +49,8 @@ const Slide: React.FC<SlideProps> = ({
           <Icon className="fill-current" />
         </span>
         <span
-          className="pl-3 pr-1  mt-1 font-normal
-          lg:mt-0 lg:px-3 lg:text-2xl lg:leading-[36px] "
+          className="pl-3 pr-1 font-normal
+          px-3 text-2xl leading-[28px] "
         >
           {text}
         </span>
