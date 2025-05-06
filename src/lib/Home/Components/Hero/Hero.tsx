@@ -5,7 +5,6 @@ import hero from './../../Assets/Images/Hero.webp';
 import background from './../../Assets/Images/background.webp';
 
 /** Hero Banner Component for Homepage */
-console.log(hero);
 const Hero: React.FC = () => {
   return (
     <div data-testid="hero" className="hero">
