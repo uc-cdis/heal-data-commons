@@ -5,6 +5,7 @@ import hero from './../../Assets/Images/Hero.webp';
 import background from './../../Assets/Images/background.webp';
 
 /** Hero Banner Component for Homepage */
+console.log(hero);
 const Hero: React.FC = () => {
   return (
     <div data-testid="hero" className="hero">
@@ -33,7 +34,9 @@ const Hero: React.FC = () => {
             <div className="hidden lg:block lg:w-1/2">
               <Image
                 data-testid="hero-image"
-                src={hero}
+                src={hero.src}
+                width={hero.width}
+                height={hero.height}
                 alt=""
                 className="w-full h-full object-cover"
               />

@@ -12,35 +12,45 @@ const PhotoDivider: React.FC = () => {
       <div className="flex justify-between gap-4">
         <div className="w-1/3 md:w-1/4 lg:w-1/5">
           <Image
-            src={photoDivider1}
+            src={photoDivider1.src}
+            width={photoDivider1.width}
+            height={photoDivider1.height}
             alt=""
             className="w-full h-full object-cover"
           />
         </div>
         <div className="w-1/3 md:w-1/4 lg:w-1/5">
           <Image
-            src={photoDivider2}
+            src={photoDivider2.src}
+            width={photoDivider2.width}
+            height={photoDivider2.height}
             alt=""
             className="w-full h-full object-cover"
           />
         </div>
         <div className="w-1/3 md:w-1/4 lg:w-1/5">
           <Image
-            src={photoDivider3}
+            src={photoDivider3.src}
+            width={photoDivider3.width}
+            height={photoDivider3.height}
             alt=""
             className="w-full h-full object-cover"
           />
         </div>
         <div className="hidden w-1/4 md:block lg:w-1/5">
           <Image
-            src={photoDivider4}
+            src={photoDivider4.src}
+            width={photoDivider4.width}
+            height={photoDivider4.height}
             alt=""
             className="w-full h-full object-cover"
           />
         </div>
         <div className="hidden lg:block lg:w-1/5">
           <Image
-            src={photoDivider5}
+            src={photoDivider5.src}
+            width={photoDivider5.width}
+            height={photoDivider5.height}
             alt=""
             className="w-full h-full object-cover"
           />
