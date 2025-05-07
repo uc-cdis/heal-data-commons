@@ -33,7 +33,9 @@ const Hero: React.FC = () => {
             <div className="hidden lg:block lg:w-1/2">
               <Image
                 data-testid="hero-image"
-                src={hero}
+                src={hero.src}
+                width={hero.width}
+                height={hero.height}
                 alt=""
                 className="w-full h-full object-cover"
               />

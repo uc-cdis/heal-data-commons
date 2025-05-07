@@ -12,7 +12,9 @@ const ContentSpotlight: React.FC = () => {
     >
       <div className="flex-1 h-full min-h-full mb-6 md:mb-0 relative">
         <Image
-          src={search}
+          src={search.src}
+          height={search.height}
+          width={search.width}
           alt=""
           className="h-[240px]  md:h-[450px] lg:h-full lg:max-h-[320px] object-cover rounded-lg shadow-lg"
         />
