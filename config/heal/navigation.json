@@ -31,7 +31,7 @@
       },
       {
         "icon": "/icons/HealIcons/Icon-Help.svg",
-        "href": "/documentation",
+        "href": "https://heal.github.io/platform-documentation/",
         "name": "Help"
       }
     ]
@@ -40,18 +40,7 @@
     "classNames": {
       "root": "bg-navigation-top"
     },
-    "items": [
-      {
-        "href": "/documentation",
-        "name": "Help and Guidance",
-        "leftIcon": "bx:radio-circle-marked",
-        "classNames": {
-          "leftIcon": "text-white",
-          "label": "text-white",
-          "button": "hover:border-white"
-        }
-      }
-    ],
+    "items": [],
     "loginButtonVisibility": "hide"
   }
 }
