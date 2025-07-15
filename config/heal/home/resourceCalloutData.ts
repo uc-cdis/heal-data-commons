@@ -6,19 +6,19 @@ export const resourceCalloutsData = [
       { title: 'Select a Repository', href: 'https://www.healdatafair.org/resources/guidance/selection' },
       {
         title: 'Register Your Study',
-        href: '/documentation/study-registration',
+        href: 'https://heal.github.io/platform-documentation/study-registration/',
       },
       {
         title: 'Submit Study-Level Metadata',
-        href: '/documentation/slmd_submission',
+        href: 'https://heal.github.io/platform-documentation/slmd_submission/',
       },
       {
         title: 'Submit Variable-Level Metadata',
-        href: '/documentation/vlmd',
+        href: 'https://heal.github.io/platform-documentation/vlmd/',
       },
       {
         title: 'Link Data to the HEAL Data Platform',
-        href: '/documentation/reporting-repo',
+        href: 'https://heal.github.io/platform-documentation/reporting-repo/',
       },
     ],
   },
@@ -31,7 +31,7 @@ export const resourceCalloutsData = [
       },
       {
         title: 'Request Access to Workspaces',
-        href: '/documentation/workspaces/heal_workspace_registration',
+        href: 'https://heal.github.io/platform-documentation/workspaces/heal_workspace_registration/',
       },
       {
         title: 'Explore Example Analyses',
@@ -39,12 +39,12 @@ export const resourceCalloutsData = [
       },
       {
         title: 'View Answers to FAQs',
-        href: '/documentation/faqs',
+        href: 'https://heal.github.io/platform-documentation/faqs/',
       },
       {
         title:
           'Watch Tutorial Videos to Learn How to Interact with the HEAL Data Platform',
-        href: '/documentation/platform_tutorial_videos',
+        href: 'https://heal.github.io/platform-documentation/platform_tutorial_videos/',
       },
     ],
   },

@@ -47,11 +47,11 @@
           "linkSet": [
             {
               "text": "About HEAL",
-              "href": "/documentation"
+              "href": "https://heal.github.io/platform-documentation/"
             },
             {
               "text": "Contact Us",
-              "href": "/documentation/contact"
+              "href": "https://heal.github.io/platform-documentation/contact/"
             }
           ]
         },
@@ -61,11 +61,11 @@
           "linkSet": [
             {
               "text": "Documentation",
-              "href": "/documentation"
+              "href": "https://heal.github.io/platform-documentation/"
             },
             {
               "text": "FAQ",
-              "href": "/documentation/faqs"
+              "href": "https://heal.github.io/platform-documentation/faqs/"
             }
           ]
         }
