@@ -20,6 +20,131 @@
     ],
     "sections": [
         {
+            "title": "July - September 2025",
+            "cards": [
+                {
+                    "title": "Predicting fatal and non-fatal overdose in Los Angeles County with Rapid Overdose Surveillance Dashboard to target street-based addiction treatment and harm reduction services",
+                    "content": "DAVID GOODMAN, CHELSEA LEIGH SHOVER; UNIVERSITY OF CALIFORNIA LOS ANGELES",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00927"
+                },
+                {
+                    "title": "comeBACK Study",
+                    "content": "JEFFREY C. LOTZ; UNIVERSITY OF CALIFORNIA, SAN FRANCISCO",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01338"
+                },
+                {
+                    "title": "Mining Social Media Big Data for Toxicovigilance: Studying Substance Use via Natural Language Processing and Machine Learning Methods",
+                    "content": "ABEED H SARKER; EMORY UNIVERSITY",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00973"
+                },
+                {
+                    "title": "Modeling temporomandibular joint disorders pain: role of transient receptor potential ion channels",
+                    "content": "YONG CHEN; DUKE UNIVERSITY",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00538"
+                },
+                {
+                    "title": "Development of LPA5 Antagonists as Analgesics",
+                    "content": "JUN-XU LI, YUAN-XIANG TAO, YANAN ZHANG; RESEARCH TRIANGLE INSTITUTE",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01101"
+                },
+                {
+                    "title": "Achieving Equity through SocioCulturally-informed, Digitally-Enabled Cancer Pain managemeNT (ASCENT) Clinical Trial",
+                    "content": "ANDREA LYNNE CHEVILLE, CHYKE ABADAMA DOUBENI; MAYO CLINIC ROCHESTER",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00941"
+                },
+                {
+                    "title": "Regulation of inflammation by nociception",
+                    "content": "ALEJANDRA MENDOZA; SCRIPPS RESEARCH INSTITUTE, THE",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01376"
+                },
+                {
+                    "title": "Exploring Health Beliefs for Community Engagement and Diversity in Clinical Trials ",
+                    "content": "KIMBERLY PAGE; UNIVERSITY OF NEW MEXICO",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01286"
+                },
+                {
+                    "title": "Discovery of novel openers of the understudied human drug target Kir6.1",
+                    "content": "TIMOTHY J CARDOZO; NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00993"
+                },
+                {
+                    "title": "Mindful Body Awareness Training as an Adjunct to Medication Assisted Treatment for Opioid Use Disorder",
+                    "content": "CYNTHIA J PRICE; UNIVERSITY OF WASHINGTON",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01076"
+                },
+                {
+                    "title": "Comprehensive CBT via reSET for a Hub and Spoke MAT System of Care",
+                    "content": "AIMEE N CAMPBELL, DENISE MICHELLE HOLDEN, SARAH SHARFSTEIN KAWASAKI, EDWARD V. NUNES; PENNSYLVANIA STATE UNIV HERSHEY MED CTR",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01482"
+                },
+                {
+                    "title": "Suicide Prediction and Prevention for People at Risk for Opioid Use Disorder",
+                    "content": "REBECCA ROSSOM, GAVIN BART; HEALTHPARTNERS INSTITUTE FOR EDUCATION & RESEARCH",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01312"
+                },
+                {
+                    "title": "HOPE Consortium Trial to Reduce Pain and Opioid Use in Hemodialysis",
+                    "content": "LAURA M DEMBER, JOHN T FARRAR, JESSE YENCHIH HSU, KYLE MATTHEW KAMPMAN; UNIVERSITY OF PENNSYLVANIA",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01340"
+                },
+                {
+                    "title": "A role for peripheral NAAA-regulated lipid signaling in the control of hyperalgesic priming",
+                    "content": "YANNICK FOTIO; UNIVERSITY OF CALIFORNIA-IRVINE",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01206"
+                },
+                {
+                    "title": "FKBP51 antagonism to prevent chronic pain: optimizing efficacy & evaluating safety and mechanisms",
+                    "content": "SARAH LINNSTAEDT, SAMUEL A. MCLEAN; UNIV OF NORTH CAROLINA CHAPEL HILL",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00247"
+                },
+                {
+                    "title": "Neurobiology of pain experiences in youth in the ABCD study",
+                    "content": "ANNA CAMILLE WILSON; OREGON HEALTH & SCIENCE UNIVERSITY",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01031"
+                },
+                {
+                    "title": "Personalized Auricular Point Acupressure for Chronic Pain Self-Management in Rural Populations",
+                    "content": "JANE N BOLIN, JENNIFER KAWI, HULIN WU; UNIVERSITY OF TEXAS HLTH SCI CTR HOUSTON",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01368"
+                },
+                {
+                    "title": "Development of therapeutic antibodies to target sodium channels involved in pain signaling",
+                    "content": "JAMES S TRIMMER, VLADIMIR M YAROV-YAROVOY; UNIVERSITY OF CALIFORNIA AT DAVIS",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00985"
+                },
+                {
+                    "title": "Anatomic, Physiologic and Transcriptomic Mechanisms of Neuropathic Pain in Human DRG",
+                    "content": "PATRICK M DOUGHERTY, THEODORE J PRICE; UNIVERSITY OF TX MD ANDERSON CAN CTR",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00284"
+                },
+                {
+                    "title": "Healthy Brain and Child Development National Consortium Data Coordinating Center",
+                    "content": "ANDERS M DALE, DAMIEN A FAIR, CHRISTOPHER DANIEL SMYSER; WASHINGTON UNIVERSITY",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01258"
+                }
+            ]
+        },
+        {
             "title": "April - June 2025",
             "cards": [
                 {
@@ -90,7 +215,7 @@
                 }
             ]
         },
-            {
+        {
             "title": "January - March 2025",
             "cards": [
                 {
@@ -243,84 +368,6 @@
                     "link": "https://healdata.org/portal/discovery/HDP00210"
                 }
             ]
-        },
-        {
-            "title": "July - September 2024",
-            "cards": [
-                {
-                    "title": "Targeting Endosomal Receptors for Treatment of Chronic Pain",
-                    "content": "NIGEL W BUNNETT, BRIAN L SCHMIDT; NEW YORK UNIVERSITY",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00113"
-                },
-                {
-                    "title": "Validation of Fibroblast-Derived PI16 as a Novel Target for pain Treatment",
-                    "content": "ANDREW JOHN SHEPHERD; UNIVERSITY OF TX MD ANDERSON CAN CTR",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00164"
-                },
-                {
-                    "title": "Sympathetic-mediated sensory neuron cluster firing as a novel therapeutic target for neuropathic pain",
-                    "content": "XINZHONG DONG, JUN-MING ZHANG; JOHNS HOPKINS UNIVERSITY",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00173"
-                },
-                {
-                    "title": "Novel Implantable Device to Negate Post-Amputation Pain",
-                    "content": "SANDEEP KATHJU, MOHAMED E LABIB; NOVAFLUX, INC.",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00245"
-                },
-                {
-                    "title": "Target validation of a novel CGRP receptor in migraine",
-                    "content": "DEBBIE L HAY, ANDREW F RUSSO; UNIVERSITY OF IOWA",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00252"
-                },
-                {
-                    "title": "Disrupting ion channel scaffolding to treat neuropathic pain",
-                    "content": "ARINDAM BHATTACHARJEE; STATE UNIVERSITY OF NEW YORK AT BUFFALO",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00303"
-                },
-                {
-                    "title": "Clinical Translation of Ultrasonic Ketamine Uncaging for Non-Opioid Therapy of Chronic Pain",
-                    "content": "RAAG D AIRAN, NOLAN R. WILLIAMS; STANFORD UNIVERSITY",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00325"
-                },
-                {
-                    "title": "tDCS to decrease opioid relapse",
-                    "content": "ANA M ABRANTES, MICHAEL D STEIN; BUTLER HOSPITAL (PROVIDENCE, RI)",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00619"
-                },
-                {
-                    "title": "Latinx Children and Surgery",
-                    "content": "ZEEV KAIN; UNIVERSITY OF CALIFORNIA-IRVINE",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00911"
-                },
-                {
-                    "title": "Tracking the opioid epidemic with social media: an early warning system",
-                    "content": "RUSS BIAGIO ALTMAN; STANFORD UNIVERSITY",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00938"
-                },
-                {
-                    "title": "A Novel Assay to Improve Translation in Analgesic Drug Development",
-                    "content": "SIDNEY S NEGUS; VIRGINIA COMMONWEALTH UNIVERSITY",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP01130"
-                },
-                {
-                    "title": "Accelerator Strategies for States to Improve System Transformations Affecting Children, Youth and Families",
-                    "content": "KIMBERLY E. HOAGWOOD, MARY MCKERNAN MCKAY; NEW YORK UNIVERSITY SCHOOL OF MEDICINE",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP01239"
-                }
-            ]
         }
-
     ]
 }
