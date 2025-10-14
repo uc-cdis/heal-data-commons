@@ -26,8 +26,12 @@ export const resourceCalloutsData = [
     title: 'Resources for Secondary Data Users',
     links: [
       {
-        title: 'Browse Studies and Data',
+        title: 'Browse All Studies and Data',
         href: '/portal',
+      },
+     {
+        title: 'Resources for Secondary Data Users',
+        href: '/newly-available-datasets',
       },
       {
         title: 'Request Access to Workspaces',
