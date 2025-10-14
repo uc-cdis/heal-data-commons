@@ -2,23 +2,29 @@ export const resourceCalloutsData = [
   {
     title: 'Resources for HEAL Investigators',
     links: [
-      { title: 'View the Checklist for HEAL-compliant Data', href: 'https://www.healdatafair.org/resources/road-map' },
-      { title: 'Select a Repository', href: 'https://www.healdatafair.org/resources/guidance/selection' },
+      {
+        title: 'View the Checklist for HEAL-compliant Data',
+        href: 'https://www.healdatafair.org/resources/road-map',
+      },
+      {
+        title: 'Select a Repository',
+        href: 'https://www.healdatafair.org/resources/guidance/selection',
+      },
       {
         title: 'Register Your Study',
-        href: 'https://heal.github.io/platform-documentation/study-registration/',
+        href: '/documentation/study-registration',
       },
       {
         title: 'Submit Study-Level Metadata',
-        href: 'https://heal.github.io/platform-documentation/slmd_submission/',
+        href: '/documentation/slmd_submission',
       },
       {
         title: 'Submit Variable-Level Metadata',
-        href: 'https://heal.github.io/platform-documentation/vlmd/',
+        href: '/documentation/vlmd',
       },
       {
         title: 'Link Data to the HEAL Data Platform',
-        href: 'https://heal.github.io/platform-documentation/reporting-repo/',
+        href: '/documentation/reporting-repo',
       },
     ],
   },
@@ -26,12 +32,16 @@ export const resourceCalloutsData = [
     title: 'Resources for Secondary Data Users',
     links: [
       {
-        title: 'Browse Studies and Data',
+        title: 'Browse All Studies and Data',
         href: '/portal',
       },
       {
+        title: 'Resources for Secondary Data Users',
+        href: '/newly-available-datasets',
+      },
+      {
         title: 'Request Access to Workspaces',
-        href: 'https://heal.github.io/platform-documentation/workspaces/heal_workspace_registration/',
+        href: '/documentation/workspaces/heal_workspace_registration',
       },
       {
         title: 'Explore Example Analyses',
@@ -39,12 +49,12 @@ export const resourceCalloutsData = [
       },
       {
         title: 'View Answers to FAQs',
-        href: 'https://heal.github.io/platform-documentation/faqs/',
+        href: '/documentation/faqs',
       },
       {
         title:
           'Watch Tutorial Videos to Learn How to Interact with the HEAL Data Platform',
-        href: 'https://heal.github.io/platform-documentation/platform_tutorial_videos/',
+        href: '/documentation/platform_tutorial_videos',
       },
     ],
   },
