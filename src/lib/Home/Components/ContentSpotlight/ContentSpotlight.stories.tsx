@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, within, fireEvent } from '@storybook/test';
+import { expect, within, fireEvent } from 'storybook/test';
 
 import ContentSpotlight from './ContentSpotlight';
 
