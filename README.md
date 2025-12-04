@@ -90,6 +90,8 @@ relevant configuration files are:
 
 ## Updating a forked commons
 
+The following steps usually apply to update a forked commons.
+
 Get the changes from the parent fork:
 ```bash
 git remote add upstream git@github.com:uc-cdis/commons-frontend-app.git
@@ -109,7 +111,3 @@ If you use this flag, it is recommended that you carefully review the changes an
 
 You will see merge conflicts. In general: **take the remote's version for everything except the config files**, as those are customized to the commons config. Resolve any remaining config issues and open a PR.
 Test the new common by running it locally or in a staging environment.
-
-## Custom Pages
-
-See ```src/pages/SamplePage``` for an example of adding a new page to the HEAL commons.

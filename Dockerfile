@@ -1,55 +1,61 @@
-# docker build -t gen3ff .
-# docker run -p 3000:3000 -it gen3ff
-# for Macbook silicon M1/m2 uncomment the following lines and comment quay.io/cdis/ubuntu:20.04:
-#FROM arm64v8/ubuntu:20.04 as build
+# docker build -t ff .
+# docker run -p 3000:3000 -it ff
+# Build stage
+FROM --platform=$BUILDPLATFORM node:22-alpine AS builder
 
-FROM quay.io/cdis/ubuntu:20.04 AS build
-
-ARG NODE_VERSION=20
-
-ARG BASE_PATH
-ARG NEXT_PUBLIC_PORTAL_BASENAME
-ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
-ENV PATH=$PATH:/home/node/.npm-global/bin
+ARG TARGETPLATFORM
+ARG BUILDPLATFORM
 
 WORKDIR /gen3
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    libssl1.1 \
-    libgnutls30 \
-    ca-certificates \
-    curl \
-    git \
-    gnupg \
-    && mkdir -p /etc/apt/keyrings \
-    && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg \
-    && echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_VERSION.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list \
-    && apt-get update \
-    && apt-get install -y nodejs \
-    && apt-get clean \
-    && npm install -g npm@10.5.2
+# Copy dependency files first for better caching
+COPY package.json package-lock.json ./
 
-RUN  addgroup --system --gid 1001 nextjs && adduser --system --uid 1001 nextjs
-COPY ./package.json ./package-lock.json ./
-COPY ./package-lock.json ./
+# Install ALL dependencies once (including dev deps for build)
+RUN npm config set fetch-retries 5 && \
+    npm config set fetch-retry-mintimeout 20000 && \
+    npm config set fetch-retry-maxtimeout 120000 && \
+    npm ci && \
+    npm cache clean --force
+
+# Copy necessary config files
+COPY next.config.js tsconfig.json tailwind.config.js postcss.config.js ./
+COPY .env.production ./
+
+# Copy source files
 COPY ./src ./src
 COPY ./public ./public
 COPY ./config ./config
-COPY ./next.config.js ./
-COPY ./tsconfig.json ./
-COPY ./.env.development ./
-COPY ./.env.production ./
-COPY ./tailwind.config.js ./
-COPY ./postcss.config.js ./
 COPY ./start.sh ./
-RUN npm ci
-RUN npm install \
-    "@swc/core" \
-    "@napi-rs/magic-string"
-RUN npm run build
-ENV PORT=3000
-ENV NODE_ENV=production
 
-EXPOSE 3000
-CMD ["/bin/bash", "./start.sh"]
+# Build and prune
+RUN npm run build && \
+    npm prune --production
+
+# Production stage
+FROM node:22-alpine AS runner
+
+WORKDIR /gen3
+
+RUN addgroup --system --gid 1001 nextjs && \
+    adduser --system --uid 1001 nextjs
+
+# Copy only production dependencies
+COPY --from=builder --chown=nextjs:nextjs /gen3/package.json ./
+COPY --from=builder --chown=nextjs:nextjs /gen3/node_modules ./node_modules
+COPY --from=builder --chown=nextjs:nextjs /gen3/config ./config
+COPY --from=builder --chown=nextjs:nextjs /gen3/.next ./.next
+COPY --from=builder --chown=nextjs:nextjs /gen3/public ./public
+COPY --from=builder --chown=nextjs:nextjs /gen3/start.sh ./start.sh
+
+RUN mkdir -p .next/cache/images && \
+    chmod +x start.sh && \
+    chown -R nextjs:nextjs .next/cache
+
+USER nextjs:nextjs
+
+ENV NODE_ENV=production \
+    PORT=3000 \
+    NEXT_TELEMETRY_DISABLED=1
+
+CMD ["sh", "./start.sh"]
