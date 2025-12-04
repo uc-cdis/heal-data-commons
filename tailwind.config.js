@@ -15,14 +15,7 @@ module.exports = {
     './src/features/**/*.{js,ts,jsx,tsx}',
     './node_modules/@gen3/frontend/dist/index/esm/*.js',
   ],
-  safelist: [
-    {
-      pattern: /^w-\[.+\]$/,
-    },
-    {
-      pattern: /^sm-\[.+\]$/,
-    },
-  ],
+
   theme: {
     extend: {
       backgroundImage: {
@@ -96,7 +89,7 @@ module.exports = {
       height: {
         '100px': '100px',
         '200px': '200px',
-        'workspace': '100vh'
+        workspace: '100vh',
       },
       screens: {
         sm: '640px',
@@ -188,6 +181,8 @@ module.exports = {
   ],
   // Add any colors used in a json config file here
   safelist: [
+    { pattern: /^w-\[.+\]$/},
+    { pattern: /^sm-\[.+\]$/},
     { pattern: /^bg-navigation-footer$/ },
     { pattern: /^border-navigation-topbar_hover$/ },
     'accent-warm',
