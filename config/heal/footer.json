@@ -8,7 +8,7 @@
           "height": 100,
           "icon": "/images/gen3.png",
           "alt": "Gen3 Logo",
-          "href": "https://ctds.uchicago.edu/gen3"
+          "href": "https://gen3.org"
         },
         {
           "className": "w-[40%] sm:w-[105px] border-r-1 border-heal-blue_accent px-2 sm:px-3 inline",
