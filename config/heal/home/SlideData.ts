@@ -12,4 +12,9 @@ export const slideData = [
     icon: IconAnalyses,
     text: 'Explore example analyses!',
   },
+  {
+    href: 'https://heal.github.io/platform-documentation/data_sharing_guidance/',
+    icon: IconHdd,
+    text: 'Guidance on packaging your data for sharing',
+  },
 ];
