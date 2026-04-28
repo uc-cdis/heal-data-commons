@@ -21,7 +21,7 @@
       },
       {
         "icon": "/icons/HealIcons/Icon-Analyses-Nav.svg",
-        "href": "/portal/resource-browser",
+        "href": "https://uc-cdis.github.io/heal-notebooks-pages/",
         "name": "Example Analyses"
       },
       {
