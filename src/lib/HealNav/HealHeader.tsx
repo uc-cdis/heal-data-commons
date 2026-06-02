@@ -60,6 +60,8 @@ const HealHeader: React.FC = () => {
                   key={i}
                   href={item.href}
                   className={generateLinkClassNames(i)}
+                  target={item.newWindow ? '_blank' : '_self'}
+                  rel="noopener noreferrer"
                 >
                   <Image
                     src={item.icon}
