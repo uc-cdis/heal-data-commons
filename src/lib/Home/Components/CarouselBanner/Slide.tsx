@@ -9,6 +9,7 @@ type SlideProps = {
   href: string;
   Icon: React.ElementType<{ className: string }>;
   text: string;
+  openInNewWindow: boolean;
 };
 
 const Slide: React.FC<SlideProps> = ({
@@ -18,6 +19,7 @@ const Slide: React.FC<SlideProps> = ({
   href,
   Icon,
   text,
+  openInNewWindow,
 }: SlideProps) => {
   // Determines the class name based on the current slide index for sliding animation
   const getSlideClassName = (i: number) => {
@@ -38,6 +40,8 @@ const Slide: React.FC<SlideProps> = ({
       <a
         href={href}
         className="text-white flex group text-center mx-1 px-1 hover:underline"
+        target={openInNewWindow ? '_blank' : '_self'}
+        rel="noopener noreferrer"
       >
         <span
           className="

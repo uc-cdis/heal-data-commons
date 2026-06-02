@@ -8,9 +8,10 @@ export const slideData = [
     text: 'View newly available datasets',
   },
   {
-    href: '/portal/resource-browser',
+    href: 'https://uc-cdis.github.io/heal-notebooks-pages/',
     icon: IconAnalyses,
     text: 'Explore example analyses!',
+    openInNewWindow: true,
   },
   {
     href: 'https://heal.github.io/platform-documentation/data_sharing_guidance/',
