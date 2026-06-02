@@ -51,7 +51,7 @@ const CarouselBanner: React.FC = () => {
             href={obj.href}
             Icon={obj.icon}
             text={obj.text}
-            openInNewWindow={Boolean(obj?.openInNewWindow)}
+            openInNewWindow={Boolean(obj?.NewWindow)}
           />
         ))}
       </div>

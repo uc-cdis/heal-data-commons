@@ -2,8 +2,14 @@ export const resourceCalloutsData = [
   {
     title: 'Resources for HEAL Investigators',
     links: [
-      { title: 'View the Checklist for HEAL-compliant Data', href: 'https://www.healdatafair.org/resources/road-map' },
-      { title: 'Select a Repository', href: 'https://www.healdatafair.org/resources/guidance/selection' },
+      {
+        title: 'View the Checklist for HEAL-compliant Data',
+        href: 'https://www.healdatafair.org/resources/road-map',
+      },
+      {
+        title: 'Select a Repository',
+        href: 'https://www.healdatafair.org/resources/guidance/selection',
+      },
       {
         title: 'Register Your Study',
         href: 'https://heal.github.io/platform-documentation/study-registration/',
@@ -29,7 +35,7 @@ export const resourceCalloutsData = [
         title: 'Browse All Studies and Data',
         href: '/portal',
       },
-     {
+      {
         title: 'Resources for Secondary Data Users',
         href: '/newly-available-datasets',
       },
@@ -39,7 +45,8 @@ export const resourceCalloutsData = [
       },
       {
         title: 'Explore Example Analyses',
-        href: '/portal/resource-browser',
+        href: 'https://uc-cdis.github.io/heal-notebooks-pages/',
+        NewWindow: true,
       },
       {
         title: 'View Answers to FAQs',

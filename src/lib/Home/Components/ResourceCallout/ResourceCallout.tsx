@@ -6,6 +6,8 @@ interface resourceCalloutLink {
   title: string;
   /** Each Link contains a href */
   href: string;
+  /** links can contain openInNewWindow  */
+  NewWindow?: boolean;
 }
 
 interface resourceCalloutProps {
@@ -41,6 +43,8 @@ const ResourceCallout: React.FC<resourceCalloutProps> = ({
                 </span>
                 <a
                   href={resourceLink.href}
+                  target={resourceLink.NewWindow ? '_blank' : '_self'}
+                  rel="noopener noreferrer"
                   className="text-heal-blue underline hover:text-heal-magenta"
                 >
                   {resourceLink.title}
