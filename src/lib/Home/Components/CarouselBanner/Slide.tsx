@@ -1,6 +1,7 @@
 import React from 'react';
 import ArrowIconSVG from '../../../../../public/icons/HealIcons/Icon-Arrow.svg';
 import styles from './CarouselAnimations.module.css';
+import ExternalLinkIndicator from '@/components/ExternalLinkIndicator';
 
 type SlideProps = {
   currentSlide: number;
@@ -59,7 +60,11 @@ const Slide: React.FC<SlideProps> = ({
           {text}
         </span>
         <span className="mr-2">
-          <ArrowIconSVG className="inline-block fill-current mt-2" />
+          {openInNewWindow ? (
+            <ExternalLinkIndicator className="mt-[6px] ml-[2px] inline-block" />
+          ) : (
+            <ArrowIconSVG className="inline-block fill-current mt-2" />
+          )}
         </span>
       </a>
     </div>

@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { Banner, BannerProps, BannerLevelCategories } from '@gen3/frontend';
 import navigationJSON from '../../../config/heal/navigation.json';
 import bannerJSON from '../../../config/heal/banner.json';
+import ArrowIconSVG from '../../../public/icons/HealIcons/Icon-Link-Arrow.svg';
+import ExternalLinkIndicator from '@/components/ExternalLinkIndicator';
 
 const { navigation } = navigationJSON;
 const banners: Array<BannerProps> = [];
@@ -71,6 +73,9 @@ const HealHeader: React.FC = () => {
                     className="mr-2 ml-1 mt-[-2px] h-[16px] lg:ml-4"
                   />
                   {item.name}
+                  {item.newWindow && (
+                    <ExternalLinkIndicator className={'-mt-[3px] ml-1'} />
+                  )}
                 </a>
               ))}
             </div>

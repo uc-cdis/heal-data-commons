@@ -1,5 +1,6 @@
 import React from 'react';
 import IconLinkArrow from '../../../../../public/icons/HealIcons/Icon-Link-Arrow.svg';
+import ExternalLinkIndicator from '@/components/ExternalLinkIndicator';
 
 interface resourceCalloutLink {
   /** Each Link contains a title */
@@ -48,6 +49,9 @@ const ResourceCallout: React.FC<resourceCalloutProps> = ({
                   className="text-heal-blue underline hover:text-heal-magenta"
                 >
                   {resourceLink.title}
+                  {resourceLink.NewWindow && (
+                    <ExternalLinkIndicator className="ml-1 -mb-[2px]" />
+                  )}
                 </a>
               </li>
             ),
