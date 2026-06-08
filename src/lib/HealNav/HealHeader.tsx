@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { Banner, BannerProps, BannerLevelCategories } from '@gen3/frontend';
 import navigationJSON from '../../../config/heal/navigation.json';
 import bannerJSON from '../../../config/heal/banner.json';
-import ArrowIconSVG from '../../../public/icons/HealIcons/Icon-Link-Arrow.svg';
 import ExternalLinkIndicator from '@/components/ExternalLinkIndicator';
 
 const { navigation } = navigationJSON;

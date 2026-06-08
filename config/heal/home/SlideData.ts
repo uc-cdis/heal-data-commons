@@ -11,7 +11,7 @@ export const slideData = [
     href: 'https://uc-cdis.github.io/heal-notebooks-pages/',
     icon: IconAnalyses,
     text: 'Explore example analyses!',
-    NewWindow: true,
+    newWindow: true,
   },
   {
     href: 'https://heal.github.io/platform-documentation/data_sharing_guidance/',

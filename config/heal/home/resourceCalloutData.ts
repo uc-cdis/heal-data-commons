@@ -46,7 +46,7 @@ export const resourceCalloutsData = [
       {
         title: 'Explore Example Analyses',
         href: 'https://uc-cdis.github.io/heal-notebooks-pages/',
-        NewWindow: true,
+        newWindow: true,
       },
       {
         title: 'View Answers to FAQs',
