@@ -3,7 +3,7 @@ import { expect, within } from '@storybook/test';
 import ExternalLinkIndicator from './ExternalLinkIndicator';
 
 const meta = {
-  title: 'HomePage/HealHeader',
+  title: 'components/ExternalLinkIndicator',
   component: ExternalLinkIndicator,
 } satisfies Meta<typeof ExternalLinkIndicator>;
 

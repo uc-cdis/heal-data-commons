@@ -10,10 +10,19 @@ const ExternalLinkIndicator: React.FC<ExternalLinkIndicatorProps> = ({
 }: ExternalLinkIndicatorProps) => {
   return (
     <>
-      <span aria-hidden="true" className={`inline-block ${className}`}>
+      <span
+        aria-hidden="true"
+        className={`inline-block ${className}`}
+        data-testid="external-link-indicator"
+      >
         <ExternalLinkSVG />
       </span>
-      <span className="sr-only">(opens in a new window)</span>
+      <span
+        className="sr-only"
+        data-testid="external-link-indicator-accessible-text"
+      >
+        (opens in a new window)
+      </span>
     </>
   );
 };
