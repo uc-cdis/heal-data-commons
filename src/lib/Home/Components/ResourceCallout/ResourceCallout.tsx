@@ -7,7 +7,7 @@ interface resourceCalloutLink {
   title: string;
   /** Each Link contains a href */
   href: string;
-  /** links can contain openInNewWindow  */
+  /** links can contain newWindow to open in new tab  */
   newWindow?: boolean;
 }
 
