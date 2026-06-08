@@ -1,11 +1,14 @@
 import React from 'react';
 import IconLinkArrow from '../../../../../public/icons/HealIcons/Icon-Link-Arrow.svg';
+import ExternalLinkIndicator from '@/components/ExternalLinkIndicator';
 
 interface resourceCalloutLink {
   /** Each Link contains a title */
   title: string;
   /** Each Link contains a href */
   href: string;
+  /** links can contain newWindow to open in new tab  */
+  newWindow?: boolean;
 }
 
 interface resourceCalloutProps {
@@ -41,9 +44,14 @@ const ResourceCallout: React.FC<resourceCalloutProps> = ({
                 </span>
                 <a
                   href={resourceLink.href}
+                  target={resourceLink.newWindow ? '_blank' : '_self'}
+                  rel="noopener noreferrer"
                   className="text-heal-blue underline hover:text-heal-magenta"
                 >
                   {resourceLink.title}
+                  {resourceLink.newWindow && (
+                    <ExternalLinkIndicator className="ml-1 -mb-[2px]" />
+                  )}
                 </a>
               </li>
             ),

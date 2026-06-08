@@ -22,7 +22,8 @@
       {
         "icon": "/icons/HealIcons/Icon-Analyses-Nav.svg",
         "href": "https://uc-cdis.github.io/heal-notebooks-pages/",
-        "name": "Example Analyses"
+        "name": "Example Analyses",
+        "newWindow": true
       },
       {
         "icon": "/icons/HealIcons/Icon-Profile.svg",
@@ -32,7 +33,8 @@
       {
         "icon": "/icons/HealIcons/Icon-Help.svg",
         "href": "https://heal.github.io/platform-documentation/",
-        "name": "Help"
+        "name": "Help",
+        "newWindow": true
       }
     ]
   },
