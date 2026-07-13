@@ -20,6 +20,137 @@
     ],
     "sections": [
         {
+            "title": "April - June 2026",
+            "cards": [
+                {
+                    "title": "Validation of Targeting Macrophage-Mediated Events in the DRG to Alleviate Chronic Spinal Cord Injury Pain",
+                    "content": "MEGAN R DETLOFF; DREXEL UNIVERSITY",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00541"
+                },
+                {
+                    "title": "POPI: Placenta, Opioids and Perinatal Implications",
+                    "content": "ILHEM MESSAOUDI, JOHN M O'BRIEN; UNIVERSITY OF KENTUCKY",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01127"
+                },
+                {
+                    "title": "Safety, pharmacokinetics and efficacy of extended-release naltrexone in pregnant women with opioid use disorder",
+                    "content": "ELISHA WACHMAN; BOSTON MEDICAL CENTER",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00210"
+                },
+                {
+                    "title": "Neuronal anatomy, connectivity, and phenotypic innervation of the knee joint",
+                    "content": "BENJAMIN R ARENKIEL, BRENDAN LEE, RUSSELL S RAY, JOSHUA D. WYTHE; BAYLOR COLLEGE OF MEDICINE",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00951"
+                },
+                {
+                    "title": "Home-based transcutaneous electrical acustimulation for abdominal pain",
+                    "content": "JIANDE CHEN; UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00171"
+                },
+                {
+                    "title": "Neural Architecture of the Murine and Human Temporomandibular Joint",
+                    "content": "DAWEN CAI, CHRISTOPHER RYAN DONNELLY, JOSHUA JAMES EMRICK; DUKE UNIVERSITY",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00996"
+                },
+                {
+                    "title": "Mapping the joint-nerve interactome of the knee",
+                    "content": "MARTIN K LOTZ, RICHARD J MILLER, ANNE-MARIE MALFAIT; RUSH UNIVERSITY MEDICAL CENTER",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00960"
+                },
+                {
+                    "title": "Nociceptive Afferent Topographical Innervation of the Heart and Stomach",
+                    "content": "ZIXI JACK CHENG; UNIVERSITY OF CENTRAL FLORIDA",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01063"
+                },
+                {
+                    "title": "Preclinical Trial: Targeting the Neuropeptide S Receptor to Curb Opioid Taking and Seeking",
+                    "content": "STEWART DONALDSON CLARK; STATE UNIVERSITY OF NEW YORK AT BUFFALO",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01404"
+                },
+                {
+                    "title": "Mechanisms of Psychosocial Treatments for Chronic Low Back Pain",
+                    "content": "MELISSA ANNE DAY, MARK P JENSEN; UNIVERSITY OF WASHINGTON",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00613"
+                },
+                {
+                    "title": "University of Michigan BACPAC Mechanistic Research Center",
+                    "content": "DANIEL J CLAUW, AFTON L HASSETT; UNIVERSITY OF MICHIGAN AT ANN ARBOR",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00429"
+                },
+                {
+                    "title": "Innervation of the knee and TMJ",
+                    "content": "KYLE D ALLEN, ALEJANDRO JOSE ALMARZA, ROBERT M CAUDLE; UNIVERSITY OF FLORIDA",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00937"
+                },
+                {
+                    "title": "Topical Neurokinin-1 Receptor Antagonist as an Effective Non-addictive Analgesic for Ocular Pain",
+                    "content": "YIHE CHEN, REZA DANA; SCHEPENS EYE RESEARCH INSTITUTE",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01344"
+                },
+                {
+                    "title": "Reversing opioid-induced hypoxemia with novel thiol-based drugs without compromising analgesia in goats",
+                    "content": "HUBERT V FORSTER, MATTHEW ROBERT HODGES; MEDICAL COLLEGE OF WISCONSIN",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01240"
+                },
+                {
+                    "title": "Dysregulation of maternal immunity during pregnancy by pregravid obesity",
+                    "content": "ILHEM MESSAOUDI; UNIVERSITY OF KENTUCKY",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01378"
+                },
+                {
+                    "title": "Neuropeptide S Receptor 1 as a Novel Target for Reducing Opioid Self-Administration and Opioid Relapse",
+                    "content": "BRENDAN TUNSTALL; UNIVERSITY OF TENNESSEE HEALTH SCI CTR",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01437"
+                },
+                {
+                    "title": "Translating an MR-guided focused ultrasound system for first-in-human precision neuromodulation of pain circuits",
+                    "content": "CHARLES F CASKEY, LI MIN CHEN; VANDERBILT UNIVERSITY MEDICAL CENTER",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01204"
+                },
+                {
+                    "title": "The Injectrode - A Truly Injectable Electrode for Dorsal Root Ganglion Stimulation to Treat Pain",
+                    "content": "KIP A LUDWIG, DOUGLAS J WEBER; UNIVERSITY OF WISCONSIN-MADISON",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00136"
+                },
+                {
+                    "title": "A novel opioid receptor antagonist for treating abuse and overdose",
+                    "content": "CHARLES P FRANCE; UNIVERSITY OF TEXAS HLTH SCIENCE CENTER",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00373"
+                },
+                {
+                    "title": "Multimodal imaging biomarkers for investigating fascia, muscle and vasculature in myofascial pain.",
+                    "content": "SIDDHARTHA SIKDAR; GEORGE MASON UNIVERSITY",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP00974"
+                },
+                {
+                    "title": "The Penn Human Precision Pain Center (HPPC): Discovery and Functional Evaluation of Human Primary Somatosensory Neuron Types at Normal and Chronic Pain Conditions",
+                    "content": "MINGYAO LI, WENQIN LUO, HKAN OLAUSSON, HAO WU; UNIVERSITY OF PENNSYLVANIA",
+                    "linkText": "View Study",
+                    "link": "https://healdata.org/portal/discovery/HDP01155"
+                }
+            ]
+        },
+        {
             "title": "January - March 2026",
             "cards": [
                 {
@@ -307,77 +438,6 @@
                     "content": "ANDERS M DALE, DAMIEN A FAIR, CHRISTOPHER DANIEL SMYSER; WASHINGTON UNIVERSITY",
                     "linkText": "View Study",
                     "link": "https://healdata.org/portal/discovery/HDP01258"
-                }
-            ]
-        },
-        {
-            "title": "April - June 2025",
-            "cards": [
-                {
-                    "title": "Anatomic, Physiologic and Transcriptomic Mechanisms of Neuropathic Pain in Human DRG",
-                    "content": "PATRICK M DOUGHERTY, THEODORE J PRICE; UNIVERSITY OF TX MD ANDERSON CAN CTR",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00284"
-                },
-                {
-                    "title": "Developing a Timely Opioid Overdose Detection Tool through a Tribally Engaged Approach",
-                    "content": "TOMMI LYNN GAINES; UNIVERSITY OF CALIFORNIA, SAN DIEGO",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP01000"
-                },
-                {
-                    "title": "Development of LPA5 Antagonists as Analgesics",
-                    "content": "JUN-XU LI, YUAN-XIANG TAO, YANAN ZHANG; RESEARCH TRIANGLE INSTITUTE",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP01101"
-                },
-                {
-                    "title": "HEAL-affiliated NIH Common Fund Acute to Chronic Pain Signatures (A2CPS) Program",
-                    "content": "MARTIN LINDQUIST, TOR D. WAGER; JOHNS HOPKINS UNIVERSITY",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP01069"
-                },
-                {
-                    "title": "Mining Social Media Big Data for Toxicovigilance: Studying Substance Use via Natural Language Processing and Machine Learning Methods",
-                    "content": "ABEED H SARKER; EMORY UNIVERSITY",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00973"
-                },
-                {
-                    "title": "Developing equilibrative nucleoside transporter inhibitors as non-opioid pain therapeutics",
-                    "content": "JIYONG HONG, RU-RONG JI, SEOK-YONG LEE; DUKE UNIVERSITY",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP01419"
-                },
-                {
-                    "title": "Deconstructing sleep disruption as a major risk factor for relapse in opioid use",
-                    "content": "CAROL A EVERSON, CHRISTOPHER M OLSEN, HERSHEL RAFF; MEDICAL COLLEGE OF WISCONSIN",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00049"
-                },
-                {
-                    "title": "Discovery and validation of a novel orphan GPCR as a target for therapeutic intervention in neuropathic pain",
-                    "content": "DANIELA SALVEMINI, GINA L.C. YOSTEN; SAINT LOUIS UNIVERSITY",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00364"
-                },
-                {
-                    "title": "Structure-Function and Signaling of Glutamate Delta 1 in Pain Mechanism",
-                    "content": "SHASHANK MANOHAR DRAVID; CREIGHTON UNIVERSITY",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP01083"
-                },
-                {
-                    "title": "INTERCEPT: Integrated Research Center for human Pain Tissues",
-                    "content": "ROBERT W GEREAU; WASHINGTON UNIVERSITY",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00902"
-                },
-                {
-                    "title": "Targeting sensory ganglia and glial signaling for the treatment of acute and chronic pain",
-                    "content": "TEMUGIN BERTA; UNIVERSITY OF CINCINNATI",
-                    "linkText": "View Study",
-                    "link": "https://healdata.org/portal/discovery/HDP00237"
                 }
             ]
         }
