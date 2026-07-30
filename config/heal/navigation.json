@@ -15,6 +15,11 @@
         "name": "Discovery"
       },
       {
+        "icon": "/icons/HealIcons/Icon-Explorer.svg",
+        "href": "/Explorer",
+        "name": "Explorer"
+      },
+      {
         "icon": "/icons/HealIcons/Icon-Workspaces.svg",
         "href": "/portal/workspace",
         "name": "Workspaces"
