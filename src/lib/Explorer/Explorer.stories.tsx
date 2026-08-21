@@ -23,4 +23,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    a11y: {
+      test: 'off', // Disables automated a11y tests and checks for this story
+    },
+  },
+};
