@@ -5,6 +5,13 @@ import navigationJSON from '../../../config/heal/navigation.json';
 import bannerJSON from '../../../config/heal/banner.json';
 import ExternalLinkIndicator from '@/components/ExternalLinkIndicator';
 
+// TODO: remove this after updating FEF dep
+export enum LoginButtonVisibility {
+  Hidden = 'hide',
+  Visible = 'visible',
+  LogoutOnly = 'logoutOnly',
+}
+
 const { navigation } = navigationJSON;
 const banners: Array<BannerProps> = [];
 bannerJSON.forEach((banner) =>
@@ -80,7 +87,7 @@ const HealHeader: React.FC = () => {
               ))}
               <LoginButton
                 className="text-heal-dark_gray text-xs mr-2 ml-1 mt-[-2px] h-[16px] lg:ml-4"
-                visibility={'visible'}
+                visibility={LoginButtonVisibility.Visible}
               />
             </div>
           </div>
