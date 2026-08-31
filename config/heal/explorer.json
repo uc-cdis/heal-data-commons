@@ -36,6 +36,22 @@
       "downloadAccessor": "object_id"
     },
     "buttons": [
+      {
+        "enabled": true,
+        "type": "manifest",
+        "action": "manifest",
+        "title": "Download File Manifest",
+        "leftIcon": "datafile",
+        "rightIcon": "download",
+        "fileName": "files_manifest.json",
+        "actionArgs": {
+          "resourceIndexType": "file",
+          "resourceIdField": "object_id",
+          "referenceIdFieldInResourceIndex": "object_id",
+          "referenceIdFieldInDataIndex": "object_id",
+          "fileFields": ["file_name", "file_size", "dataset_name", "study_name", "repository_name", "object_id"]
+        }
+      }
     ],
     "loginForDownload": true
   }
