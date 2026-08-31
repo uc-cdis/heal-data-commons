@@ -53,6 +53,6 @@
         }
       }
     ],
-    "loginForDownload": true
+    "loginForDownload": false
   }
 ]
