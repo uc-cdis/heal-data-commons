@@ -1,11 +1,8 @@
-import React from 'react';
-import Layout from '@/lib/Layouts';
-import HealLandingPage from './Home';
+import {
+  LandingPage,
+  LandingPageGetServerSideProps as getServerSideProps,
+} from '@gen3/frontend';
 
-export default function IndexPage() {
-    return (
-      <Layout>
-        <HealLandingPage />
-      </Layout>
-    );
-  }
+
+export default LandingPage;
+export { getServerSideProps };

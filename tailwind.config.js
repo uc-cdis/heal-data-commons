@@ -1,34 +1,26 @@
 /** @type {import('tailwindcss').Config} */
-/* eslint-disable @typescript-eslint/no-var-requires */
-
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const plugin = require('tailwindcss/plugin');
-/* eslint-disable @typescript-eslint/no-var-requires */
+
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { GEN3_COMMONS_NAME } = require('@gen3/core');
-const themeColors = require(`./config/${GEN3_COMMONS_NAME}/themeColors.json`);
+/** @type {import('tailwindcss').Config} */
+/* eslint-disable @typescript-eslint/no-require-imports */
 const themeFonts = require(`./config/${GEN3_COMMONS_NAME}/themeFonts.json`);
+const themeColorCSSVars = require(`./config/themeColorCSSVars.json`);
+const { typographyPlugin } = require('@gen3/frontend');
+
 
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/lib/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
     './src/features/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@gen3/frontend/dist/esm/index.js',
-  ],
-  safelist: [
-    {
-      pattern: /^w-\[.+\]$/,
-    },
-    {
-      pattern: /^sm-\[.+\]$/,
-    },
+    './node_modules/@gen3/frontend/dist/index/esm/*.js',
+    './node_modules/@gen3/workspaces/dist/index/esm/*.js',
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'carousel-gradient':
-          'linear-gradient(90.11deg, #532565 10.07%, #982568 30.02%, #981F32 49.97%, #BF362E 94.85%, #E07C3E 99.84%)',
-      },
       colors: {
         heal: {
           primary: '#99286B',
@@ -43,10 +35,6 @@ module.exports = {
           medium_gray: '#818A91',
           light_gray: '#DDDDDD',
           blue: '#0044B3',
-          blue_accent: '#81C5FF',
-          background: '#262663',
-          dark_background: '#111111',
-          carousel_button: '#98203f',
         },
         midrc: {
           secondary: '#421C52',
@@ -73,12 +61,11 @@ module.exports = {
           titanium: '#707070',
           obsidian: '#757575',
         },
-        ...themeColors,
+        ...themeColorCSSVars,
       },
       fontFamily: {
         heading: themeFonts.heading,
         content: themeFonts.content,
-        sans: ['Montserrat', 'sans-serif'],
       },
       fontSize: {
         tiny: '0.625rem',
@@ -93,6 +80,19 @@ module.exports = {
         6: '6px',
         8: '8px',
       },
+      height: {
+        '100px': '100px',
+        '200px': '200px',
+        workspace: '100vh',
+      },
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1420px',
+        '3xl': '1536px',
+      },
     },
   },
   variants: {
@@ -100,7 +100,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
+    typographyPlugin,
     require('@tailwindcss/forms')({
       strategy: 'class',
     }),
@@ -114,6 +114,15 @@ module.exports = {
       addVariant('api-in-range', '&[api-in-range]');
       addVariant('api-first-in-range', '&[api-first-in-range]');
       addVariant('api-last-in-range', '&[api-last-in-range]');
+      addVariant('data-checked', '&[data-checked]');
+      addVariant('data-active', '&[data-active]');
+      addVariant('data-selected', '&[data-selected]');
+      addVariant('data-hovered', '&[data-hovered]');
+      addVariant('data-disabled', '&[data-disabled]');
+      addVariant('data-in-range', '&[data-in-range]');
+      addVariant('data-first-in-range', '&[data-first-in-range]');
+      addVariant('data-last-in-range', '&[data-last-in-range]');
+      addVariant('data-with-icon', '&[data-with-icon]');
     }),
     plugin(function ({ addUtilities }) {
       const newUtilities = {
@@ -173,10 +182,7 @@ module.exports = {
       });
     }),
   ],
-  // Add any colors used in a json config file here
   safelist: [
-    { pattern: /^bg-navigation-footer$/ },
-    { pattern: /^border-navigation-topbar_hover$/ },
     'accent-warm',
     'text-tiny',
     'text-xxs',
