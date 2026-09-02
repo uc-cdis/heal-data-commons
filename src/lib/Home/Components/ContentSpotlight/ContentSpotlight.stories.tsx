@@ -16,7 +16,7 @@ export const Default: Story = {
     const canvas = within(canvasElement);
     const contentSpotlight = canvas.getByTestId('content-spotlight');
     const spotlightButton = canvas.getByRole('button');
-    let successfulButtonClick = false;
+    let successfulButtonClick;
     spotlightButton.addEventListener(
       'click',
       (e) => e.preventDefault(),

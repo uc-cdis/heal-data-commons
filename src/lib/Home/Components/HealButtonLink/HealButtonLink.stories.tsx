@@ -15,7 +15,7 @@ export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const healButton = canvas.getByRole('button');
-    let successfulButtonClick = false;
+    let successfulButtonClick;
     healButton.addEventListener(
       'click',
       (e) => e.preventDefault(),
