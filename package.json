@@ -117,5 +117,10 @@
     "msw": true,
     "sharp": true,
     "@swc/core": true
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
