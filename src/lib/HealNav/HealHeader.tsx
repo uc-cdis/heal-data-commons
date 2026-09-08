@@ -37,7 +37,7 @@ const HealHeader: React.FC = () => {
         Skip to main content
       </a>
       <header data-testid="heal-header">
-        <div className="bg-carousel-gradient h-2"></div>
+        <div className="bg-carousel-gradient h-2" />
         <div className="container mx-auto px-1 md:px-1 lg:px-6 py-4 text-xs">
           <div className="lg:flex justify-between">
             <a
@@ -80,7 +80,9 @@ const HealHeader: React.FC = () => {
             </div>
           </div>
         </div>
-        {banners?.map((banner) => <Banner {...banner} key={banner.id} />)}
+        {banners?.map((banner) => (
+          <Banner {...banner} key={banner.id} />
+        ))}
       </header>
     </div>
   );
