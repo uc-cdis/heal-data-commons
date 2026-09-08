@@ -1,6 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-import { Banner, BannerProps, BannerLevelCategories } from '@gen3/frontend';
+import {
+  Banner,
+  type BannerProps,
+  type BannerLevelCategories,
+} from '@gen3/frontend';
 import navigationJSON from '../../../config/heal/navigation.json';
 import bannerJSON from '../../../config/heal/banner.json';
 import ExternalLinkIndicator from '@/components/ExternalLinkIndicator';
