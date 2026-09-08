@@ -1,9 +1,6 @@
 import React from 'react';
-import {
-  NavPageLayout,
-  NavPageLayoutProps,
-  getNavPageLayoutPropsFromConfig,
-} from '@gen3/frontend';
+import { NavPageLayout, getNavPageLayoutPropsFromConfig } from '@gen3/frontend';
+import type { NavPageLayoutProps } from '@gen3/frontend';
 import type { GetServerSideProps } from 'next';
 
 const VLMDSubmissionAccessRequestPage = ({
@@ -31,11 +28,12 @@ const VLMDSubmissionAccessRequestPage = ({
 
 export default VLMDSubmissionAccessRequestPage;
 
-export const getServerSideProps: GetServerSideProps<NavPageLayoutProps> =
-  async () => {
-    return {
-      props: {
-        ...(await getNavPageLayoutPropsFromConfig()),
-      },
-    };
+export const getServerSideProps: GetServerSideProps<
+  NavPageLayoutProps
+> = async () => {
+  return {
+    props: {
+      ...(await getNavPageLayoutPropsFromConfig()),
+    },
   };
+};

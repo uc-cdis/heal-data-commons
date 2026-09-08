@@ -1,5 +1,5 @@
-import { JSONObject } from '@gen3/core';
-import {
+import type { JSONObject } from '@gen3/core';
+import type {
   AdvancedSearchTerms,
   DiscoveryIndexConfig,
   SearchKV,
@@ -96,8 +96,8 @@ const filterByAdvSearch = (
       const isSearchKV = (obj: any): obj is SearchKV => {
         return obj && obj.key && obj.value;
       };
-      const isSearchKVArray = (obj: any): obj is SearchKV[] => {
-        return obj && Array.isArray(obj) && obj.every(isSearchKV);
+      const isSearchKVArray = (obj: unknown): obj is SearchKV[] => {
+        return (obj as boolean) && Array.isArray(obj) && obj.every(isSearchKV);
       };
       if (!isSearchKVArray(studyFilters)) {
         return false;

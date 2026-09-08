@@ -4,15 +4,20 @@
 
 import {
   type AggregationsData,
-  DataLibraryStoreMode,
+  type DataLibraryStoreMode,
   type ExportDatasetFields,
+  JSONObject,
+  JSONValue,
   type MetadataPaginationParams,
 } from '@gen3/core';
-import { AccessLevel, DataAuthorization } from '@gen3/frontend/utils';
-import { JSONValue, JSONObject } from '@gen3/core';
-import { accessibleFieldName } from '@gen3/frontend/utils';
-import { CollapsableChartsPanelConfiguration } from '@gen3/frontend/components/charts/types';
-import { Gen3AppConfigData } from '@gen3/frontend/lib/content/types';
+
+import {
+  accessibleFieldName,
+  AccessLevel,
+  CollapsableChartsPanelConfiguration,
+  DataAuthorization,
+  Gen3AppConfigData,
+} from '@gen3/frontend';
 
 interface KeywordSearch {
   keywords?: string[];
@@ -221,12 +226,17 @@ export interface TagInfo {
   category: string;
 }
 
-export const isTagInfo = (obj: any): obj is TagInfo => {
-  return obj && obj.name && obj.category;
+export const isTagInfo = (obj: unknown): obj is TagInfo => {
+  return (
+    typeof obj === 'object' &&
+    obj !== null &&
+    'name' in obj &&
+    'category' in obj
+  );
 };
 
-export const isTagInfoArray = (obj: any): obj is TagInfo[] => {
-  return obj && Array.isArray(obj) && obj.every(isTagInfo);
+export const isTagInfoArray = (obj: unknown): obj is TagInfo[] => {
+  return Array.isArray(obj) && obj.every(isTagInfo);
 };
 
 export interface TagCategory extends TagInfo {
