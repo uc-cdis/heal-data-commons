@@ -21,6 +21,18 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@gen3/frontend/pages/StudyForms/StudyRegistration": [
+        "./node_modules/@gen3/frontend/dist/dts/pages/StudyForms/StudyRegistration/index"
+      ],
+      "@gen3/frontend/pages/StudyForms/StudyRegistration/data": [
+        "./node_modules/@gen3/frontend/dist/dts/pages/StudyForms/StudyRegistration/data"
+      ],
+      "@gen3/frontend/pages/StudyForms/StudyRegistrationAccessRequest": [
+        "./node_modules/@gen3/frontend/dist/dts/pages/StudyForms/StudyRegistrationAccessRequest/index"
+      ],
+      "@gen3/frontend/pages/StudyForms/StudyRegistrationAccessRequest/data": [
+        "./node_modules/@gen3/frontend/dist/dts/pages/StudyForms/StudyRegistrationAccessRequest/data"
       ]
     },
     "plugins": [
