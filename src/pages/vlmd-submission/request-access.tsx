@@ -1,39 +1,13 @@
 import React from 'react';
-import { NavPageLayout, getNavPageLayoutPropsFromConfig } from '@gen3/frontend';
-import type { NavPageLayoutProps } from '@gen3/frontend';
-import type { GetServerSideProps } from 'next';
 
-const VLMDSubmissionAccessRequestPage = ({
-  headerProps,
-  footerProps,
-}: NavPageLayoutProps) => {
+const VLMDSubmissionPage = () => {
   return (
-    <NavPageLayout
-      headerProps={headerProps}
-      footerProps={footerProps}
-      headerMetadata={{
-        title: 'VLMD Submission Access Request',
-        content: 'VLMD Submission Access Request',
-        key: 'vlmd-submission-access-request',
-      }}
-    >
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <h1 className="text-3xl font-bold text-gray-800">
-          VLMD Submission Access Request
-        </h1>
-      </div>
-    </NavPageLayout>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <h1 className="text-3xl font-bold text-gray-800">
+        VLMD Request Access Page Placeholder
+      </h1>
+    </div>
   );
 };
 
-export default VLMDSubmissionAccessRequestPage;
-
-export const getServerSideProps: GetServerSideProps<
-  NavPageLayoutProps
-> = async () => {
-  return {
-    props: {
-      ...(await getNavPageLayoutPropsFromConfig()),
-    },
-  };
-};
+export default VLMDSubmissionPage;
