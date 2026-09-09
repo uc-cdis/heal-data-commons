@@ -14,8 +14,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const contentSpotlight = canvas.getByTestId('content-spotlight');
-    const spotlightButton = canvas.getByRole('button');
+    const contentSpotlight = await canvas.findByTestId('content-spotlight');
+    const spotlightButton = await canvas.findByRole('button');
     let successfulButtonClick;
     spotlightButton.addEventListener(
       'click',

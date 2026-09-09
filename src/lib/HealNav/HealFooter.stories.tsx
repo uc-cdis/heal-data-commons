@@ -12,6 +12,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    await expect(canvas.getByTestId('heal-footer')).toBeInTheDocument();
+    expect(await canvas.findByTestId('heal-footer')).toBeInTheDocument();
   },
 };

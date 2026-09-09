@@ -13,8 +13,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const carouselBanner = canvas.getByTestId('carousel-banner');
-    const playPauseButton = canvas.getByTestId('play-pause-button');
+    const carouselBanner = await canvas.findByTestId('carousel-banner');
+    const playPauseButton = await canvas.findByTestId('play-pause-button');
     expect(carouselBanner).toBeInTheDocument();
     expect(playPauseButton).toBeInTheDocument();
     playPauseButton.click();
