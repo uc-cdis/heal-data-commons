@@ -1,13 +1,27 @@
-import React from 'react';
+import {
+  GenericRegistrationAccessRequestForm,
+  VLMDSubmissionAccessRequestPageGetServerSideProps as getServerSideProps,
+} from '@gen3/frontend/pages';
+import type { GenericRegistrationAccessRequestFormConfig } from '@gen3/frontend/pages';
+import Layout from '@/lib/Layouts';
+import PageTitle from '@/lib/HealNav/PageTitle';
 
-const VLMDSubmissionPage = () => {
+interface Props {
+  config: GenericRegistrationAccessRequestFormConfig;
+}
+
+const VLMDSubmissionPage = ({ config }: Props) => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-3xl font-bold text-gray-800">
-        VLMD Submission Page Placeholder
-      </h1>
-    </div>
+    <Layout>
+      <PageTitle pageName="VLMD Submission" />
+      <div className="flex flex-row justify-items-center">
+        <div className="sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-xl mx-20">
+          <GenericRegistrationAccessRequestForm config={config} />
+        </div>
+      </div>
+    </Layout>
   );
 };
 
+export { getServerSideProps };
 export default VLMDSubmissionPage;
