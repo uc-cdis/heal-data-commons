@@ -36,7 +36,7 @@ const searchData = (
     fields: searchOverFields, // fields to index for full-text search
     storeFields: [uidField],
     idField: uidField,
-    tokenize: (string, _fieldName) => string.split(' '),
+    tokenize: (string: string, _fieldName?: string) => string.split(' '),
     extractField: extractValue,
   });
 
@@ -46,7 +46,7 @@ const searchData = (
   // Search with default options
   const miniSearchResults = miniSearch.search(searchTermsSpaceSeparated);
   // Extract _hdp_uid values from the mini search results
-  const uidsToFilter = miniSearchResults.map((item) => item._hdp_uid);
+  const uidsToFilter = miniSearchResults.map((item: any) => item._hdp_uid);
   // filter the original data with the search results uids array
   const finalSearchResults = data.filter((item) =>
     uidsToFilter.includes(item._hdp_uid),
