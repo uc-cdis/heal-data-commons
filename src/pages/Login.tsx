@@ -10,10 +10,8 @@ const LoginPage = ({ loginConfig }: LoginPageLayoutProps) => {
   return (
     <Layout>
       <PageTitle pageName="Login" />
-      <div className="flex flex-row justify-items-center">
-        <div className="sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-xl mx-20">
-          <LoginPanel {...loginConfig} />
-        </div>
+      <div className="flex justify-center items-start w-full">
+        <LoginPanel {...loginConfig} />
       </div>
     </Layout>
   );
