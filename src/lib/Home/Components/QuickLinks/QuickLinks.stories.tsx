@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, within } from 'storybook/test';
 
 import QuickLinks from './QuickLinks';
 
@@ -14,18 +14,18 @@ export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const testIds = ['quick-links'];
-    testIds.forEach((id) => {
-      const currEle = canvas.getByTestId(id);
+    for (const id of testIds) {
+      const currEle = await canvas.findByTestId(id);
       expect(currEle).toBeInTheDocument();
-    });
+    }
 
     const testIdsWithTwoInstances = [
       'resource-callout',
       'resource-callout-header',
     ];
-    testIdsWithTwoInstances.forEach((id) => {
-      const currEle = canvas.getAllByTestId(id);
+    for (const id of testIdsWithTwoInstances) {
+      const currEle = await canvas.findAllByTestId(id);
       expect(currEle.length).toBe(2);
-    });
+    }
   },
 };

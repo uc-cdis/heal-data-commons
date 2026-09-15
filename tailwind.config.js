@@ -1,11 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-/* eslint-disable @typescript-eslint/no-var-requires */
-
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const plugin = require('tailwindcss/plugin');
-/* eslint-disable @typescript-eslint/no-var-requires */
+
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { GEN3_COMMONS_NAME } = require('@gen3/core');
-const themeColors = require(`./config/${GEN3_COMMONS_NAME}/themeColors.json`);
+/** @type {import('tailwindcss').Config} */
+/* eslint-disable @typescript-eslint/no-require-imports */
 const themeFonts = require(`./config/${GEN3_COMMONS_NAME}/themeFonts.json`);
+const themeColorCSSVars = require(`./config/themeColorCSSVars.json`);
+const { typographyPlugin } = require('@gen3/frontend');
+
 
 module.exports = {
   content: [
@@ -13,15 +17,8 @@ module.exports = {
     './src/lib/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
     './src/features/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@gen3/frontend/dist/esm/index.js',
-  ],
-  safelist: [
-    {
-      pattern: /^w-\[.+\]$/,
-    },
-    {
-      pattern: /^sm-\[.+\]$/,
-    },
+    './node_modules/@gen3/frontend/dist/index/esm/*.js',
+    './node_modules/@gen3/workspaces/dist/index/esm/*.js',
   ],
   theme: {
     extend: {
@@ -73,7 +70,7 @@ module.exports = {
           titanium: '#707070',
           obsidian: '#757575',
         },
-        ...themeColors,
+        ...themeColorCSSVars,
       },
       fontFamily: {
         heading: themeFonts.heading,
@@ -93,6 +90,11 @@ module.exports = {
         6: '6px',
         8: '8px',
       },
+      height: {
+        '100px': '100px',
+        '200px': '200px',
+        workspace: '100vh',
+      },
     },
   },
   variants: {
@@ -100,7 +102,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
+    typographyPlugin,
     require('@tailwindcss/forms')({
       strategy: 'class',
     }),
@@ -114,6 +116,15 @@ module.exports = {
       addVariant('api-in-range', '&[api-in-range]');
       addVariant('api-first-in-range', '&[api-first-in-range]');
       addVariant('api-last-in-range', '&[api-last-in-range]');
+      addVariant('data-checked', '&[data-checked]');
+      addVariant('data-active', '&[data-active]');
+      addVariant('data-selected', '&[data-selected]');
+      addVariant('data-hovered', '&[data-hovered]');
+      addVariant('data-disabled', '&[data-disabled]');
+      addVariant('data-in-range', '&[data-in-range]');
+      addVariant('data-first-in-range', '&[data-first-in-range]');
+      addVariant('data-last-in-range', '&[data-last-in-range]');
+      addVariant('data-with-icon', '&[data-with-icon]');
     }),
     plugin(function ({ addUtilities }) {
       const newUtilities = {
@@ -173,8 +184,9 @@ module.exports = {
       });
     }),
   ],
-  // Add any colors used in a json config file here
   safelist: [
+    { pattern: /^w-\[.+\]$/ },
+    { pattern: /^sm-\[.+\]$/ },
     { pattern: /^bg-navigation-footer$/ },
     { pattern: /^border-navigation-topbar_hover$/ },
     'accent-warm',
