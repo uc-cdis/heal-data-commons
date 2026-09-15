@@ -1,6 +1,27 @@
-import StudyRegistrationForm from '@gen3/frontend/pages/StudyForms/StudyRegistration';
-import { RequestAccessFormPageGetServerSideProps as getServerSideProps } from '@gen3/frontend/pages/StudyForms/StudyRegistration/data';
+import {
+  StudyRegistrationForm,
+  StudyRegistrationPageGetServerSideProps as getServerSideProps,
+} from '@gen3/frontend/pages';
+import type { StudyRegistrationFormConfig } from '@gen3/frontend/pages';
+import Layout from '@/lib/Layouts';
+import PageTitle from '@/lib/HealNav/PageTitle';
 
-export default StudyRegistrationForm;
+interface Props {
+  configStudyRegistrationForm: StudyRegistrationFormConfig;
+}
+
+const StudyRegistrationPage = ({ configStudyRegistrationForm }: Props) => {
+  return (
+    <Layout>
+      <PageTitle pageName="Study Registration" />
+      <div className="flex justify-center items-start w-full">
+        <StudyRegistrationForm
+          configStudyRegistrationForm={configStudyRegistrationForm}
+        />
+      </div>
+    </Layout>
+  );
+};
 
 export { getServerSideProps };
+export default StudyRegistrationPage;
