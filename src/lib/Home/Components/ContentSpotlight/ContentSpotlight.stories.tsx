@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, within, fireEvent } from '@storybook/test';
+import { expect, within, fireEvent } from 'storybook/test';
 
 import ContentSpotlight from './ContentSpotlight';
 
@@ -14,9 +14,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const contentSpotlight = canvas.getByTestId('content-spotlight');
-    const spotlightButton = canvas.getByRole('button');
-    let successfulButtonClick = false;
+    const contentSpotlight = await canvas.findByTestId('content-spotlight');
+    const spotlightButton = await canvas.findByRole('button');
+    let successfulButtonClick;
     spotlightButton.addEventListener(
       'click',
       (e) => e.preventDefault(),

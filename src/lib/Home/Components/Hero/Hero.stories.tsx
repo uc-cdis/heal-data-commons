@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, within } from 'storybook/test';
 
 import Hero from './Hero';
 
@@ -14,9 +14,9 @@ export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const testIds = ['hero', 'hero-title', 'hero-description', 'hero-image'];
-    testIds.forEach((id) => {
-      const currEle = canvas.getByTestId(id);
+    for (const id of testIds) {
+      const currEle = await canvas.findByTestId(id);
       expect(currEle).toBeInTheDocument();
-    });
+    }
   },
 };

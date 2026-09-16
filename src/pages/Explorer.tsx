@@ -1,14 +1,24 @@
-import {
-  ExplorerPage,
-  ExplorerPageGetServerSideProps as getServerSideProps,
-} from '@gen3/frontend';
+import React from 'react';
+import type { JSX } from 'react';
+import { CohortBuilder, type CohortBuilderProps } from '@gen3/frontend';
+import { ExplorerPageGetServerSideProps as getServerSideProps } from '@gen3/frontend';
+import Layout from '@/lib/Layouts';
 
-import { registerCohortTableCustomCellRenderers } from '@/lib/CohortBuilder/CustomCellRenderers';
-import { registerCustomExplorerDetailsPanels } from '@/lib/CohortBuilder/FileDetailsPanel';
-
-registerCohortTableCustomCellRenderers();
-registerCustomExplorerDetailsPanels();
+const ExplorerPage = ({
+  explorerConfig,
+  tabsLayout,
+  sharedFiltersMap,
+}: CohortBuilderProps): JSX.Element => {
+  return (
+    <Layout>
+      <CohortBuilder
+        explorerConfig={explorerConfig}
+        tabsLayout={tabsLayout}
+        sharedFiltersMap={sharedFiltersMap}
+      />
+    </Layout>
+  );
+};
 
 export default ExplorerPage;
-
 export { getServerSideProps };

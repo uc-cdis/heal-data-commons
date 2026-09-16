@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, within } from 'storybook/test';
 import QuoteSpotlight from './QuoteSpotlight';
 
 const meta = {
@@ -13,13 +13,13 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const quote = canvas.getByRole('blockquote');
+    const quote = await canvas.findByRole('blockquote');
     expect(quote).toBeInTheDocument();
 
     const testIds = ['quote-spotlight', 'citation'];
-    testIds.forEach((id) => {
-      const currEle = canvas.getByTestId(id);
+    for (const id of testIds) {
+      const currEle = await canvas.findByTestId(id);
       expect(currEle).toBeInTheDocument();
-    });
+    }
   },
 };

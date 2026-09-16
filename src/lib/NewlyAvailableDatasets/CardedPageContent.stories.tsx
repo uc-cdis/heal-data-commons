@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, within } from 'storybook/test';
 import newDatasetsPageConfig from '../../../config/heal/newDatasets.json';
 import CardedPageContent from './CardedPageContent';
 
@@ -20,10 +20,10 @@ export const Default: Story = {
       'carded-page-content-title',
       'multi-part-text',
     ];
-    testIds.forEach((id) => {
-      const currEle = canvas.getByTestId(id);
+    for (const id of testIds) {
+      const currEle = await canvas.findByTestId(id);
       expect(currEle).toBeInTheDocument();
-    });
+    }
 
     const testIdsWithMultipleInstances = [
       'carded-page-content-header',
@@ -32,9 +32,9 @@ export const Default: Story = {
       'card-grid-content',
       'card-grid-link',
     ];
-    testIdsWithMultipleInstances.forEach((id) => {
-      const currEle = canvas.getAllByTestId(id);
+    for (const id of testIdsWithMultipleInstances) {
+      const currEle = await canvas.findAllByTestId(id);
       expect(currEle.length).toBeGreaterThan(0);
-    });
+    }
   },
 };

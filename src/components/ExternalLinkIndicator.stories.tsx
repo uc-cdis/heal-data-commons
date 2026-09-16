@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, within } from 'storybook/test';
 import ExternalLinkIndicator from './ExternalLinkIndicator';
 
 const meta = {
@@ -12,11 +12,11 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    await expect(
-      canvas.getByTestId('external-link-indicator'),
+    expect(
+      await canvas.findByTestId('external-link-indicator'),
     ).toBeInTheDocument();
-    await expect(
-      canvas.getByTestId('external-link-indicator-accessible-text'),
+    expect(
+      await canvas.findByTestId('external-link-indicator-accessible-text'),
     ).toBeInTheDocument();
   },
 };

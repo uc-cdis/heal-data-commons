@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { expect, within } from '@storybook/test';
+import { expect, within } from 'storybook/test';
 
 import PhotoDivider from './PhotoDivider';
 
@@ -16,10 +16,10 @@ export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const testIds = ['photo-divider'];
-    testIds.forEach((id) => {
-      const currEle = canvas.getByTestId(id);
+    for (const id of testIds) {
+      const currEle = await canvas.findByTestId(id);
       expect(currEle).toBeInTheDocument();
-    });
+    }
     const images = canvasElement.querySelectorAll('img');
     expect(images).toHaveLength(expectedNumberOfImages);
   },
