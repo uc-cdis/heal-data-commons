@@ -14,7 +14,7 @@ const StudyRegistrationAccessRequestPage = ({ config }: Props) => {
   return (
     <Layout>
       <PageTitle pageName="Study Registration Access Request" />
-      <div className="flex justify-center items-start w-full">
+      <div className="w-full max-w-2xl mx-auto px-6">
         <GenericRegistrationAccessRequestForm config={config} />
       </div>
     </Layout>
