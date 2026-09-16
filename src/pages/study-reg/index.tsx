@@ -14,7 +14,7 @@ const StudyRegistrationPage = ({ configStudyRegistrationForm }: Props) => {
   return (
     <Layout>
       <PageTitle pageName="Study Registration" />
-      <div className="flex justify-center items-start w-full">
+      <div className="w-full max-w-2xl mx-auto px-6">
         <StudyRegistrationForm
           configStudyRegistrationForm={configStudyRegistrationForm}
         />
