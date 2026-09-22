@@ -45,7 +45,7 @@
     "@gen3/core": "^0.12.70",
     "@gen3/frontend": "^0.12.70",
     "@gen3/workspaces": "^0.12.70",
-    "@iconify-icon/react": "^2.3.0",
+    "@iconify-icon/react": "^3.0.4",
     "@mantine/core": "^9.4.0",
     "@mantine/dates": "^9.4.0",
     "@mantine/form": "^9.4.0",
