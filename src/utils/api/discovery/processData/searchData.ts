@@ -1,7 +1,7 @@
 import MiniSearch from 'minisearch';
-import { JSONObject } from '@gen3/core';
+import type { JSONObject } from '@gen3/core';
 import { JSONPath } from 'jsonpath-plus';
-import { DiscoveryIndexConfig, SearchMode } from '../types/discoveryApi';
+import { type DiscoveryIndexConfig, SearchMode } from '../types/discoveryApi';
 
 const searchData = (
   data: Array<JSONObject>,
