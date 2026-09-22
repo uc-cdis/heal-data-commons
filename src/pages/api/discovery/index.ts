@@ -11,7 +11,7 @@ import filterByAccessLevels from '@/utils/api/discovery/processData/filterByAcce
 
 let cachedData: Array<JSONObject> = [];
 let cacheTime = 0;
-const CACHE_DURATION = 0.25 * 60 * 60 * 1000; // 15 minutes in milliseconds
+const CACHE_DURATION = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
 const mdsAggregateApi =
   'https://healdata.org/mds/aggregate/metadata?data=True&limit=2000&offset=0';
 const mdsMetadataApi =
