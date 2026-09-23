@@ -74,6 +74,7 @@ export default async function handler(req: any, res: any) {
   const currentTime = Date.now();
   // Check if cached data is still valid
   if (cachedData && currentTime - cacheTime < CACHE_DURATION) {
+    // Use the cachedData without fetching from mds APIs
     const processedData = await processData(cachedData, req.body, cookies);
     res.status(200).json(processedData);
   } else {
