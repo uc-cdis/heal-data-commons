@@ -1,7 +1,7 @@
 import MiniSearch from 'minisearch';
-import { JSONObject } from '@gen3/core';
+import type { JSONObject } from '@gen3/core';
 import { JSONPath } from 'jsonpath-plus';
-import { DiscoveryIndexConfig, SearchMode } from '../types/discoveryApi';
+import { type DiscoveryIndexConfig, SearchMode } from '../types/discoveryApi';
 
 const searchData = (
   data: Array<JSONObject>,
@@ -36,7 +36,7 @@ const searchData = (
     fields: searchOverFields, // fields to index for full-text search
     storeFields: [uidField],
     idField: uidField,
-    tokenize: (string, _fieldName) => string.split(' '),
+    tokenize: (string: string, _fieldName?: string) => string.split(' '),
     extractField: extractValue,
   });
 

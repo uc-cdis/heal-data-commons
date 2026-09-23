@@ -24,17 +24,8 @@ const withMDX = require('@next/mdx')({
 
 // get the version of the frontend package
 const packageJson = require(
-  path.resolve(
-    __dirname,
-    'node_modules',
-    '@gen3',
-    'frontend',
-    'package.json',
-  ),
+  path.resolve(__dirname, 'node_modules', '@gen3', 'frontend', 'package.json'),
 );
-
-
-console.log('version:', packageJson.version);
 
 // Next configuration with support for writing API to existing common services
 /** @type {import('next').NextConfig} */
@@ -58,7 +49,9 @@ const nextConfig = {
       level: 'error',
     };
 
-    const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.('.svg'));
+    const fileLoaderRule = config.module.rules.find((rule) =>
+      rule.test?.test?.('.svg'),
+    );
     if (fileLoaderRule) {
       fileLoaderRule.exclude = /\.svg$/;
     }
@@ -66,26 +59,6 @@ const nextConfig = {
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
-
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@gen3/frontend/pages/StudyForms/StudyRegistration': path.resolve(
-        __dirname,
-        'node_modules/@gen3/frontend/dist/dts/pages/StudyForms/StudyRegistration',
-      ),
-      '@gen3/frontend/pages/StudyForms/StudyRegistration/data': path.resolve(
-        __dirname,
-        'node_modules/@gen3/frontend/dist/dts/pages/StudyForms/StudyRegistration/data.js',
-      ),
-      '@gen3/frontend/pages/StudyForms/StudyRegistrationAccessRequest': path.resolve(
-        __dirname,
-        'node_modules/@gen3/frontend/dist/dts/pages/StudyForms/StudyRegistrationAccessRequest',
-      ),
-      '@gen3/frontend/pages/StudyForms/StudyRegistrationAccessRequest/data': path.resolve(
-        __dirname,
-        'node_modules/@gen3/frontend/dist/dts/pages/StudyForms/StudyRegistrationAccessRequest/data.js',
-      ),
-    };
 
     return config;
   },

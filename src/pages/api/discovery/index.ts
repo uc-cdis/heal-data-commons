@@ -1,4 +1,4 @@
-import { JSONObject } from '@gen3/core';
+import { type JSONObject } from '@gen3/core';
 import filterByTags from '@/utils/api/discovery/processData/filterByTags';
 import paginateData from '@/utils/api/discovery/processData/paginateData';
 import searchData from '@/utils/api/discovery/processData/searchData';
@@ -11,7 +11,7 @@ import filterByAccessLevels from '@/utils/api/discovery/processData/filterByAcce
 
 let cachedData: Array<JSONObject> = [];
 let cacheTime = 0;
-const CACHE_DURATION = 0.25 * 60 * 60 * 1000; // 15 minutes in milliseconds
+const CACHE_DURATION = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
 const mdsAggregateApi =
   'https://healdata.org/mds/aggregate/metadata?data=True&limit=2000&offset=0';
 const mdsMetadataApi =
@@ -74,6 +74,7 @@ export default async function handler(req: any, res: any) {
   const currentTime = Date.now();
   // Check if cached data is still valid
   if (cachedData && currentTime - cacheTime < CACHE_DURATION) {
+    // Use the cachedData without fetching from mds APIs
     const processedData = await processData(cachedData, req.body, cookies);
     res.status(200).json(processedData);
   } else {
