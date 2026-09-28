@@ -1,12 +1,12 @@
 import App, { AppProps, AppContext, AppInitialProps } from 'next/app';
 import React, { useState, useEffect, useRef, Suspense } from 'react';
 import { MantineProvider, mergeThemeOverrides } from '@mantine/core';
-
 import type {
   RegisteredIcons,
   SessionConfiguration,
   TenStringArray,
-  Fonts} from '@gen3/frontend';
+  Fonts,
+} from '@gen3/frontend';
 import {
   type AuthorizedRoutesConfig,
   createMantineTheme,
@@ -17,11 +17,12 @@ import {
   registerCohortDiscoveryApp,
   registerExplorerDefaultCellRenderers,
   registerMetadataSchemaApp,
-  registerIGVApp
+  registerIGVApp,
 } from '@gen3/frontend';
 import { registerDefaultRemoteSupport, setDRSHostnames } from '@gen3/core';
 import { registerCohortTableCustomCellRenderers } from '@/lib/CohortBuilder/CustomCellRenderers';
 import { registerCustomExplorerDetailsPanels } from '@/lib/CohortBuilder/FileDetailsPanel';
+import { toString } from 'lodash';
 
 import '../styles/globals.css';
 import '@fontsource/montserrat';
@@ -90,7 +91,7 @@ const Gen3App = ({
       setMantineTheme(mergedTheme);
       console.log('Gen3 App initialized');
     }
-  }, []);
+  }, [colors, fonts]);
 
   return (
     <React.Fragment>
@@ -136,8 +137,8 @@ Gen3App.getInitialProps = async (
       ...res,
       publicConfig,
     };
-  } catch (error: any) {
-    console.error('Provider Wrapper error loading config', error.toString());
+  } catch (error: unknown) {
+    console.error('Provider Wrapper error loading config', toString(error));
   }
   // return default
   return {
