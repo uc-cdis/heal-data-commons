@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { expect, within, fireEvent } from 'storybook/test';
 
 import ContentSpotlight from './ContentSpotlight';

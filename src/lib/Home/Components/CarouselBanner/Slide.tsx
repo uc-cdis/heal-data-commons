@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowIconSVG from '../../../../../public/icons/HealIcons/Icon-Arrow.svg';
+import IconArrow from '@/assets/icons/Icon-Arrow';
 import styles from './CarouselAnimations.module.css';
 import ExternalLinkIndicator from '@/components/ExternalLinkIndicator';
 
@@ -63,7 +63,7 @@ const Slide: React.FC<SlideProps> = ({
           {openInNewWindow ? (
             <ExternalLinkIndicator className="mt-[6px] ml-[2px] inline-block" />
           ) : (
-            <ArrowIconSVG className="inline-block fill-current mt-2" />
+            <IconArrow className="inline-block fill-current mt-2" />
           )}
         </span>
       </a>

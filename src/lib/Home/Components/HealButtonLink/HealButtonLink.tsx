@@ -1,5 +1,5 @@
 import React from 'react';
-import ArrowIconSVG from '../../../../../public/icons/HealIcons/Icon-Arrow.svg';
+import IconArrow from '@/assets/icons/Icon-Arrow';
 
 interface ButtonLinkProps {
   /** HREF for Button Link */
@@ -48,7 +48,7 @@ const HealButtonLink: React.FC<ButtonLinkProps> = ({ href, label }) => {
           text-heal-magenta
         `}
       >
-        <ArrowIconSVG className="inline-block fill-current" />
+        <IconArrow className="inline-block fill-current" />
       </span>
     </a>
   );
