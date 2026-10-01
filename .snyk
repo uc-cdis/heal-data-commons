@@ -1,7 +1,0 @@
-# Snyk (https://snyk.io) policy file
-version: v1.25.0
-ignore:
-  snyk:lic:npm:lightningcss:MPL-2.0:
-    - '*':
-        reason: lightningcss is a transitive dependency of vite@8.3.0; MPL-2.0 is an approved open-source license
-        expires: 2028-01-01T00:00:00.000Z
