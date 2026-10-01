@@ -9,7 +9,7 @@ describe('HealButtonLink', () => {
 
     render(<HealButtonLink href={href} label={label} />);
 
-    const buttonElement = screen.getByRole('button', { name: label });
+    const buttonElement = screen.getByTestId('heal-button-link');
     expect(buttonElement).toHaveAttribute('href', href);
 
     const labelElement = screen.getByText(label);

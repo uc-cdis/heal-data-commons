@@ -1,12 +1,13 @@
-import App, { AppProps, AppContext, AppInitialProps } from 'next/app';
+import type { AppProps, AppContext, AppInitialProps } from 'next/app';
+import App from 'next/app';
 import React, { useState, useEffect, useRef, Suspense } from 'react';
 import { MantineProvider, mergeThemeOverrides } from '@mantine/core';
+
 import type {
   RegisteredIcons,
   SessionConfiguration,
   TenStringArray,
-  Fonts,
-} from '@gen3/frontend';
+  Fonts} from '@gen3/frontend';
 import {
   type AuthorizedRoutesConfig,
   createMantineTheme,
@@ -17,12 +18,11 @@ import {
   registerCohortDiscoveryApp,
   registerExplorerDefaultCellRenderers,
   registerMetadataSchemaApp,
-  registerIGVApp,
+  registerIGVApp
 } from '@gen3/frontend';
 import { registerDefaultRemoteSupport, setDRSHostnames } from '@gen3/core';
 import { registerCohortTableCustomCellRenderers } from '@/lib/CohortBuilder/CustomCellRenderers';
 import { registerCustomExplorerDetailsPanels } from '@/lib/CohortBuilder/FileDetailsPanel';
-import { toString } from 'lodash';
 
 import '../styles/globals.css';
 import '@fontsource/montserrat';
@@ -35,9 +35,9 @@ import Loading from '../components/Loading';
 import DatadogInit from '@/components/DatadogInit';
 
 if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  // eslint-disable-next-line @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports
   const ReactDOM = require('react-dom');
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  // eslint-disable-next-line @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports
   const axe = require('@axe-core/react');
   axe(React, ReactDOM, 1000);
 }
@@ -91,7 +91,7 @@ const Gen3App = ({
       setMantineTheme(mergedTheme);
       console.log('Gen3 App initialized');
     }
-  }, [colors, fonts]);
+  }, []);
 
   return (
     <React.Fragment>
@@ -137,8 +137,8 @@ Gen3App.getInitialProps = async (
       ...res,
       publicConfig,
     };
-  } catch (error: unknown) {
-    console.error('Provider Wrapper error loading config', toString(error));
+  } catch (error: any) {
+    console.error('Provider Wrapper error loading config', error.toString());
   }
   // return default
   return {

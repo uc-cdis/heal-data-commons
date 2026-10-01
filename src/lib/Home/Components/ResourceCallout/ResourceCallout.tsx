@@ -1,5 +1,5 @@
 import React from 'react';
-import IconLinkArrow from '../../../../../public/icons/HealIcons/Icon-Link-Arrow.svg';
+import IconLinkArrow from '@/assets/icons/Icon-Link-Arrow';
 import ExternalLinkIndicator from '@/components/ExternalLinkIndicator';
 
 interface resourceCalloutLink {
