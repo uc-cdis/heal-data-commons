@@ -15,7 +15,7 @@ export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const contentSpotlight = await canvas.findByTestId('content-spotlight');
-    const spotlightButton = await canvas.findByRole('button');
+    const spotlightButton = await canvas.findByTestId('heal-button-link');
     let successfulButtonClick;
     spotlightButton.addEventListener(
       'click',
