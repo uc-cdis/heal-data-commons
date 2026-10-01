@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const healButton = await canvas.findByRole('button');
+    const healButton = await canvas.findByTestId('heal-button-link');
     let successfulButtonClick;
     healButton.addEventListener(
       'click',

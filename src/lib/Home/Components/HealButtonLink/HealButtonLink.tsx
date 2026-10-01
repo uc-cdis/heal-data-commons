@@ -12,6 +12,7 @@ const HealButtonLink: React.FC<ButtonLinkProps> = ({ href, label }) => {
   return (
     <a
       href={href}
+      data-testid="heal-button-link"
       className={`
         heal-button-link
         focus:border-4
