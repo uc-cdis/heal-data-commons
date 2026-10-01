@@ -17,6 +17,7 @@
     "build:volume": "npm run build:middlewarePathsMatchAll && next build --webpack",
     "start": "next start",
     "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "storybook:build": "storybook build",
     "storybook:test": "vitest --config vitest.config.mts",
     "setupCommons": "npm run build:colors && npm run build:icons && npm run build:middlewarePaths",
