@@ -1,18 +1,14 @@
 {
   "name": "@gen3/commons-portal-app-base",
-  "version": "0.12.69",
+  "version": "0.12.79",
   "private": "true",
   "engines": {
     "npm": ">=11.16.0",
     "node": ">=24.18.1"
   },
-  "overrides": {
-    "fast-uri": "^3.1.7",
-    "qs": "^6.16.0"
-  },
   "scripts": {
     "lint": "oxlint .",
-    "lint-fix": "eslint . --fix",
+    "lint-fix": "oxlint --fix",
     "predev": " NODE_ENV=development npm run build:middlewarePaths",
     "dev": "next dev --webpack",
     "dev:turbopack": "next dev",
@@ -22,7 +18,9 @@
     "start": "next start",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "setupCommons": "npm run buildColors && npm run getSchema && npm run getDRSToHostname && npm run buildIcons && npm run build:middlewarePaths",
+    "storybook:build": "storybook build",
+    "storybook:test": "vitest --config vitest.config.mts",
+    "setupCommons": "npm run build:colors && npm run build:icons && npm run build:middlewarePaths",
     "build:docker": "docker build -t gen3:fef_app -f Dockerfile.production .",
     "build:colors": "node ./node_modules/@gen3/toolsff/dist/buildColors.esm.js --themeFile=config/$npm_config_commons/colors.json --out=config/$npm_config_commons",
     "build:icons": "node ./node_modules/@gen3/toolsff/dist/bundleIcons.esm.js --inpath=config/icons --outpath=config/icons",
@@ -42,10 +40,9 @@
     "@fontsource/montserrat": "^5.2.8",
     "@fontsource/poppins": "^5.2.7",
     "@fontsource/source-sans-pro": "^5.2.5",
-    "@gen3/core": "^0.12.77",
-    "@gen3/frontend": "^0.12.77",
-    "@gen3/workspaces": "^0.12.77",
-    "@iconify-icon/react": "^3.0.4",
+    "@gen3/core": "^0.12.79",
+    "@gen3/frontend": "^0.12.79",
+    "@gen3/workspaces": "^0.12.79",
     "@mantine/core": "^9.4.0",
     "@mantine/dates": "^9.4.0",
     "@mantine/form": "^9.4.0",
@@ -72,15 +69,14 @@
   },
   "devDependencies": {
     "@axe-core/react": "^4.10.2",
-    "@chromatic-com/storybook": "^5.1.2",
-    "@gen3/toolsff": "^0.12.77",
+    "@chromatic-com/storybook": "^5.3.1",
+    "@gen3/toolsff": "^0.12.79",
     "@graphiql/react": "^0.37.7",
-    "@storybook/addon-a11y": "^10.5.8",
-    "@storybook/addon-docs": "^10.5.8",
-    "@storybook/addon-onboarding": "^10.5.8",
-    "@storybook/nextjs": "^10.5.8",
-    "@storybook/test-runner": "^0.24.4",
-    "@svgr/webpack": "^8.1.0",
+    "@storybook/addon-a11y": "^10.6.0",
+    "@storybook/addon-docs": "^10.6.0",
+    "@storybook/addon-onboarding": "^10.6.0",
+    "@storybook/addon-vitest": "^10.6.0",
+    "@storybook/nextjs-vite": "^10.6.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/line-clamp": "^0.4.4",
@@ -93,6 +89,7 @@
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.21",
     "axe-playwright": "^2.2.2",
+    "eslint-plugin-storybook": "10.6.0",
     "graphiql": "^5.2.4",
     "jest-fixed-jsdom": "^0.0.10",
     "msw": "^2.11.5",
@@ -108,29 +105,29 @@
     "postcss-preset-env": "^10.4.0",
     "postcss-preset-mantine": "^1.18.0",
     "prettier": "^3.6.2",
-    "sharp": "^0.34.4",
-    "storybook": "^10.5.8",
+    "sharp": "^0.35.4",
+    "storybook": "^10.6.0",
     "storybook-addon-deep-controls": "^0.10.0",
     "swr": "^2.3.6",
     "tailwindcss": "^3.4.18",
     "ts-jest": "^29.4.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.1"
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.46.1",
+    "vite": "^8.3.0",
+    "vitest": "^4.1.11",
+    "@vitest/browser-playwright": "^4.1.11",
+    "@vitest/browser": "^4.1.11",
+    "vite-plugin-svgr": "^5.2.0"
   },
   "allowScripts": {
-    "esbuild": true,
     "core-js-pure": true,
     "unrs-resolver": true,
     "fsevents": true,
     "msw": true,
     "sharp": true,
-    "@swc/core": true
-  },
-  "msw": {
-    "workerDirectory": [
-      "public"
-    ],
-    "@parcel/watcher": true
+    "@swc/core": true,
+    "@parcel/watcher": true,
+    "esbuild@0.28.2": true
   }
 }
