@@ -1,5 +1,5 @@
 import React from 'react';
-import ExternalLinkSVG from '../../public/icons/HealIcons/Icon-External-Link.svg';
+import IconExternalLink from '@/assets/icons/Icon-External-Link';
 
 type ExternalLinkIndicatorProps = {
   className?: string;
@@ -15,7 +15,7 @@ const ExternalLinkIndicator: React.FC<ExternalLinkIndicatorProps> = ({
         className={`inline-block ${className}`}
         data-testid="external-link-indicator"
       >
-        <ExternalLinkSVG />
+        <IconExternalLink />
       </span>
       <span
         className="sr-only"

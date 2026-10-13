@@ -1,6 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-import { Banner, BannerProps, BannerLevelCategories, LoginButton } from '@gen3/frontend';
+import {
+  Banner,
+  type BannerProps,
+  type BannerLevelCategories,
+} from '@gen3/frontend';
 import navigationJSON from '../../../config/heal/navigation.json';
 import bannerJSON from '../../../config/heal/banner.json';
 import ExternalLinkIndicator from '@/components/ExternalLinkIndicator';
@@ -44,8 +48,7 @@ const HealHeader: React.FC = () => {
         Skip to main content
       </a>
       <header data-testid="heal-header">
-        <div className="bg-carousel-gradient h-2">
-        </div>
+        <div className="bg-carousel-gradient h-2" />
         <div className="container mx-auto px-1 md:px-1 lg:px-6 py-4 text-xs">
           <div className="lg:flex justify-between">
             <a
@@ -85,14 +88,16 @@ const HealHeader: React.FC = () => {
                   )}
                 </a>
               ))}
-              <LoginButton
+              {/* <LoginButton
                 className="text-heal-dark_gray text-xs mr-2 ml-1 mt-[-2px] h-[16px] lg:ml-4"
                 visibility={LoginButtonVisibility.Visible}
-              />
+              /> */}
             </div>
           </div>
         </div>
-        {banners?.map((banner) => <Banner {...banner} key={banner.id} />)}
+        {banners?.map((banner) => (
+          <Banner {...banner} key={banner.id} />
+        ))}
       </header>
     </div>
   );

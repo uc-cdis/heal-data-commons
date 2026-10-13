@@ -16,5 +16,6 @@
       "className": "text-center text-sm"
     }
   ],
-  "image": "/images/heal_login_color_sides.svg"
+  "image": "images/gene_side_texture.svg",
+  "showCredentialsLogin": true
 }

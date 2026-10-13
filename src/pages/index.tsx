@@ -3,9 +3,9 @@ import Layout from '@/lib/Layouts';
 import HealLandingPage from './Home';
 
 export default function IndexPage() {
-    return (
-      <Layout>
-        <HealLandingPage />
-      </Layout>
-    );
-  }
+  return (
+    <Layout>
+      <HealLandingPage />
+    </Layout>
+  );
+}

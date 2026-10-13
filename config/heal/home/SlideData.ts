@@ -1,5 +1,5 @@
-import IconHdd from '../../../public/icons/HealIcons/Icon-Hdd.svg';
-import IconAnalyses from '../../../public/icons/HealIcons/Icon-Analyses.svg';
+import IconHdd from '../../../src/assets/icons/Icon-Hdd';
+import IconAnalyses from '../../../src/assets/icons/Icon-Analyses';
 
 export const slideData = [
   {

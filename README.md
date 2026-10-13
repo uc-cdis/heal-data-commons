@@ -1,29 +1,31 @@
-
-
 This is the NextJS application for the HEAL Data Commons.
 
-
 ## Getting Started
+
 The HEAL Data Commons develop quick startup:
 
-* create a clone of [HEAL Data Commons](https://github.com/uc-cdis/heal-data-commons)
+- create a clone of [HEAL Data Commons](https://github.com/uc-cdis/heal-data-commons)
 
-* Configure the commons by editing the configuration files in the ```config```
+- Configure the commons by editing the configuration files in the `config`
 
-* Add your pages and content
+- Add your pages and content
 
-* Deploy via helm charts or Docker.
+- Deploy via helm charts or Docker.
 
 Changes to the Gen3 Data Commons Application can be pulled from the Common Frontend Repository. You need configure git to pull from the Common Frontend Repository.
+
 ```bash
 git remote add upstream https://github.com/uc-cdis/heal-data-commons.git
 ```
+
 or
+
 ```bash
 git remote add upstream git@github.com:uc-cdis/heal-data-commons.git
 ```
 
-changes to ```main``` can be pulled from the Common Frontend Repository by running:
+changes to `main` can be pulled from the Common Frontend Repository by running:
+
 ```bash
 git pull upstream main
 ```
@@ -34,24 +36,18 @@ This documentation is currently less complete than we would like, but we will be
 
 ## Installation
 
-The minimum node version is set to v20.71.0.
+The minimum node version is set to v24.18.1.
 Node can be downloaded from the official Node.js site. You may also consider using a [Node version manager](https://docs.npmjs.com/cli/v7/configuring-npm/install#using-a-node-version-manager-to-install-nodejs-and-npm).
-Your version of Node may not ship with npm v10. To install it, run:
+Your version of Node may not ship with npm v24. To install it, run:
 
 ```bash
-npm install npm@10.8.2 -g
+npm install npm@11.16.0 -g
 ```
-
-Note: if you see this error:
-```
-npm ERR! code ENOWORKSPACES
-npm ERR! This command does not support workspaces.
-```
-you can run ```npx next telemetry disable```
 
 Alternatively, you can use `nvm` to install the correct version of npm:
+
 ```bash
-nvm install 20.17.0
+nvm install 24.18.1
 ```
 
 ### Install Dependencies
@@ -70,41 +66,48 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-
 ## Docker
 
-You build a Docker image by:
+You build a self-contained Docker image by:
 
 ```bash
-docker build .
+docker build -f Dockerfile.production .
 ```
 
 ## Configuration
 
-All the configuration files are located in ```config/heal```. As HEAL is currently only used for the landing page the
+All the configuration files are located in `config/heal`. As HEAL is currently only used for the landing page the
 relevant configuration files are:
 
-* navigation.json
-* footer.json
-* banner
+- navigation.json
+- footer.json
+- banner
 
 ## Updating a forked commons
 
+The following steps usually apply to update a forked commons.
+
 Get the changes from the parent fork:
+
 ```bash
 git remote add upstream git@github.com:uc-cdis/commons-frontend-app.git
 git fetch upstream
 ```
+
 Create a branch and merge changes from upstream:
+
 ```bash
 git merge upstream/main
 ```
-If the above has the error message:  "fatal: refusing to merge unrelated histories" error.
+
+If the above has the error message: "fatal: refusing to merge unrelated histories" error.
 This often happens when the repo was created as a template, not a fork.
-To resolve this, the ```--allow-unrelated-histories``` flag can be used during the merge operation. This flag forces Git to merge the branches despite lacking a common history.
+To resolve this, the `--allow-unrelated-histories` flag can be used during the merge operation. This flag forces Git to merge the branches despite lacking a common history.
+
 ```bash
 git merge upstream/main --allow-unrelated-histories
 ```
+
 If you use this flag, it is recommended that you carefully review the changes and resolve any conflicts before finalizing the merge.
 
 You will see merge conflicts. In general: **take the remote's version for everything except the config files**, as those are customized to the commons config. Resolve any remaining config issues and open a PR.
@@ -112,4 +115,4 @@ Test the new common by running it locally or in a staging environment.
 
 ## Custom Pages
 
-See ```src/pages/SamplePage``` for an example of adding a new page to the HEAL commons.
+See `src/pages/SamplePage` for an example of adding a new page to the HEAL commons.

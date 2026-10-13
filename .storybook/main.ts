@@ -1,38 +1,56 @@
-import type { StorybookConfig } from '@storybook/nextjs';
+
+import { fileURLToPath } from 'node:url';
+import { createRequire } from 'node:module';
+import { dirname } from 'node:path';
+import path from 'path';
+import type { StorybookConfig } from '@storybook/nextjs-vite';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const require = createRequire(import.meta.url);
+
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  env: (config) => ({
+    ...config,
+  }),
   addons: [
-    '@storybook/addon-onboarding',
-    '@storybook/addon-essentials',
-    '@chromatic-com/storybook',
-    '@storybook/addon-interactions',
-    '@storybook/addon-a11y',
+    getAbsolutePath('@chromatic-com/storybook'),
+    getAbsolutePath('@storybook/addon-a11y'),
+    getAbsolutePath('storybook-addon-deep-controls'),
+    getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath('@storybook/addon-vitest'),
   ],
+  typescript: {
+    check: false,
+    skipCompiler: false,
+  },
   framework: {
-    name: '@storybook/nextjs',
-    options: {},
+    name: getAbsolutePath('@storybook/nextjs-vite'),
+    options: {
+      nextConfigPath: path.resolve(__dirname, '../src//next.config.js'),
+    },
   },
   staticDirs: ['../public'],
-  webpackFinal: async (config) => {
-    const imageRule = config.module?.rules?.find((rule) => {
-      const test = (rule as { test: RegExp }).test;
+  viteFinal: async (config) => {
+    const { mergeConfig } = await import('vite');
+    const { default: svgr } = await import('vite-plugin-svgr');
+    const aliases = [{ find: 'next/router', replacement: 'next-router-mock' }];
 
-      if (!test) {
-        return false;
-      }
+    const merged = mergeConfig(config, { plugins: [svgr()] });
 
-      return test.test('.svg');
-    }) as { [key: string]: any };
+    merged.resolve ??= {};
+    const frameworkAliases = Array.isArray(merged.resolve.alias)
+      ? merged.resolve.alias
+      : [];
+    merged.resolve.alias = [...aliases, ...frameworkAliases];
 
-    imageRule.exclude = /\.svg$/;
-
-    config.module?.rules?.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-    });
-
-    return config;
+    return merged;
   },
 };
 export default config;
+
+function getAbsolutePath(value: string): any {
+  return path.dirname(require.resolve(path.join(value, 'package.json')));
+}

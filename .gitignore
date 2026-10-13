@@ -35,5 +35,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-*storybook.log
 .vscode/settings.json
+.jupyterlite.doit.db

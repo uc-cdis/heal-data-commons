@@ -1,4 +1,5 @@
-import React, { JSX } from 'react';
+import React from 'react';
+import type { JSX } from 'react';
 import { CohortBuilder, type CohortBuilderProps } from '@gen3/frontend';
 import { ExplorerPageGetServerSideProps as getServerSideProps } from '@gen3/frontend';
 import Layout from '@/lib/Layouts';
