@@ -1,0 +1,12 @@
+{
+  "dataDictionarySubmissionBucket": "",
+  "variableMetadataField": "variable_level_metadata",
+  "gen3DiscoveryField": "gen3_discovery",
+  "tagsListFieldName": "tags",
+  "remoteSupportService": {
+    "service": "zenDesk",
+    "configuration": {
+      "zendeskSubdomainName": "heal-support"
+    }
+  }
+}
