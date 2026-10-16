@@ -4,6 +4,7 @@
   "gen3DiscoveryField": "gen3_discovery",
   "tagsListFieldName": "tags",
   "advSearchFilterField": "advSearchFilters",
+  "cdeSupportEmail": "heal_cde@hsc.utah.edu",
   "remoteSupportService": {
     "service": "zenDesk",
     "configuration": {
