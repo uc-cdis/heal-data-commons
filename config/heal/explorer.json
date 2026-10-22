@@ -17,11 +17,26 @@
     "table": {
       "enabled": true,
       "columns": {
-        "hdp_id":{
-          "title": "HDP ID"
+        "hdp_id": {
+          "field": "hdp_id",
+          "title": "HDP ID",
+          "type": "link",
+          "params": {
+            "baseURL": "/portal/discovery/"
+          }
         }
       },
-      "fields": ["hdp_id", "study_name", "dataset_name", "file_name", "file_size", "object_id", "repository_name", "repository_data_link", "data_availability"]
+      "fields": [
+        "hdp_id",
+        "study_name",
+        "dataset_name",
+        "file_name",
+        "file_size",
+        "object_id",
+        "repository_name",
+        "repository_data_link",
+        "data_availability"
+      ]
     },
     "guppyConfig": {
       "dataType": "file",
@@ -48,10 +63,18 @@
           "resourceIdField": "object_id",
           "referenceIdFieldInResourceIndex": "object_id",
           "referenceIdFieldInDataIndex": "object_id",
-          "fileFields": ["file_name", "file_size", "dataset_name", "study_name", "repository_name", "object_id"]
+          "fileFields": [
+            "file_name",
+            "file_size",
+            "dataset_name",
+            "study_name",
+            "repository_name",
+            "object_id"
+          ]
         }
       }
     ],
-    "loginForDownload": false
+    "loginForDownload": true,
+    "enableRedirectToLogin": true
   }
 ]
