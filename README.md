@@ -47,7 +47,7 @@ npm install npm@11.16.0 -g
 Alternatively, you can use `nvm` to install the correct version of npm:
 
 ```bash
-nvm install 24.18.1
+nvm install 24.22.1
 ```
 
 ### Install Dependencies
