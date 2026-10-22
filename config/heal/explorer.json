@@ -16,11 +16,10 @@
     },
     "table": {
       "enabled": true,
-      "detailsConfig": {
-        "panel": "fileDetails",
-        "mode": "click",
-        "idField": "object_id",
-        "title": "File Details"
+      "columns": {
+        "hdp_id":{
+          "title": "HDP ID"
+        }
       },
       "fields": ["hdp_id", "study_name", "dataset_name", "file_name", "file_size", "object_id", "repository_name", "repository_data_link", "data_availability"]
     },
