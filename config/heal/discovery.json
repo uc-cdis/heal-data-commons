@@ -376,6 +376,7 @@
         "dataAvailabilityField": "data_availability",
         "uid": "_hdp_uid"
       },
+      "variableMetadataFieldName": "variable_level_metadata",
       "tags": {
         "tagCategories": [
           {
