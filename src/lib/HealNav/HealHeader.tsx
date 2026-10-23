@@ -4,6 +4,7 @@ import {
   Banner,
   type BannerProps,
   type BannerLevelCategories,
+  LoginButton,
 } from '@gen3/frontend';
 import navigationJSON from '../../../config/heal/navigation.json';
 import bannerJSON from '../../../config/heal/banner.json';
@@ -88,10 +89,10 @@ const HealHeader: React.FC = () => {
                   )}
                 </a>
               ))}
-              {/* <LoginButton
+              <LoginButton
                 className="text-heal-dark_gray text-xs mr-2 ml-1 mt-[-2px] h-[16px] lg:ml-4"
-                visibility={LoginButtonVisibility.Visible}
-              /> */}
+                visibility={LoginButtonVisibility.LogoutOnly}
+              />
             </div>
           </div>
         </div>
