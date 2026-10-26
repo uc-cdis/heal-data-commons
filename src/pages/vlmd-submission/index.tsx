@@ -13,7 +13,9 @@ interface Props {
 const VLMDSubmissionPage = ({ config }: Props) => (
   <Layout>
     <PageTitle pageName="VLMD Submission" />
-    <VLMDSubmissionForm config={config} />
+    <div className="px-32">
+      <VLMDSubmissionForm config={config} />
+    </div>
   </Layout>
 );
 

@@ -6,6 +6,8 @@ export const config = {
   matcher: [
   "/DataLibrary",
   "/Workspace",
-  "/Profile"
+  "/WorkspaceRequestAccess",
+  "/Profile",
+  "/Login"
 ],
 };
