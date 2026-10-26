@@ -7,7 +7,7 @@ import {
   MdOutlineRemoveCircleOutline as MinusCircleOutlined,
 } from 'react-icons/md';
 import { isArray, toString } from 'lodash';
-import { JSONObject } from '@gen3/core';
+import type { JSONObject } from '@gen3/core';
 import { FilemapInline, FilemapPopup } from '@/lib/Discovery/Filemap';
 import { isTextTransform } from '@gen3/frontend';
 

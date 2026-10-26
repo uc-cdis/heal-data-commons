@@ -7,7 +7,8 @@ import type {
   RegisteredIcons,
   SessionConfiguration,
   TenStringArray,
-  Fonts} from '@gen3/frontend';
+  Fonts,
+} from '@gen3/frontend';
 import {
   type AuthorizedRoutesConfig,
   createMantineTheme,
@@ -95,7 +96,7 @@ const Gen3App = ({
       // oxlint-disable-next-line no-console
       console.log('Gen3 App initialized');
     }
-  }, []);
+  }, [fonts, colors]);
 
   return (
     <React.Fragment>
@@ -141,7 +142,7 @@ Gen3App.getInitialProps = async (
       ...res,
       publicConfig,
     };
-  } catch (error: any) {
+  } catch (error) {
     console.error('Provider Wrapper error loading config', error.toString());
   }
   // return default
