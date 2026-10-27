@@ -61,7 +61,6 @@ const HealHeader: React.FC = () => {
                 alt={navigation.logo.alt}
                 width={navigation.logo.width}
                 height={navigation.logo.height}
-                unoptimized
                 className="w-[60px] border-r-1 pr-3"
               />
               <div className="text-heal-dark_gray font-semibold text-base pl-3 mt-1">
