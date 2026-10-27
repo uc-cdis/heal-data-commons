@@ -15,6 +15,7 @@ const ExplorerPage = ({
         explorerConfig={explorerConfig}
         tabsLayout={tabsLayout}
         sharedFiltersMap={sharedFiltersMap}
+        enableCohortManager={false}
       />
     </Layout>
   );
