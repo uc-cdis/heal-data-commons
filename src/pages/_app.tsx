@@ -143,7 +143,7 @@ Gen3App.getInitialProps = async (
       publicConfig,
     };
   } catch (error) {
-    console.error('Provider Wrapper error loading config', error.toString());
+    console.error('Provider Wrapper error loading config', String(error));
   }
   // return default
   return {
