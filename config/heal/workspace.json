@@ -1,0 +1,89 @@
+{
+  "launchStepIndicatorConfig": {
+    "steps": []
+  },
+  "requestAccessForm": {
+    "enabled": true,
+    "label": "Workspace Access Request",
+    "submitButtonText": "Submit",
+    "remoteSupportService": {
+      "service": "zenDesk",
+      "configuration": {
+        "zendeskSubdomainName": "heal-support"
+      }
+    },
+    "form": [
+      {
+        "type": "markdown",
+        "text": "The HEAL workspace provides a standardized computational environment for accessing and analyzing data from HEAL studies. Please fill out this form to request access to the workspace and start computing!",
+        "className": "text-sm"
+      },
+      {
+        "type": "TextInput",
+        "label": "Registrant First Name",
+        "required": true,
+        "variable": "firstName"
+      },
+      {
+        "type": "TextInput",
+        "label": "Registrant Last Name",
+        "required": true,
+        "variable": "lastName"
+      },
+      {
+        "type": "Email",
+        "label": "E-mail Address",
+        "initialValue": "userEmail",
+        "required": true,
+        "variable": "emailAddress"
+      },
+      {
+        "type": "TextInput",
+        "label": "Affiliated Institution",
+        "required": true,
+        "variable": "affiliatedInstitution"
+      },
+      {
+        "type": "TextInput",
+        "label": "Grant Number",
+        "required": false,
+        "variable": "grantNumber"
+      },
+      {
+        "type": "RadioGroup",
+        "label": "Role on Project",
+        "text": [
+          "Principal Investigator",
+          "Co-Principal Investigator",
+          "Co-Investigator",
+          "Administrator",
+          "Clinical Collaborator",
+          "Clinical Coordinator",
+          "Data Analyst",
+          "Data Manager",
+          "Research Coordinator",
+          "Other..."
+        ],
+        "required": true,
+        "variable": "roleOnProject"
+      }
+    ],
+    "success": {
+      "content": [
+        {
+          "type": "markdown",
+          "text": [
+            "# Your access request has been submitted!",
+            "Thank you for your submission. Requests take up to 1 business day to complete. Please check back then."
+          ],
+          "className": "text-center"
+        }
+      ],
+      "button": {
+        "variant": "filled",
+        "href": "/Discovery",
+        "text": "Go to Discovery Page"
+      }
+    }
+  }
+}

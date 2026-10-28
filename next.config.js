@@ -24,17 +24,10 @@ const withMDX = require('@next/mdx')({
 
 // get the version of the frontend package
 const packageJson = require(
-  path.resolve(
-    __dirname,
-    'node_modules',
-    '@gen3',
-    'frontend',
-    'package.json',
-  ),
+  path.resolve(__dirname, 'node_modules', '@gen3', 'frontend', 'package.json'),
 );
 
-
-console.log('version:', packageJson.version);
+console.warn('version:', packageJson.version);
 
 // Next configuration with support for writing API to existing common services
 /** @type {import('next').NextConfig} */
@@ -57,7 +50,6 @@ const nextConfig = {
     config.infrastructureLogging = {
       level: 'error',
     };
-
     return config;
   },
   async rewrites() {
@@ -111,7 +103,13 @@ const nextConfig = {
           source: '/library/lists/:path*',
           destination: `${GEN3_TARGET}/library/lists/:path*`,
         },
-
+        // The manifest service redirects `/manifests` to `/manifests/` using
+        // its own absolute host, which the browser then blocks with CORS.
+        // Send the trailing slash upstream so the redirect never happens.
+        {
+          source: '/manifests',
+          destination: `${GEN3_TARGET}/manifests/`,
+        },
         {
           source: '/manifests/:path*',
           destination: `${GEN3_TARGET}/manifests/:path*`,

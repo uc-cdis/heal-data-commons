@@ -22,14 +22,6 @@ export default [
     },
   },
   {
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-
-  {
     ignores: [
       '.nx/**/*',
       '**/build/*',

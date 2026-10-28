@@ -7,18 +7,21 @@ import type {
   RegisteredIcons,
   SessionConfiguration,
   TenStringArray,
-  Fonts} from '@gen3/frontend';
+  Fonts,
+} from '@gen3/frontend';
 import {
   type AuthorizedRoutesConfig,
   createMantineTheme,
   DefaultAuthorizedRoutesConfig,
   Gen3Provider,
   type ModalsConfig,
+  registerBaseSowerActions,
   registerCohortBuilderDefaultPreviewRenderers,
+  registerCohortSowerActions,
   registerCohortDiscoveryApp,
   registerExplorerDefaultCellRenderers,
   registerMetadataSchemaApp,
-  registerIGVApp
+  registerIGVApp,
 } from '@gen3/frontend';
 import { registerDefaultRemoteSupport, setDRSHostnames } from '@gen3/core';
 import { registerCohortTableCustomCellRenderers } from '@/lib/CohortBuilder/CustomCellRenderers';
@@ -84,14 +87,16 @@ const Gen3App = ({
       registerCohortBuilderDefaultPreviewRenderers();
       registerCohortTableCustomCellRenderers();
       registerCustomExplorerDetailsPanels();
+      registerBaseSowerActions();
+      registerCohortSowerActions();
       isFirstRender.current = false;
       const gen3ThemeDynamic = createMantineTheme(fonts, colors);
       const mergedTheme = mergeThemeOverrides(gen3ThemeDynamic);
       setMantineTheme(mergedTheme);
-      setMantineTheme(mergedTheme);
+      // oxlint-disable-next-line no-console
       console.log('Gen3 App initialized');
     }
-  }, []);
+  }, [fonts, colors]);
 
   return (
     <React.Fragment>
@@ -137,8 +142,8 @@ Gen3App.getInitialProps = async (
       ...res,
       publicConfig,
     };
-  } catch (error: any) {
-    console.error('Provider Wrapper error loading config', error.toString());
+  } catch (error) {
+    console.error('Provider Wrapper error loading config', String(error));
   }
   // return default
   return {
