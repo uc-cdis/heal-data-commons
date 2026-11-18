@@ -116,7 +116,10 @@
         "enabled": true,
         "manifestFieldName": "__manifest",
         "enableDownloadManifest": true,
-        "downloadManifestButtonText": "Download",
+        "enableDownloadVariableMetadata": true,
+        "enableDownloadStudyMetadata": true,
+        "studyMetadataFieldName": "study_metadata",
+        "downloadManifestButtonText": "Download Manifest Data",
         "documentationLinks": {
           "gen3Client": "https://gen3.org/resources/user/gen3-client/",
           "gen3Workspaces": "https://gen3.org/resources/user/analyze-data/"
@@ -204,6 +207,7 @@
         "valueIfNotAvailable": "No summary has been provided for this study."
       },
       "detailView": {
+        "routeToStudyURL": true,
         "showSubmitButton": true,
         "headerField": "study_metadata.minimal_info.study_name",
         "subHeaderField": "_hdp_uid",
