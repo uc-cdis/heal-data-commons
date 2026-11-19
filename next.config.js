@@ -24,10 +24,16 @@ const withMDX = require('@next/mdx')({
 
 // get the version of the frontend package
 const packageJson = require(
-  path.resolve(__dirname, 'node_modules', '@gen3', 'frontend', 'package.json'),
+  path.resolve(
+    __dirname,
+    'node_modules',
+    '@gen3',
+    'frontend',
+    'package.json',
+  ),
 );
 
-console.warn('version:', packageJson.version);
+console.log('version:', packageJson.version);
 
 // Next configuration with support for writing API to existing common services
 /** @type {import('next').NextConfig} */
@@ -56,6 +62,10 @@ const nextConfig = {
     const workspaceApiRewrite = [
       {
         source: '/workspace-api/:path*',
+        destination: '/api/:path*',
+      },
+      {
+        source: '/frontend-api/:path*',
         destination: '/api/:path*',
       },
       {
